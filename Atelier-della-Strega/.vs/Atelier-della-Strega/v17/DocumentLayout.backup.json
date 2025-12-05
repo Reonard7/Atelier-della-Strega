@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|c:\\users\\leosa\\desktop\\atelier della strega\\atelier-della-strega\\assets\\gamedata\\scripts\\items\\potion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|solutionrelative:assets\\gamedata\\scripts\\items\\potion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\assets\\gamedata\\scripts\\items\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|solutionrelative:assets\\gamedata\\scripts\\items\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Potion.cs",
+              "DocumentMoniker": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\GameData\\Scripts\\Items\\Potion.cs",
+              "RelativeDocumentMoniker": "Assets\\GameData\\Scripts\\Items\\Potion.cs",
+              "ToolTip": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\GameData\\Scripts\\Items\\Potion.cs",
+              "RelativeToolTip": "Assets\\GameData\\Scripts\\Items\\Potion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T19:57:04.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Ingredient.cs",
+              "DocumentMoniker": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\GameData\\Scripts\\Items\\Ingredient.cs",
+              "RelativeDocumentMoniker": "Assets\\GameData\\Scripts\\Items\\Ingredient.cs",
+              "ToolTip": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\GameData\\Scripts\\Items\\Ingredient.cs",
+              "RelativeToolTip": "Assets\\GameData\\Scripts\\Items\\Ingredient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T19:54:01.161Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

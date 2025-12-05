@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b71de09a1210147a9ad078539fe55f, type: 3}
+  m_Name: Pozione della Forza dei Giganti
+  m_EditorClassIdentifier: Assembly-CSharp::Potion
+  id: giantstrength_potion
+  displayName: Pozione della Forza dei Giganti
+  description: Nel liquido trasparente di questa pozione galleggia un frammento di
+    pelle di un gigante
+  icon: {fileID: 0}
+  prefab: {fileID: 0}
+  potionRecipe:
+  - {fileID: 11400000, guid: bfbed05795de30f4c8fdb3c3d30c0a91, type: 2}
+  - {fileID: 11400000, guid: 111fd8164509a6b48ad3eec72745c72d, type: 2}
+  - {fileID: 11400000, guid: d8286b45d9369444a9d68cca3bb6e147, type: 2}

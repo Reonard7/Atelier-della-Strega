@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e3044405e1f78f46b694de89da317da, type: 3}
+  m_Name: Alga Revitalizzante
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  id: revital_seaweed
+  displayName: 'Alga Revitalizzante '
+  description: Pianta sottomarina che cresce solo nelle zone cariche di magia selvaggia.
+    Le popolazioni locali giurano di aver visto alcune piante muoversi da sole e
+    avvinghiare i natanti locali.
+  icon: {fileID: 0}
+  prefab: {fileID: 0}
+  craftablePotions:
+  - {fileID: 11400000, guid: e5091b74c15db2d409df9ca98eb1d011, type: 2}
+  - {fileID: 11400000, guid: 2ec3efae521e3a049a90b843608b6ab4, type: 2}

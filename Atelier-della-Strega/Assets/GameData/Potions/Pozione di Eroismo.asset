@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b71de09a1210147a9ad078539fe55f, type: 3}
+  m_Name: Pozione di Eroismo
+  m_EditorClassIdentifier: Assembly-CSharp::Potion
+  id: heroism_potion
+  displayName: Pozione di Eroismo
+  description: Il liquido blu di questa pozione gorgoglia e fuma come se stesse bollendo
+  icon: {fileID: 0}
+  prefab: {fileID: 0}
+  potionRecipe:
+  - {fileID: 11400000, guid: bfbed05795de30f4c8fdb3c3d30c0a91, type: 2}
+  - {fileID: 11400000, guid: 42294e25fff135742a574b5f501e3f77, type: 2}
+  - {fileID: 11400000, guid: 156768524ecd2e1458a3d75113d4411f, type: 2}

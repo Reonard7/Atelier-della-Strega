@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e3044405e1f78f46b694de89da317da, type: 3}
+  m_Name: Pietra di Sangue
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  id: blood_stone
+  displayName: Pietra di Sangue
+  description: Popoli antichi chiamavano questa pietra "pietra filosofale" ed era
+    la base di molti processi alchemici. Al giorno d'oggi viene creata a partire
+    dal sangue di gentili donatori.
+  icon: {fileID: 0}
+  prefab: {fileID: 0}
+  craftablePotions:
+  - {fileID: 11400000, guid: 25d5be15fe2a7134e9d5385cd6ac57e5, type: 2}
+  - {fileID: 11400000, guid: 1c324d533b7fd9b4c876d104db13da8e, type: 2}
+  - {fileID: 11400000, guid: 2e1e00168244f2f49a6e2482774907c5, type: 2}
+  - {fileID: 11400000, guid: 4a316acbf0e5bbc47986fa84a4db10ee, type: 2}
+  - {fileID: 11400000, guid: 2ec3efae521e3a049a90b843608b6ab4, type: 2}

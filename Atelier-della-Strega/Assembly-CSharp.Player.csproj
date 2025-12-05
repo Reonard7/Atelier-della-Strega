@@ -61,7 +61,11 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.2.9f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\GameData\Scripts\Items\Ingredient.cs" />
+    <Compile Include="Assets\GameData\Scripts\Items\Potion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\README_ActivityLog.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -953,6 +957,10 @@
     <ProjectReference Include="Unity.Rendering.LightTransport.Runtime.Player.csproj">
       <Project>{EE8FF418-7167-8CC1-F006-AE0C13C42955}</Project>
       <Name>Unity.Rendering.LightTransport.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.Player.csproj">
+      <Project>{C17C908E-E3B0-1B5F-9CC8-E4A1A2B537C5}</Project>
+      <Name>Unity.ProBuilder.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
       <Project>{C07D3BC4-D5BB-0270-AFA3-D5B4C4D78E72}</Project>

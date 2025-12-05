@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b71de09a1210147a9ad078539fe55f, type: 3}
+  m_Name: "Pozione del Respirare Sott\u2019Acqua"
+  m_EditorClassIdentifier: Assembly-CSharp::Potion
+  id: waterbreathing_potion
+  displayName: "Pozione del Respirare Sott\u2019Acqua"
+  description: Il suo liquido verde torbido ha un odore salmastro e al suo interno
+    galleggia una bolla a forma di medusa
+  icon: {fileID: 0}
+  prefab: {fileID: 0}
+  potionRecipe:
+  - {fileID: 11400000, guid: ce5a8c76594d6fa458b5a58a39c64582, type: 2}
+  - {fileID: 11400000, guid: c2e7001a9ad083043a05d9a1140c377c, type: 2}
+  - {fileID: 11400000, guid: 3cfd160f461c77b4aa8d8b8b1a378a69, type: 2}

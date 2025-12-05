@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b71de09a1210147a9ad078539fe55f, type: 3}
+  m_Name: Pozione del Soffio di Fuoco
+  m_EditorClassIdentifier: Assembly-CSharp::Potion
+  id: firebreath_potion
+  displayName: Pozione del Soffio di Fuoco
+  description: "Il liquido arancione di questa pozione lampeggia e la parte superiore
+    della bottiglia \xE8 piena di fumo che si disperde quando la bottiglia viene
+    aperta"
+  icon: {fileID: 0}
+  prefab: {fileID: 0}
+  potionRecipe:
+  - {fileID: 11400000, guid: 93341c3a3287f2049b4c6323139966d1, type: 2}
+  - {fileID: 11400000, guid: dbe245709b55aac408e7d4118b26dd25, type: 2}
+  - {fileID: 11400000, guid: bfbed05795de30f4c8fdb3c3d30c0a91, type: 2}

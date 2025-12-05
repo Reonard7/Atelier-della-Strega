@@ -1,0 +1,658 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.2/staging' branch; Version is '6000.2.9f1 (e0c4e791ab71) revision 14730471'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) 64bit Core' Language: 'en' Physical Memory: 16087 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-leosa" at "2025-12-05T20:10:05.3569201Z"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+Date: 2025-12-05T20:10:05Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.2.9f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/leosa/Desktop/Atelier della Strega/Atelier-della-Strega
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+59359
+-licensingIpc
+LicenseClient-leosa
+-job-worker-count
+7
+-background-job-worker-count
+8
+-gc-helper-count
+1
+-name
+AssetImport
+Successfully changed project path to: C:/Users/leosa/Desktop/Atelier della Strega/Atelier-della-Strega
+C:/Users/leosa/Desktop/Atelier della Strega/Atelier-della-Strega
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [24168]  Target information:
+
+Player connection [24168]  * "[IP] 192.168.1.4 [Port] 0 [Flags] 2 [Guid] 963730111 [EditorId] 963730111 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [24168] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [24168] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 15688, path: "C:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.17.3+a4e98f1
+  Session Id:              8812b489f4ff4e8fa0c0531101569365
+  Correlation Id:          65de52d1ecc6eb142105e61ae19ca072
+  External correlation Id: 2115603092763628338
+  Machine Id:              324oqykJ7nizdg03wNMuK8wetVM=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-leosa" (connect: 0.00s, validation: 0.00s, handshake: 0.04s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-leosa-notifications" at "2025-12-05T20:10:05.3963459Z"
+[Licensing::Module] Licensing Background thread has ended after 0.04s
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 5.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.2.9f1 (e0c4e791ab71)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/leosa/Desktop/Atelier della Strega/Atelier-della-Strega/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 4060 Laptop GPU (ID=0x28a0)
+    Vendor:   NVIDIA
+    VRAM:     7957 MB
+    Driver:   32.0.15.8157
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56228
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 6872527656023-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.004341 seconds.
+- Loaded All Assemblies, in  0.313 seconds
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 221 ms
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.510 seconds
+Domain Reload Profiling: 822ms
+	BeginReloadAssembly (99ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (132ms)
+		LoadAssemblies (97ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (129ms)
+			TypeCache.Refresh (128ms)
+				TypeCache.ScanAssembly (118ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (511ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (479ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (307ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (48ms)
+			ProcessInitializeOnLoadAttributes (80ms)
+			ProcessInitializeOnLoadMethodAttributes (41ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+- Loaded All Assemblies, in  0.707 seconds
+Refreshing native plugins compatible for Editor in 0.55 ms, found 3 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Atelier-della-Strega
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.752 seconds
+Domain Reload Profiling: 1456ms
+	BeginReloadAssembly (174ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (34ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (444ms)
+		LoadAssemblies (325ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (210ms)
+			TypeCache.Refresh (148ms)
+				TypeCache.ScanAssembly (135ms)
+			BuildScriptInfoCaches (47ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (752ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (536ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (118ms)
+			ProcessInitializeOnLoadAttributes (311ms)
+			ProcessInitializeOnLoadMethodAttributes (84ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 1.02 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6495 unused Assets / (4.7 MB). Loaded Objects now: 7216.
+Memory consumption went from 138.6 MB to 133.9 MB.
+Total: 11.314700 ms (FindLiveObjects: 1.661100 ms CreateObjectMapping: 0.582400 ms MarkObjects: 6.043900 ms  DeleteObjects: 3.025600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 16951.841996 seconds.
+  path: Assets/GameData/Ingredients/Alga Revitalizzante.asset
+  artifactKey: Guid(c2e7001a9ad083043a05d9a1140c377c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Ingredients/Alga Revitalizzante.asset using Guid(c2e7001a9ad083043a05d9a1140c377c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ba4c2733679772f793202205b48ddc66') in 0.018742 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.926795 seconds.
+  path: Assets/GameData/Ingredients/Alga Revitalizzante.asset
+  artifactKey: Guid(c2e7001a9ad083043a05d9a1140c377c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Alga Revitalizzante.asset using Guid(c2e7001a9ad083043a05d9a1140c377c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e0c8636ae263b1097303f6174db7d0bd') in 0.1443924 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.459642 seconds.
+  path: Assets/GameData/Ingredients/Polvere di medusa essiccata.asset
+  artifactKey: Guid(3cfd160f461c77b4aa8d8b8b1a378a69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Ingredients/Polvere di medusa essiccata.asset using Guid(3cfd160f461c77b4aa8d8b8b1a378a69) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9a235c6439878d540cdceb931084a5fd') in 0.0014156 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.951615 seconds.
+  path: Assets/GameData/Ingredients/Polvere di medusa essiccata.asset
+  artifactKey: Guid(3cfd160f461c77b4aa8d8b8b1a378a69) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Polvere di medusa essiccata.asset using Guid(3cfd160f461c77b4aa8d8b8b1a378a69) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9ef99c44df543c310e2c316c68b268f4') in 0.0315317 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.154053 seconds.
+  path: Assets/GameData/Ingredients/Ferro Fuso.asset
+  artifactKey: Guid(93341c3a3287f2049b4c6323139966d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Ingredients/Ferro Fuso.asset using Guid(93341c3a3287f2049b4c6323139966d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bd7e3fe09bd2a86e0fb14b81ad536c84') in 0.001182 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.950456 seconds.
+  path: Assets/GameData/Ingredients/Ferro Fuso.asset
+  artifactKey: Guid(93341c3a3287f2049b4c6323139966d1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Ferro Fuso.asset using Guid(93341c3a3287f2049b4c6323139966d1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0014018d443967e6fdb42edcb8f587df') in 0.0208107 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.908027 seconds.
+  path: Assets/GameData/Ingredients/Carbone Magico.asset
+  artifactKey: Guid(dbe245709b55aac408e7d4118b26dd25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Ingredients/Carbone Magico.asset using Guid(dbe245709b55aac408e7d4118b26dd25) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b6208517b63b587db7383d376a945201') in 0.001209 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.951797 seconds.
+  path: Assets/GameData/Ingredients/Carbone Magico.asset
+  artifactKey: Guid(dbe245709b55aac408e7d4118b26dd25) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Carbone Magico.asset using Guid(dbe245709b55aac408e7d4118b26dd25) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4cb7ff49dce33836b4f06a71f415a94e') in 0.0250815 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.048957 seconds.
+  path: Assets/GameData/Ingredients/Cuore di Viverna.asset
+  artifactKey: Guid(bfbed05795de30f4c8fdb3c3d30c0a91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Ingredients/Cuore di Viverna.asset using Guid(bfbed05795de30f4c8fdb3c3d30c0a91) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5ddf91f52586a35a3a66b9ed9b95f446') in 0.001 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.953927 seconds.
+  path: Assets/GameData/Ingredients/Cuore di Viverna.asset
+  artifactKey: Guid(bfbed05795de30f4c8fdb3c3d30c0a91) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Cuore di Viverna.asset using Guid(bfbed05795de30f4c8fdb3c3d30c0a91) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ac859a03770a98c603ddf9d8ae58b8cc') in 0.0237846 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.533657 seconds.
+  path: Assets/GameData/Ingredients/Polvere di pelle di Gigante.asset
+  artifactKey: Guid(111fd8164509a6b48ad3eec72745c72d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Ingredients/Polvere di pelle di Gigante.asset using Guid(111fd8164509a6b48ad3eec72745c72d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '95455e48e2d10c153b08d11006fecd2f') in 0.0010589 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.949340 seconds.
+  path: Assets/GameData/Ingredients/Polvere di pelle di Gigante.asset
+  artifactKey: Guid(111fd8164509a6b48ad3eec72745c72d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Polvere di pelle di Gigante.asset using Guid(111fd8164509a6b48ad3eec72745c72d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'bed873b4110efd7afb1cdfbb0cad39b3') in 0.0271803 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.265942 seconds.
+  path: Assets/GameData/Ingredients/Barba di Gnomo.asset
+  artifactKey: Guid(d81c6c26b07443e48940c73610055783) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Ingredients/Barba di Gnomo.asset using Guid(d81c6c26b07443e48940c73610055783) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0966badafd87e27f283b3d072505431a') in 0.0010075 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.949391 seconds.
+  path: Assets/GameData/Ingredients/Barba di Gnomo.asset
+  artifactKey: Guid(d81c6c26b07443e48940c73610055783) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Barba di Gnomo.asset using Guid(d81c6c26b07443e48940c73610055783) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c98e338d1e8a031298a5ecc724dbb699') in 0.0393501 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.442421 seconds.
+  path: Assets/GameData/Ingredients/Piuma di Orsogufo.asset
+  artifactKey: Guid(42294e25fff135742a574b5f501e3f77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Ingredients/Piuma di Orsogufo.asset using Guid(42294e25fff135742a574b5f501e3f77) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c7fc5a46f536680cdf5cea38ede48382') in 0.0009505 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.934791 seconds.
+  path: Assets/GameData/Ingredients/Piuma di Orsogufo.asset
+  artifactKey: Guid(42294e25fff135742a574b5f501e3f77) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Piuma di Orsogufo.asset using Guid(42294e25fff135742a574b5f501e3f77) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1628e60df8c43f1e20002db4c5757530') in 0.037285 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.258459 seconds.
+  path: Assets/GameData/Ingredients/Occhio di Beholder.asset
+  artifactKey: Guid(9f6165d26821f8944ad3813c73897419) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Ingredients/Occhio di Beholder.asset using Guid(9f6165d26821f8944ad3813c73897419) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '63c5c4ac25f12c49bc1054e38bc7ce1b') in 0.0011639 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.923081 seconds.
+  path: Assets/GameData/Ingredients/Occhio di Beholder.asset
+  artifactKey: Guid(9f6165d26821f8944ad3813c73897419) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Occhio di Beholder.asset using Guid(9f6165d26821f8944ad3813c73897419) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b93413c3546561b9ab297c9469487f5f') in 0.0206967 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.934433 seconds.
+  path: Assets/GameData/Ingredients/Zampa di Coniglio.asset
+  artifactKey: Guid(f15f309f288a4f1448f9d08da4e5d295) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Ingredients/Zampa di Coniglio.asset using Guid(f15f309f288a4f1448f9d08da4e5d295) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c9ccf4a95c1198b92218a0d370fa7cdf') in 0.0011509 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.946842 seconds.
+  path: Assets/GameData/Ingredients/Zampa di Coniglio.asset
+  artifactKey: Guid(f15f309f288a4f1448f9d08da4e5d295) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Zampa di Coniglio.asset using Guid(f15f309f288a4f1448f9d08da4e5d295) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'fd1253e5a15e216ca5d011ecb2c34a65') in 0.0373871 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.608009 seconds.
+  path: Assets/GameData/Ingredients/Polvere di Zolfo.asset
+  artifactKey: Guid(6517bf937a33ac34eae7718e37effb4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Ingredients/Polvere di Zolfo.asset using Guid(6517bf937a33ac34eae7718e37effb4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6f2d2244d3d329898aac4a8e00dc1880') in 0.0011423 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.947425 seconds.
+  path: Assets/GameData/Ingredients/Polvere di Zolfo.asset
+  artifactKey: Guid(6517bf937a33ac34eae7718e37effb4f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Polvere di Zolfo.asset using Guid(6517bf937a33ac34eae7718e37effb4f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ceb90b7370ca73f6fad1df31bf314a0b') in 0.0207969 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.335759 seconds.
+  path: Assets/GameData/Ingredients/Pietra di Sangue.asset
+  artifactKey: Guid(156768524ecd2e1458a3d75113d4411f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Ingredients/Pietra di Sangue.asset using Guid(156768524ecd2e1458a3d75113d4411f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5395ad8ad27921fc5a237a914d56926b') in 0.0010706 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.949559 seconds.
+  path: Assets/GameData/Ingredients/Pietra di Sangue.asset
+  artifactKey: Guid(156768524ecd2e1458a3d75113d4411f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Pietra di Sangue.asset using Guid(156768524ecd2e1458a3d75113d4411f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9058e43990923f6dacef5e0e35496e90') in 0.0262799 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.422719 seconds.
+  path: Assets/GameData/Ingredients/Etere in Bottiglia.asset
+  artifactKey: Guid(d8286b45d9369444a9d68cca3bb6e147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Ingredients/Etere in Bottiglia.asset using Guid(d8286b45d9369444a9d68cca3bb6e147) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c64056ef7be030632add2e80e431ea3c') in 0.001046 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.947773 seconds.
+  path: Assets/GameData/Ingredients/Etere in Bottiglia.asset
+  artifactKey: Guid(d8286b45d9369444a9d68cca3bb6e147) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Etere in Bottiglia.asset using Guid(d8286b45d9369444a9d68cca3bb6e147) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2b6105f78ee4309392c424b2f32d0661') in 0.027214 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 55.324358 seconds.
+  path: Assets/GameData/Potions/Potion 1.asset
+  artifactKey: Guid(e5091b74c15db2d409df9ca98eb1d011) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Potions/Potion 1.asset using Guid(e5091b74c15db2d409df9ca98eb1d011) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bf0a5f890f8bca73a5d59e08b143082e') in 0.0015973 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.293221 seconds.
+  path: Assets/GameData/Potions/Potion 2.asset
+  artifactKey: Guid(f5423c6e7ee877e4c9c9c25cccc3ce0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Potions/Potion 2.asset using Guid(f5423c6e7ee877e4c9c9c25cccc3ce0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c65cdf85c1d34d956c83e282b6a4382a') in 0.001238 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.426186 seconds.
+  path: Assets/GameData/Potions/Potion 3.asset
+  artifactKey: Guid(08702ee1f2d2f4b499871beb003e8cb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Potions/Potion 3.asset using Guid(08702ee1f2d2f4b499871beb003e8cb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e3b9f34bab2e5a945ac6daa666676973') in 0.0010946 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.379849 seconds.
+  path: Assets/GameData/Potions/Potion 4.asset
+  artifactKey: Guid(51ede6f332341f848bc69ebf16cc0dd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Potions/Potion 4.asset using Guid(51ede6f332341f848bc69ebf16cc0dd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '175152f60f9058700686b46ed1129be6') in 0.0010585 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.219859 seconds.
+  path: Assets/GameData/Potions/Potion 5.asset
+  artifactKey: Guid(c500564848ae1984c8f8d4bd79836da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Potions/Potion 5.asset using Guid(c500564848ae1984c8f8d4bd79836da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a42fa6ad514db03d991d3eb72166f75f') in 0.00111 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.145683 seconds.
+  path: Assets/GameData/Potions/Potion 6.asset
+  artifactKey: Guid(731529ed201e1f64386d78262e242e8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Potions/Potion 6.asset using Guid(731529ed201e1f64386d78262e242e8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b35420c011327fed943adbabf85c0034') in 0.0011737 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.103285 seconds.
+  path: Assets/GameData/Potions/Potion 7.asset
+  artifactKey: Guid(25d5be15fe2a7134e9d5385cd6ac57e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Potions/Potion 7.asset using Guid(25d5be15fe2a7134e9d5385cd6ac57e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4182c60648990a3f73a26909ec450e17') in 0.0009739 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.111388 seconds.
+  path: Assets/GameData/Potions/Potion 8.asset
+  artifactKey: Guid(1c324d533b7fd9b4c876d104db13da8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Potions/Potion 8.asset using Guid(1c324d533b7fd9b4c876d104db13da8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1ae83cec88c2ac6d9a750f7d9071fb00') in 0.0010202 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.107509 seconds.
+  path: Assets/GameData/Potions/Potion 9.asset
+  artifactKey: Guid(2e1e00168244f2f49a6e2482774907c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Potions/Potion 9.asset using Guid(2e1e00168244f2f49a6e2482774907c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a56c581cdf6dbf128340a655dd4012b9') in 0.0012963 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.116254 seconds.
+  path: Assets/GameData/Potions/Potion 10.asset
+  artifactKey: Guid(d60185664fe59274db0d646e5d72c041) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Potions/Potion 10.asset using Guid(d60185664fe59274db0d646e5d72c041) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dfeaa3ba00717329e0a23fc1c76624a9') in 0.0010859 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.158134 seconds.
+  path: Assets/GameData/Potions/Potion 11.asset
+  artifactKey: Guid(4a316acbf0e5bbc47986fa84a4db10ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Potions/Potion 11.asset using Guid(4a316acbf0e5bbc47986fa84a4db10ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '34e515261dfbd561e0b03c44276eac69') in 0.000987 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.363435 seconds.
+  path: Assets/GameData/Potions/Potion 12.asset
+  artifactKey: Guid(6a0d01459984db844856246b10d5ecbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Potions/Potion 12.asset using Guid(6a0d01459984db844856246b10d5ecbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cc682ab7f0eace5de0bf081570039f5e') in 0.0009002 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.518137 seconds.
+  path: Assets/GameData/Potions/Potion 13.asset
+  artifactKey: Guid(d72e120f30d1f0b49b6f4a6570d30eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GameData/Potions/Potion 13.asset using Guid(d72e120f30d1f0b49b6f4a6570d30eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4bf03b2b1a4e9dcb9eb8534b6a5ffbd0') in 0.0012938 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.934498 seconds.
+  path: Assets/GameData/Ingredients/Polvere di pelle di Gigante.asset
+  artifactKey: Guid(111fd8164509a6b48ad3eec72745c72d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Polvere di pelle di Gigante.asset using Guid(111fd8164509a6b48ad3eec72745c72d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7b505a37dc6ead2276f30afb1b3db78e') in 0.018435 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/GameData/Potions/Potion 4.asset
+  artifactKey: Guid(51ede6f332341f848bc69ebf16cc0dd2) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Potions/Potion 4.asset using Guid(51ede6f332341f848bc69ebf16cc0dd2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '81aa43b0c22758a347ad518c24afa50a') in 0.0222079 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/GameData/Potions/Potion 10.asset
+  artifactKey: Guid(d60185664fe59274db0d646e5d72c041) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Potions/Potion 10.asset using Guid(d60185664fe59274db0d646e5d72c041) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '58c1532c5476bb1ee5960692b7fa269a') in 0.0188254 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/GameData/Potions/Potion 13.asset
+  artifactKey: Guid(d72e120f30d1f0b49b6f4a6570d30eba) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Potions/Potion 13.asset using Guid(d72e120f30d1f0b49b6f4a6570d30eba) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '13aeb0b5cfb80fd2c1065c53be401f77') in 0.0274784 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/GameData/Ingredients/Carbone Magico.asset
+  artifactKey: Guid(dbe245709b55aac408e7d4118b26dd25) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Carbone Magico.asset using Guid(dbe245709b55aac408e7d4118b26dd25) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'dae60dedf6425f071edab2e53d1b5621') in 0.0179214 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/GameData/Ingredients/Polvere di Zolfo.asset
+  artifactKey: Guid(6517bf937a33ac34eae7718e37effb4f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Polvere di Zolfo.asset using Guid(6517bf937a33ac34eae7718e37effb4f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3b96c934e6daf0b79d75a91d29003521') in 0.0198579 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/GameData/Potions/Potion 5.asset
+  artifactKey: Guid(c500564848ae1984c8f8d4bd79836da5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Potions/Potion 5.asset using Guid(c500564848ae1984c8f8d4bd79836da5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '68d37b4d92bd44ea83a4072b5405dd5d') in 0.0217617 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/GameData/Potions/Potion 11.asset
+  artifactKey: Guid(4a316acbf0e5bbc47986fa84a4db10ee) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Potions/Potion 11.asset using Guid(4a316acbf0e5bbc47986fa84a4db10ee) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '52ee51f803f152a7263acb0a8e3d7067') in 0.0173547 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/GameData/Ingredients/Piuma di Orsogufo.asset
+  artifactKey: Guid(42294e25fff135742a574b5f501e3f77) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Piuma di Orsogufo.asset using Guid(42294e25fff135742a574b5f501e3f77) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1d7ca2ab8075dd1e78bba77f7359dd07') in 0.0201095 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/GameData/Ingredients/Etere in Bottiglia.asset
+  artifactKey: Guid(d8286b45d9369444a9d68cca3bb6e147) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Etere in Bottiglia.asset using Guid(d8286b45d9369444a9d68cca3bb6e147) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7222fc9b3128e877eb6212336886c9ac') in 0.0221218 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/GameData/Ingredients/Polvere di medusa essiccata.asset
+  artifactKey: Guid(3cfd160f461c77b4aa8d8b8b1a378a69) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Polvere di medusa essiccata.asset using Guid(3cfd160f461c77b4aa8d8b8b1a378a69) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1687ad5607a91ce45ec8526f1b93555b') in 0.0243617 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/GameData/Ingredients/Cuore di Viverna.asset
+  artifactKey: Guid(bfbed05795de30f4c8fdb3c3d30c0a91) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Ingredients/Cuore di Viverna.asset using Guid(bfbed05795de30f4c8fdb3c3d30c0a91) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a08e1ccde868940532e1d5ddb8255cd1') in 0.0223211 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/GameData/Potions/Potion 1.asset
+  artifactKey: Guid(e5091b74c15db2d409df9ca98eb1d011) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Potions/Potion 1.asset using Guid(e5091b74c15db2d409df9ca98eb1d011) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'acba59556a6df2bec0db4e2e81c3fa39') in 0.0206083 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/GameData/Potions/Potion 9.asset
+  artifactKey: Guid(2e1e00168244f2f49a6e2482774907c5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Potions/Potion 9.asset using Guid(2e1e00168244f2f49a6e2482774907c5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5d533468959ec53f2e1f4852e9bcb83a') in 0.0207308 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/GameData/Potions/Potion 3.asset
+  artifactKey: Guid(08702ee1f2d2f4b499871beb003e8cb3) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GameData/Potions/Potion 3.asset using Guid(08702ee1f2d2f4b499871beb003e8cb3) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '555945f090ca4494aba877eb656cf746') in 0.0213701 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

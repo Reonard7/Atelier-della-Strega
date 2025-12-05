@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e3044405e1f78f46b694de89da317da, type: 3}
+  m_Name: Acqua di Palude
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  id: swamp_water
+  displayName: Acqua di Palude
+  description: "Purissimo (e nauseabondo) campione di acqua proveniente dal Mare
+    dei Morti, a nord di Waterdeep. La sua esatta composizone non \xE8 ancora stata
+    studiata, ma vi sono tracce di creature marine ritenute scomparse."
+  icon: {fileID: 0}
+  prefab: {fileID: 0}
+  craftablePotions:
+  - {fileID: 11400000, guid: e5091b74c15db2d409df9ca98eb1d011, type: 2}
+  - {fileID: 11400000, guid: 08702ee1f2d2f4b499871beb003e8cb3, type: 2}
+  - {fileID: 11400000, guid: 731529ed201e1f64386d78262e242e8c, type: 2}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b71de09a1210147a9ad078539fe55f, type: 3}
+  m_Name: "Pozione di Invisibilit\xE0"
+  m_EditorClassIdentifier: Assembly-CSharp::Potion
+  id: invisibility_potion
+  displayName: "Pozione di Invisibilit\xE0"
+  description: Il contenitore di questa pozione sembra vuoto, ma pesa come se contenesse
+    del liquido
+  icon: {fileID: 0}
+  prefab: {fileID: 0}
+  potionRecipe:
+  - {fileID: 11400000, guid: d81c6c26b07443e48940c73610055783, type: 2}
+  - {fileID: 11400000, guid: 6517bf937a33ac34eae7718e37effb4f, type: 2}
+  - {fileID: 11400000, guid: 9f6165d26821f8944ad3813c73897419, type: 2}
