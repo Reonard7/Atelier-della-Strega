@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|c:\\users\\leosa\\desktop\\atelier della strega\\atelier-della-strega\\assets\\readme_activitylog.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\assets\\readme_activitylog.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|solutionrelative:assets\\readme_activitylog.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|c:\\users\\leosa\\desktop\\atelier della strega\\atelier-della-strega\\assets\\gamedata\\scripts\\items\\potion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|solutionrelative:assets\\gamedata\\scripts\\items\\potion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|c:\\users\\leosa\\desktop\\atelier della strega\\atelier-della-strega\\assets\\scripts\\ingredientinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ingredientinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\assets\\gamedata\\scripts\\items\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|solutionrelative:assets\\gamedata\\scripts\\items\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|c:\\users\\leosa\\desktop\\atelier della strega\\atelier-della-strega\\assets\\scripts\\fpsinteractionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fpsinteractionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|c:\\users\\leosa\\desktop\\atelier della strega\\atelier-della-strega\\assets\\scripts\\interactable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +26,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FPSInteractionManager.cs",
+              "DocumentMoniker": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\Scripts\\FPSInteractionManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FPSInteractionManager.cs",
+              "ToolTip": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\Scripts\\FPSInteractionManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FPSInteractionManager.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAgwDoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T14:00:37.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Interactable.cs",
+              "DocumentMoniker": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\Scripts\\Interactable.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactable.cs",
+              "ToolTip": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\Scripts\\Interactable.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interactable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T13:56:28.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IngredientInteractable.cs",
+              "DocumentMoniker": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\Scripts\\IngredientInteractable.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\IngredientInteractable.cs",
+              "ToolTip": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\Scripts\\IngredientInteractable.cs",
+              "RelativeToolTip": "Assets\\Scripts\\IngredientInteractable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T13:54:35.958Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,35 +75,10 @@
               "RelativeDocumentMoniker": "Assets\\README_ActivityLog.txt",
               "ToolTip": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\README_ActivityLog.txt",
               "RelativeToolTip": "Assets\\README_ActivityLog.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2025-12-05T20:42:20.872Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Potion.cs",
-              "DocumentMoniker": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\GameData\\Scripts\\Items\\Potion.cs",
-              "RelativeDocumentMoniker": "Assets\\GameData\\Scripts\\Items\\Potion.cs",
-              "ToolTip": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\GameData\\Scripts\\Items\\Potion.cs",
-              "RelativeToolTip": "Assets\\GameData\\Scripts\\Items\\Potion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T19:57:04.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Ingredient.cs",
-              "DocumentMoniker": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\GameData\\Scripts\\Items\\Ingredient.cs",
-              "RelativeDocumentMoniker": "Assets\\GameData\\Scripts\\Items\\Ingredient.cs",
-              "ToolTip": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\GameData\\Scripts\\Items\\Ingredient.cs",
-              "RelativeToolTip": "Assets\\GameData\\Scripts\\Items\\Ingredient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T19:54:01.161Z"
             }
           ]
         }
