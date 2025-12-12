@@ -1,0 +1,716 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.2/staging' branch; Version is '6000.2.9f1 (e0c4e791ab71) revision 14730471'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) 64bit Core' Language: 'it' Physical Memory: 16021 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-H1HNk6DbjPsOXaL5vpuSh" at "2025-12-12T13:10:45.2210023Z"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+Date: 2025-12-12T13:10:45Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.2.9f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+C:/Users/elesa/Unity/Atelier-della-Strega/Atelier-della-Strega
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+63908
+-licensingIpc
+LicenseClient-H1HNk6DbjPsOXaL5vpuSh
+-job-worker-count
+7
+-background-job-worker-count
+8
+-gc-helper-count
+1
+-name
+AssetImport
+Successfully changed project path to: C:/Users/elesa/Unity/Atelier-della-Strega/Atelier-della-Strega
+C:/Users/elesa/Unity/Atelier-della-Strega/Atelier-della-Strega
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [24716]  Target information:
+
+Player connection [24716]  * "[IP] 192.168.43.157 [Port] 0 [Flags] 2 [Guid] 1106946913 [EditorId] 1106946913 [Version] 1048832 [Id] WindowsEditor(7,Elena) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [24716] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [24716] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 21284, path: "C:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.17.3+a4e98f1
+  Session Id:              7ca04dd5f028409a9edb332dde38a847
+  Correlation Id:          891f4372ab34c443c76e8fd9c32f2cb5
+  External correlation Id: 8949200519061451683
+  Machine Id:              xqXYjViZHJQE1rg3zHEF18DM3SQ=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-H1HNk6DbjPsOXaL5vpuSh" (connect: 0.00s, validation: 0.01s, handshake: 0.23s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-H1HNk6DbjPsOXaL5vpuSh-notifications" at "2025-12-12T13:10:45.4587158Z"
+[Licensing::Module] Licensing Background thread has ended after 0.24s
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 12.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.2.9f1 (e0c4e791ab71)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/elesa/Unity/Atelier-della-Strega/Atelier-della-Strega/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3050 Ti Laptop GPU (ID=0x25a0)
+    Vendor:   NVIDIA
+    VRAM:     3962 MB
+    Driver:   32.0.15.7703
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56236
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.006186 seconds.
+- Loaded All Assemblies, in  0.599 seconds
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.655 seconds
+Domain Reload Profiling: 1249ms
+	BeginReloadAssembly (213ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (69ms)
+	RebuildNativeTypeToScriptingClass (22ms)
+	initialDomainReloadingComplete (73ms)
+	LoadAllAssembliesAndSetupDomain (216ms)
+		LoadAssemblies (208ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (211ms)
+			TypeCache.Refresh (209ms)
+				TypeCache.ScanAssembly (190ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (656ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (583ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (181ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (112ms)
+			ProcessInitializeOnLoadAttributes (198ms)
+			ProcessInitializeOnLoadMethodAttributes (84ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 1375562866835-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+- Loaded All Assemblies, in  1.202 seconds
+Refreshing native plugins compatible for Editor in 1.64 ms, found 3 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Atelier-della-Strega
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.223 seconds
+Domain Reload Profiling: 2415ms
+	BeginReloadAssembly (267ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (46ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (68ms)
+	LoadAllAssembliesAndSetupDomain (794ms)
+		LoadAssemblies (592ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (341ms)
+			TypeCache.Refresh (252ms)
+				TypeCache.ScanAssembly (234ms)
+			BuildScriptInfoCaches (67ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (1223ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (866ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (21ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (177ms)
+			ProcessInitializeOnLoadAttributes (512ms)
+			ProcessInitializeOnLoadMethodAttributes (140ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 3.03 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6499 unused Assets / (4.1 MB). Loaded Objects now: 7251.
+Memory consumption went from 144.5 MB to 140.4 MB.
+Total: 17.471300 ms (FindLiveObjects: 1.064800 ms CreateObjectMapping: 0.750100 ms MarkObjects: 10.936000 ms  DeleteObjects: 4.718900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 85041.593724 seconds.
+  path: Assets/Art/Models/pavimento_sotto.fbx
+  artifactKey: Guid(69805075b53fa834291b4d7284363bd4) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Models/pavimento_sotto.fbx using Guid(69805075b53fa834291b4d7284363bd4) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '70a1101235ac2338c7355e3770eca896') in 1.0575104 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.649100 seconds.
+  path: Assets/Art/Models/pavimento_sotto.fbx
+  artifactKey: Guid(69805075b53fa834291b4d7284363bd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/pavimento_sotto.fbx using Guid(69805075b53fa834291b4d7284363bd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'de169201d904a62783b54845c34e29bf') in 1.0708258 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.556074 seconds.
+  path: Assets/Art/Models/pavimento_sotto.fbx
+  artifactKey: Guid(69805075b53fa834291b4d7284363bd4) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Models/pavimento_sotto.fbx using Guid(69805075b53fa834291b4d7284363bd4) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7c8bed04cb8c740c4502645b132b74aa') in 0.0387259 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.175517 seconds.
+  path: Assets/Art/Models/pavimento_sotto.fbx
+  artifactKey: Guid(69805075b53fa834291b4d7284363bd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/pavimento_sotto.fbx using Guid(69805075b53fa834291b4d7284363bd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f20ec186893e55be013a4fbc2fb456a5') in 0.053008 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 68.804599 seconds.
+  path: Assets/Art/Models/pavimento_sotto.fbx
+  artifactKey: Guid(69805075b53fa834291b4d7284363bd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/pavimento_sotto.fbx using Guid(69805075b53fa834291b4d7284363bd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7dee5c489290d1da8c594d84446fee66') in 0.0264115 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.852191 seconds.
+  path: Assets/Art/Materials/pavimento.mat
+  artifactKey: Guid(5192d984fb7da394f9c48f6c519cc9f7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Materials/pavimento.mat using Guid(5192d984fb7da394f9c48f6c519cc9f7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '29f3a14222fda39429045c0da0445136') in 0.0120633 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 166.796743 seconds.
+  path: Assets/Art/Textures/pavimento Roughness.png
+  artifactKey: Guid(7b40fb4ecc276ad409eb06f1ed8bdfdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Textures/pavimento Roughness.png using Guid(7b40fb4ecc276ad409eb06f1ed8bdfdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a0f7876629707b2397e67336382d6190') in 0.0287123 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 186.685091 seconds.
+  path: Assets/Art/Textures/pavimento S+M.png
+  artifactKey: Guid(9ea3569ac079eb142b0f2d15a8c155ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Textures/pavimento S+M.png using Guid(9ea3569ac079eb142b0f2d15a8c155ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7851d8f204ee85666157f60aac2e3fd6') in 0.0313419 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.713414 seconds.
+  path: Assets/Art/Textures/pavimento S+M.png
+  artifactKey: Guid(9ea3569ac079eb142b0f2d15a8c155ed) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Textures/pavimento S+M.png using Guid(9ea3569ac079eb142b0f2d15a8c155ed) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2dbff0823c25c3fdc7dfac8b3254486e') in 0.1784154 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 425.315902 seconds.
+  path: Assets/Art/Textures/pavimento Displacement.png
+  artifactKey: Guid(bbe83ef3477fed5419ffee2b958315e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Textures/pavimento Displacement.png using Guid(bbe83ef3477fed5419ffee2b958315e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '018d7906b6edf27c273b529fe07983cb') in 0.022597 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.207476 seconds.
+  path: Assets/Art/Textures/pavimento Metallic.png
+  artifactKey: Guid(416f1f6e2d04e964abd5a9fb87411898) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Textures/pavimento Metallic.png using Guid(416f1f6e2d04e964abd5a9fb87411898) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e1151c6a9b7f5b80215503af357d8113') in 0.0170973 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 278.022561 seconds.
+  path: Assets/Art/Textures/pavimento S+M 1.png
+  artifactKey: Guid(e91877aa4ef13e34db5172a87b7451db) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Textures/pavimento S+M 1.png using Guid(e91877aa4ef13e34db5172a87b7451db) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b29d5a6798e8bbe14f49fa598e17d97c') in 0.0646569 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 280.991369 seconds.
+  path: Assets/Art/Textures/pavimento S+M 1.png
+  artifactKey: Guid(e91877aa4ef13e34db5172a87b7451db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Textures/pavimento S+M 1.png using Guid(e91877aa4ef13e34db5172a87b7451db) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd58b31c8087ec65e0669627f212ffe0e') in 0.0224076 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 59.516052 seconds.
+  path: Assets/Art/Textures/pavimento_sotto
+  artifactKey: Guid(452e5869f2b67004ca08460621f4c232) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Textures/pavimento_sotto using Guid(452e5869f2b67004ca08460621f4c232) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e2460c1061ceaec53b3e810ad00c7611') in 0.0028171 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.871404 seconds.
+  path: Assets/Art/Textures/pavimento_sotto
+  artifactKey: Guid(452e5869f2b67004ca08460621f4c232) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Textures/pavimento_sotto using Guid(452e5869f2b67004ca08460621f4c232) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'dc66693b62b2460daef64add192d872b') in 0.0129816 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.320867 seconds.
+  path: Assets/Art/Textures/pavimento Color.png
+  artifactKey: Guid(e014ab355110bfe42bb3b205c407bd42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Textures/pavimento Color.png using Guid(e014ab355110bfe42bb3b205c407bd42) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0c8e7d22583853f85fffcbb8ed778efb') in 0.0208197 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.225013 seconds.
+  path: Assets/Art/Textures/pavimento S+M.png
+  artifactKey: Guid(9ea3569ac079eb142b0f2d15a8c155ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Textures/pavimento S+M.png using Guid(9ea3569ac079eb142b0f2d15a8c155ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3cabe30958f39a84b2866f7a826b5d34') in 0.0207774 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.630641 seconds.
+  path: Assets/Art/Textures/pavimento_sotto/pavimento Normal.png
+  artifactKey: Guid(03a47fb4162253f48aaa0fc794345b8e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Textures/pavimento_sotto/pavimento Normal.png using Guid(03a47fb4162253f48aaa0fc794345b8e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ef9013e25fdb9c0eebce20872862e3a1') in 0.0250844 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Art/Textures/pavimento_sotto/pavimento S+M.png
+  artifactKey: Guid(9ea3569ac079eb142b0f2d15a8c155ed) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Textures/pavimento_sotto/pavimento S+M.png using Guid(9ea3569ac079eb142b0f2d15a8c155ed) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '66795fc6f6eeae5a767302fd5fd6acc4') in 0.0237751 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.788675 seconds.
+  path: Assets/Art/Materials/pavimento_sotto.mat
+  artifactKey: Guid(5192d984fb7da394f9c48f6c519cc9f7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Materials/pavimento_sotto.mat using Guid(5192d984fb7da394f9c48f6c519cc9f7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '63dc56503e62e691b957bd619c582259') in 0.0388596 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 1151.942910 seconds.
+  path: Assets/Art/Textures/mobile_ingredienti
+  artifactKey: Guid(2c94e59096c66374ea993a450744e298) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Textures/mobile_ingredienti using Guid(2c94e59096c66374ea993a450744e298) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bcf07e66bc4d882f5d12fa570485c73c') in 0.0038336 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.890376 seconds.
+  path: Assets/Art/Textures/mobile_ingredienti
+  artifactKey: Guid(2c94e59096c66374ea993a450744e298) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Textures/mobile_ingredienti using Guid(2c94e59096c66374ea993a450744e298) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '931c74d5c6dbc6fdc0fd9049c77f1bf2') in 0.0168236 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.794215 seconds.
+  path: Assets/Art/Textures/tavolo_pozioni
+  artifactKey: Guid(1ae8b3c95d09dd04e9487fec52c61eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Textures/tavolo_pozioni using Guid(1ae8b3c95d09dd04e9487fec52c61eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f80ff9fe0ab339e2cf3422527bc5dc48') in 0.0012232 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.923478 seconds.
+  path: Assets/Art/Textures/tavolo_pozioni
+  artifactKey: Guid(1ae8b3c95d09dd04e9487fec52c61eb9) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Textures/tavolo_pozioni using Guid(1ae8b3c95d09dd04e9487fec52c61eb9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '362b9042a1811d5450664fc067136f24') in 0.0098181 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.651296 seconds.
+  path: Assets/Art/Models/angolo_pozioni.fbx
+  artifactKey: Guid(e83f72758a4974a4fb9e8d0a75e9ba90) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Models/angolo_pozioni.fbx using Guid(e83f72758a4974a4fb9e8d0a75e9ba90) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a5d51406976b11286d670bd4f343b676') in 0.076151 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 16
+
+========================================================================
+Received Import Request.
+  Time since last request: 118.843769 seconds.
+  path: Assets/Art/Textures/mobile_ingredienti/Mobile Ingrdienti Normal.png
+  artifactKey: Guid(a1890b55cf51e3e4d93085a00a7482a3) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Textures/mobile_ingredienti/Mobile Ingrdienti Normal.png using Guid(a1890b55cf51e3e4d93085a00a7482a3) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '59666c6254a10ff40bee2a42b9a2f079') in 0.02016 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Art/Textures/mobile_ingredienti/Mobile Ingrdienti S+M.png
+  artifactKey: Guid(9379c577e38fd5f4b822dc996f99df1b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Textures/mobile_ingredienti/Mobile Ingrdienti S+M.png using Guid(9379c577e38fd5f4b822dc996f99df1b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5c3c3349e1d60fba5e19aca47f603385') in 0.0212969 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.476942 seconds.
+  path: Assets/Art/Textures/tavolo_pozioni/Tavolo Pozioni S+M.png
+  artifactKey: Guid(79c6457b1e7017a4cb87816617ddbcda) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Textures/tavolo_pozioni/Tavolo Pozioni S+M.png using Guid(79c6457b1e7017a4cb87816617ddbcda) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3199f79f1eac6fbb2b6b07aa5b5bca5c') in 0.0125816 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Art/Textures/tavolo_pozioni/Tavolo Pozioni Normal.png
+  artifactKey: Guid(e820487c511b8274d8ccee1fd90b0dcf) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Textures/tavolo_pozioni/Tavolo Pozioni Normal.png using Guid(e820487c511b8274d8ccee1fd90b0dcf) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '08ec9e61ffeb532f6c2c58ab6a27ff29') in 0.0124771 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 91.763263 seconds.
+  path: Assets/Art/Models/pavimento_sotto.fbx
+  artifactKey: Guid(69805075b53fa834291b4d7284363bd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/pavimento_sotto.fbx using Guid(69805075b53fa834291b4d7284363bd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '94e6bed49abfeb07ac490e6753f9e3df') in 2.4578224 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.837394 seconds.
+  path: Assets/Art/Models/angolo_pozioni.fbx
+  artifactKey: Guid(e83f72758a4974a4fb9e8d0a75e9ba90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/angolo_pozioni.fbx using Guid(e83f72758a4974a4fb9e8d0a75e9ba90) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3a1420868939ab0709c089d001c6f393') in 0.046575 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 16
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.162427 seconds.
+  path: Assets/Art/Models/angolo_pozioni.fbx
+  artifactKey: Guid(e83f72758a4974a4fb9e8d0a75e9ba90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/angolo_pozioni.fbx using Guid(e83f72758a4974a4fb9e8d0a75e9ba90) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5eb2acb47e89985b6b0c9899dbbd7a6f') in 0.0884515 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 16
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.851077 seconds.
+  path: Assets/Art/Materials/Mobile Ingrdienti.mat
+  artifactKey: Guid(49ef86ecb4abad3479402315628e5664) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Materials/Mobile Ingrdienti.mat using Guid(49ef86ecb4abad3479402315628e5664) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c69fb0cf5c6f1088e8fbee6134098c35') in 0.0075959 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 138.334448 seconds.
+  path: Assets/Art/Textures/tavolo_pozioni/Tavolo Pozioni Color.png
+  artifactKey: Guid(556b6d3ca0fec044a812e2cf5e024f3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Textures/tavolo_pozioni/Tavolo Pozioni Color.png using Guid(556b6d3ca0fec044a812e2cf5e024f3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6edac1f8ac76f44936819b25bbc54cec') in 0.0116417 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.937484 seconds.
+  path: Assets/Art/Textures/tavolo_pozioni/Tavolo Pozioni Color.png
+  artifactKey: Guid(556b6d3ca0fec044a812e2cf5e024f3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Textures/tavolo_pozioni/Tavolo Pozioni Color.png using Guid(556b6d3ca0fec044a812e2cf5e024f3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c1a142ff7ada9a52c0cf591917369870') in 0.0121816 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 1866.954589 seconds.
+  path: Assets/Art/Textures/tavolo_pozioni/Tavolo Pozioni S+M.png
+  artifactKey: Guid(79c6457b1e7017a4cb87816617ddbcda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Textures/tavolo_pozioni/Tavolo Pozioni S+M.png using Guid(79c6457b1e7017a4cb87816617ddbcda) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '741615fe69ca34acdc2380c007086039') in 0.0440523 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.979222 seconds.
+  path: Assets/Art/Textures/tavolo_pozioni/Tavolo Pozioni S+M.png
+  artifactKey: Guid(79c6457b1e7017a4cb87816617ddbcda) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Textures/tavolo_pozioni/Tavolo Pozioni S+M.png using Guid(79c6457b1e7017a4cb87816617ddbcda) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7259015c4a3d8de773ca7a300e8e615d') in 0.0252359 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 63.957480 seconds.
+  path: Assets/Art/Textures/tavolo_pozioni/Tavolo Pozioni S+M.png
+  artifactKey: Guid(79c6457b1e7017a4cb87816617ddbcda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Textures/tavolo_pozioni/Tavolo Pozioni S+M.png using Guid(79c6457b1e7017a4cb87816617ddbcda) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b014f8f66edaaad56adcd00f2a0b8068') in 0.0186401 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.940730 seconds.
+  path: Assets/Art/Textures/tavolo_pozioni/Tavolo Pozioni Normal.png
+  artifactKey: Guid(e820487c511b8274d8ccee1fd90b0dcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Textures/tavolo_pozioni/Tavolo Pozioni Normal.png using Guid(e820487c511b8274d8ccee1fd90b0dcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0338fd50ba2dfa86ecebd789657cce22') in 0.0402841 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 189.797216 seconds.
+  path: Assets/Art/Textures/pavimento_sotto/Tavolo Pozioni S+M.png
+  artifactKey: Guid(7da6cf569f7e8314f8a43b373d9393ad) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Textures/pavimento_sotto/Tavolo Pozioni S+M.png using Guid(7da6cf569f7e8314f8a43b373d9393ad) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e3a3aec1fa46b97df3924e8ff496a1f2') in 0.0159765 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 147.959714 seconds.
+  path: Assets/Art/Textures/pavimento_sotto/Tavolo Pozioni S+M.png
+  artifactKey: Guid(7da6cf569f7e8314f8a43b373d9393ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Textures/pavimento_sotto/Tavolo Pozioni S+M.png using Guid(7da6cf569f7e8314f8a43b373d9393ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '49f584edca699146285a7dc1095bd057') in 0.017218 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.076480 seconds.
+  path: Assets/Art/Textures/pavimento_sotto/pavimento S+M 1.png
+  artifactKey: Guid(3209f9c3663237e49b4c92a9810af998) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Textures/pavimento_sotto/pavimento S+M 1.png using Guid(3209f9c3663237e49b4c92a9810af998) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'f8f0eeb3cf20f398bdb4d56fffeb91b8') in 0.0150438 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.887690 seconds.
+  path: Assets/Art/Textures/pavimento_sotto/pavimento S+M 1.png
+  artifactKey: Guid(3209f9c3663237e49b4c92a9810af998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Textures/pavimento_sotto/pavimento S+M 1.png using Guid(3209f9c3663237e49b4c92a9810af998) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f2770b882041370f2680a0f37c75a280') in 0.0190402 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 286.950465 seconds.
+  path: Assets/Art/Textures/tavolo_pozioni/Tavolo Pozioni S+M 1.png
+  artifactKey: Guid(e94b2926d6ad42e4f8c16c55fc36bcfb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Textures/tavolo_pozioni/Tavolo Pozioni S+M 1.png using Guid(e94b2926d6ad42e4f8c16c55fc36bcfb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '35588c681d929b1a7c23c8b47628d112') in 0.0213027 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 247.415969 seconds.
+  path: Assets/Art/Textures/mobile_ingredienti/Mobile Ingredienti S+M.png
+  artifactKey: Guid(e8978162b18d6394a908edfc43ba69cc) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Textures/mobile_ingredienti/Mobile Ingredienti S+M.png using Guid(e8978162b18d6394a908edfc43ba69cc) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3dd06f4f501c437a77f0fa6228a2563c') in 0.0553766 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.718095 seconds.
+  path: Assets/Art/Textures/mobile_ingredienti/Mobile Ingrdienti S+M.png
+  artifactKey: Guid(9379c577e38fd5f4b822dc996f99df1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Textures/mobile_ingredienti/Mobile Ingrdienti S+M.png using Guid(9379c577e38fd5f4b822dc996f99df1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '048895ab38d931405571303fd07ad5bf') in 0.0190343 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 63.684596 seconds.
+  path: Assets/Art/Textures/mobile_ingredienti/Mobile Ingredienti S+M.png
+  artifactKey: Guid(e8978162b18d6394a908edfc43ba69cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Textures/mobile_ingredienti/Mobile Ingredienti S+M.png using Guid(e8978162b18d6394a908edfc43ba69cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f6008faf23fe8edecb0f2fa83d4df11d') in 0.0264454 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+- Loaded All Assemblies, in  1.337 seconds
+Refreshing native plugins compatible for Editor in 1.99 ms, found 3 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.876 seconds
+Domain Reload Profiling: 2213ms
+	BeginReloadAssembly (646ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (100ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (1ms)
+		CreateAndSetChildDomain (151ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (615ms)
+		LoadAssemblies (516ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (223ms)
+			TypeCache.Refresh (17ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (187ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (877ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (668ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (19ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (150ms)
+			ProcessInitializeOnLoadAttributes (396ms)
+			ProcessInitializeOnLoadMethodAttributes (92ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (17ms)
+Refreshing native plugins compatible for Editor in 2.01 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6496 unused Assets / (4.3 MB). Loaded Objects now: 7339.
+Memory consumption went from 156.2 MB to 151.9 MB.
+Total: 17.268300 ms (FindLiveObjects: 1.576100 ms CreateObjectMapping: 1.372700 ms MarkObjects: 9.871300 ms  DeleteObjects: 4.446200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 491.446348 seconds.
+  path: Assets/Prefabs
+  artifactKey: Guid(caf47f38524384941a2856ef1e36e11d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs using Guid(caf47f38524384941a2856ef1e36e11d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1b12d78670cf0a983f087ec78b53c628') in 0.0353285 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.451639 seconds.
+  path: Assets/Prefabs/Environment
+  artifactKey: Guid(45138c5a8d3027644b8d68e02e0afcff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Environment using Guid(45138c5a8d3027644b8d68e02e0afcff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9de3f36032aa901a35a03559e625dd1d') in 0.00075 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.919897 seconds.
+  path: Assets/Prefabs/Environment
+  artifactKey: Guid(45138c5a8d3027644b8d68e02e0afcff) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Prefabs/Environment using Guid(45138c5a8d3027644b8d68e02e0afcff) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ec32da41c345f7765aea564028f3d866') in 0.1276501 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.421237 seconds.
+  path: Assets/Prefabs/Environment/angolo_pozioni.prefab
+  artifactKey: Guid(0025fa81d839ad641b2ba57635c36049) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Environment/angolo_pozioni.prefab using Guid(0025fa81d839ad641b2ba57635c36049) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3ab27ff4f3aa4970f1cee033a9029c9c') in 0.4060426 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 32
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.505545 seconds.
+  path: Assets/Prefabs/Environment/angolo_pozioni.prefab
+  artifactKey: Guid(0025fa81d839ad641b2ba57635c36049) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Prefabs/Environment/angolo_pozioni.prefab using Guid(0025fa81d839ad641b2ba57635c36049) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '21707f231b43906056afe7be2f74bf6a') in 0.035422 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.224954 seconds.
+  path: Assets/Prefabs/Environment/pavimento_sotto.prefab
+  artifactKey: Guid(6b9a7f960b03e4e4498a0c7fa511a04e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Environment/pavimento_sotto.prefab using Guid(6b9a7f960b03e4e4498a0c7fa511a04e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4197d20d53cd2aa8a894b9188c9d5ef1') in 2.1445444 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 49.831315 seconds.
+  path: Assets/Art/Materials/Mobile Ingrdienti.mat
+  artifactKey: Guid(49ef86ecb4abad3479402315628e5664) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Art/Materials/Mobile Ingrdienti.mat using Guid(49ef86ecb4abad3479402315628e5664) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd6cb9742bd71333af6a7987feb5a0283') in 0.0342974 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Scenes/ArtTest.unity
+  artifactKey: Guid(ba765c3c51ee3f549a61551577e9d1f2) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Scenes/ArtTest.unity using Guid(ba765c3c51ee3f549a61551577e9d1f2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '066274c3f495cbf7dca11483b188aac3') in 0.0047174 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
