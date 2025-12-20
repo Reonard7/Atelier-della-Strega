@@ -18,3 +18,7 @@ desideriamo e da quel momento quell'oggetto sarà riconosciuto come Ingredient.
 L'obiettivo adesos è popolare la scena di tanti ingredienti, e vedere se il testo a schermo funzioni correttamente; poi, c'è da creare un
 IngredientManager che all'avvio tenga in storage tutti gli ingredienti in scena, così possiamo fare cose utili tipo far sparire l'ingrediente
 se messo nell'inventario o farlo ritornare al suo posto.
+
+20/12 - Leonardo
+Hotbar yeaaaaaah!!!! Vedere lo script InventoryManager per come funziona. Ho anche create gli eventi legati alle interazioni dentro
+InteractionEvents (per ora ci stanno solo il pickup e il discard degli ingredienti).

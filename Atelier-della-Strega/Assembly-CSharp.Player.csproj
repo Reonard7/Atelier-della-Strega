@@ -61,12 +61,21 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.2.9f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\IngredientInteractable.cs" />
-    <Compile Include="Assets\Scripts\Interactable.cs" />
+    <Compile Include="Assets\Scripts\Interaction\FPSInteractionManager.cs" />
+    <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
+    <Compile Include="Assets\Scripts\Interaction\Interactable.cs" />
+    <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
+    <Compile Include="Assets\Scripts\Interaction\IngredientInteractable.cs" />
     <Compile Include="Assets\GameData\Scripts\Items\Ingredient.cs" />
-    <Compile Include="Assets\Scripts\FirstPersonCharacterController.cs" />
-    <Compile Include="Assets\Scripts\FPSInteractionManager.cs" />
+    <Compile Include="Assets\Scripts\Events\InteractionEvents.cs" />
+    <Compile Include="Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
     <Compile Include="Assets\GameData\Scripts\Items\Potion.cs" />
+    <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
+    <Compile Include="Assets\Scripts\PlayerController\BasicRigidBodyPush.cs" />
+    <Compile Include="Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerController\FirstPersonController.cs" />
+    <Compile Include="Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -82,6 +91,7 @@
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\StarterAssets\license.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
@@ -912,6 +922,10 @@
     <ProjectReference Include="Unity.AI.Navigation.Player.csproj">
       <Project>{69CFD7AF-CF82-59E6-2F46-1ECD6B121618}</Project>
       <Name>Unity.AI.Navigation.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Cinemachine.Player.csproj">
+      <Project>{2392DA5D-8CA7-611A-1F9B-35FB0F8465B9}</Project>
+      <Name>Cinemachine.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.Player.csproj">
       <Project>{17126E39-26B4-A9D4-E078-A8B840ED9977}</Project>

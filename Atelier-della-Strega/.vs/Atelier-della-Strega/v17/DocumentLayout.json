@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\assets\\readme_activitylog.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|c:\\users\\leosa\\desktop\\atelier della strega\\atelier-della-strega\\assets\\scripts\\inventory\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|c:\\users\\leosa\\desktop\\atelier della strega\\atelier-della-strega\\assets\\readme_activitylog.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|solutionrelative:assets\\readme_activitylog.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|c:\\users\\leosa\\desktop\\atelier della strega\\atelier-della-strega\\assets\\scripts\\ingredientinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ingredientinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|c:\\users\\leosa\\desktop\\atelier della strega\\atelier-della-strega\\assets\\scripts\\interaction\\ingredientinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interaction\\ingredientinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|c:\\users\\leosa\\desktop\\atelier della strega\\atelier-della-strega\\assets\\scripts\\fpsinteractionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fpsinteractionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|c:\\users\\leosa\\desktop\\atelier della strega\\atelier-della-strega\\assets\\scripts\\interactable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|c:\\users\\leosa\\desktop\\atelier della strega\\atelier-della-strega\\assets\\scripts\\events\\interactionevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6409422-E8B8-64E4-A241-99B43E85A197}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\events\\interactionevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FPSInteractionManager.cs",
-              "DocumentMoniker": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\Scripts\\FPSInteractionManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\FPSInteractionManager.cs",
-              "ToolTip": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\Scripts\\FPSInteractionManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\FPSInteractionManager.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAgwDoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T14:00:37.538Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Interactable.cs",
-              "DocumentMoniker": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\Scripts\\Interactable.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactable.cs",
-              "ToolTip": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\Scripts\\Interactable.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Interactable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T13:56:28.256Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IngredientInteractable.cs",
-              "DocumentMoniker": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\Scripts\\IngredientInteractable.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\IngredientInteractable.cs",
-              "ToolTip": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\Scripts\\IngredientInteractable.cs",
-              "RelativeToolTip": "Assets\\Scripts\\IngredientInteractable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T13:54:35.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "README_ActivityLog.txt",
               "DocumentMoniker": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\README_ActivityLog.txt",
               "RelativeDocumentMoniker": "Assets\\README_ActivityLog.txt",
               "ToolTip": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\README_ActivityLog.txt",
               "RelativeToolTip": "Assets\\README_ActivityLog.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-12-05T20:42:20.872Z",
+              "WhenOpened": "2025-12-20T19:07:22.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InventoryManager.cs",
+              "DocumentMoniker": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\Scripts\\Inventory\\InventoryManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\InventoryManager.cs",
+              "ToolTip": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\Scripts\\Inventory\\InventoryManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Inventory\\InventoryManager.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAowEkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T17:57:07.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IngredientInteractable.cs",
+              "DocumentMoniker": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\Scripts\\Interaction\\IngredientInteractable.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interaction\\IngredientInteractable.cs",
+              "ToolTip": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\Scripts\\Interaction\\IngredientInteractable.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interaction\\IngredientInteractable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T18:19:09.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InteractionEvents.cs",
+              "DocumentMoniker": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\Scripts\\Events\\InteractionEvents.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Events\\InteractionEvents.cs",
+              "ToolTip": "C:\\Users\\leosa\\Desktop\\Atelier della Strega\\Atelier-della-Strega\\Assets\\Scripts\\Events\\InteractionEvents.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Events\\InteractionEvents.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T18:07:44.312Z",
               "EditorCaption": ""
             }
           ]

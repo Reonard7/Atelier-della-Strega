@@ -17,7 +17,7 @@ MonoBehaviour:
   description: Pianta sottomarina che cresce solo nelle zone cariche di magia selvaggia.
     Le popolazioni locali giurano di aver visto alcune piante muoversi da sole e
     avvinghiare i natanti locali.
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: b74c31d447d2f5d41a61081bdf5e7126, type: 3}
   prefab: {fileID: 0}
   craftablePotions:
   - {fileID: 11400000, guid: e5091b74c15db2d409df9ca98eb1d011, type: 2}

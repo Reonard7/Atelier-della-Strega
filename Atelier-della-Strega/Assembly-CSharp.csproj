@@ -61,12 +61,21 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.2.9f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\IngredientInteractable.cs" />
-    <Compile Include="Assets\Scripts\Interactable.cs" />
+    <Compile Include="Assets\Scripts\Interaction\FPSInteractionManager.cs" />
+    <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
+    <Compile Include="Assets\Scripts\Interaction\Interactable.cs" />
+    <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
+    <Compile Include="Assets\Scripts\Interaction\IngredientInteractable.cs" />
     <Compile Include="Assets\GameData\Scripts\Items\Ingredient.cs" />
-    <Compile Include="Assets\Scripts\FirstPersonCharacterController.cs" />
-    <Compile Include="Assets\Scripts\FPSInteractionManager.cs" />
+    <Compile Include="Assets\Scripts\Events\InteractionEvents.cs" />
+    <Compile Include="Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
     <Compile Include="Assets\GameData\Scripts\Items\Potion.cs" />
+    <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
+    <Compile Include="Assets\Scripts\PlayerController\BasicRigidBodyPush.cs" />
+    <Compile Include="Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerController\FirstPersonController.cs" />
+    <Compile Include="Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -82,6 +91,7 @@
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\StarterAssets\license.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
@@ -1117,9 +1127,21 @@
       <Project>{1542C402-D442-D785-B19C-958A0C5C1099}</Project>
       <Name>Unity.AI.Navigation</Name>
     </ProjectReference>
+    <ProjectReference Include="Cinemachine.csproj">
+      <Project>{E0808659-AA89-1F29-3C6B-64405A761D56}</Project>
+      <Name>Cinemachine</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
       <Project>{56FCBAB0-6DBA-D3C6-4F3E-EDFDED4D7EFB}</Project>
       <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.PackageValidationSuite.Editor.Extension.csproj">
+      <Project>{09E1BE4D-81D2-E472-E070-55063ADFACC0}</Project>
+      <Name>Unity.PackageValidationSuite.Editor.Extension</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.PackageValidationSuite.Editor.csproj">
+      <Project>{8E53C611-A196-6825-4B6D-60B3A916806F}</Project>
+      <Name>Unity.PackageValidationSuite.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
       <Project>{A0536BE4-9E31-C51A-4805-0BA94A5B56E3}</Project>
@@ -1276,6 +1298,10 @@
     <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
       <Project>{928B128C-60D7-70B1-D435-68D3BE260931}</Project>
       <Name>Unity.RenderPipelines.Universal.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
+      <Project>{B259CA55-7724-B80B-7A5C-97C3CBD4D6A9}</Project>
+      <Name>com.unity.cinemachine.editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Rendering.LightTransport.Runtime.csproj">
       <Project>{5462A20E-32CD-811E-0C3F-BEE6BDCDFE06}</Project>
