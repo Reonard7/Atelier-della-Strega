@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e3044405e1f78f46b694de89da317da, type: 3}
+  m_Name: Zampa di Coniglio
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  id: rabbit_foot
+  displayName: Zampa di Coniglio
+  description: 'La zampa di un coniglio proveniente da una delle tante foreste della
+    Selva Fatata.
+
+    Questi conigli sembrano poter ricrescere le proprie zampe,
+    qualora ne perdessero una durante uno scontro territoriale.'
+  icon: {fileID: 0}
+  prefab: {fileID: 0}
+  craftablePotions:
+  - {fileID: 11400000, guid: c500564848ae1984c8f8d4bd79836da5, type: 2}
+  - {fileID: 11400000, guid: 1c324d533b7fd9b4c876d104db13da8e, type: 2}
+  - {fileID: 11400000, guid: d72e120f30d1f0b49b6f4a6570d30eba, type: 2}

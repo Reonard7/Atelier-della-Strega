@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e3044405e1f78f46b694de89da317da, type: 3}
+  m_Name: Ferro Fuso
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  id: molten_iron
+  displayName: Ferro Fuso
+  description: "Questo campione di ferro, ottenuto dalle profondit\xE0 delle miniere
+    naniche, ha la peculiarit\xE0 di non solidificarsi neanche a temperatura ambiente.\nStudiosi
+    di regni ormai scomparsi chiamavano questo metallo \"mercurio\"."
+  icon: {fileID: 0}
+  prefab: {fileID: 0}
+  craftablePotions:
+  - {fileID: 11400000, guid: f5423c6e7ee877e4c9c9c25cccc3ce0a, type: 2}
+  - {fileID: 11400000, guid: 4a316acbf0e5bbc47986fa84a4db10ee, type: 2}

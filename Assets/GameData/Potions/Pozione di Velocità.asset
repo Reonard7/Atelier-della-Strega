@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b71de09a1210147a9ad078539fe55f, type: 3}
+  m_Name: "Pozione di Velocit\xE0"
+  m_EditorClassIdentifier: Assembly-CSharp::Potion
+  id: speed_potion
+  displayName: "Pozione di Velocit\xE0"
+  description: "Il fluido giallo della pozione \xE8 striato di nero e vortica costantemente."
+  icon: {fileID: 0}
+  prefab: {fileID: 0}
+  potionRecipe:
+  - {fileID: 11400000, guid: d81c6c26b07443e48940c73610055783, type: 2}
+  - {fileID: 11400000, guid: 42294e25fff135742a574b5f501e3f77, type: 2}
+  - {fileID: 11400000, guid: f15f309f288a4f1448f9d08da4e5d295, type: 2}

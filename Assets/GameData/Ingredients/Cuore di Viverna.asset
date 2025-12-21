@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e3044405e1f78f46b694de89da317da, type: 3}
+  m_Name: Cuore di Viverna
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  id: wyvern_heart
+  displayName: Cuore di Viverna
+  description: "In realt\xE0, questo \"cuore\" non ha la funzione di pompare sangue,
+    ma si tratta di un organo che genera fiamme. Cionondimeno, colpire una viverna
+    a questo organo \xE8 come colpirla al cuore stesso."
+  icon: {fileID: 0}
+  prefab: {fileID: 0}
+  craftablePotions:
+  - {fileID: 11400000, guid: f5423c6e7ee877e4c9c9c25cccc3ce0a, type: 2}
+  - {fileID: 11400000, guid: 51ede6f332341f848bc69ebf16cc0dd2, type: 2}
+  - {fileID: 11400000, guid: 2e1e00168244f2f49a6e2482774907c5, type: 2}
+  - {fileID: 11400000, guid: 2ec3efae521e3a049a90b843608b6ab4, type: 2}
