@@ -1,11 +1,15 @@
 using StarterAssets;
 using UnityEngine;
+using Cinemachine;
+using System.Collections;
 
 namespace Interaction
 {
     public class CauldronInteractable : MonoBehaviour, IInteractable
     {
         [SerializeField] private GameObject _cauldronCanvas;
+        [SerializeField] private CinemachineVirtualCamera _mainCam;
+        [SerializeField] private CinemachineVirtualCamera _cauldronCam;
         private FirstPersonController _playerFPS;
         private bool _cursorLocked;
 
@@ -17,19 +21,59 @@ namespace Interaction
             _playerFPS = GameObject.FindWithTag("Player").GetComponent<FirstPersonController>();
             // Hide Cauldron Canvas
             _cauldronCanvas.SetActive(false);
+
+            _mainCam.Priority = 20;
+            _cauldronCam.Priority = 10;
         }
 
         private void Update()
         {
-            if (_cursorLocked && _cauldronCanvas.activeSelf && Input.GetKeyDown(KeyCode.H))
-                CloseCauldronCanvas();
+            if (_cauldronCanvas.activeSelf && Input.GetKeyDown(KeyCode.H))
+                StartCoroutine(CloseCauldronRoutine());
         }
         
         public void Interact(GameObject caller)
         {
-            OpenCauldronCanvas();
+            StartCoroutine(OpenCauldronRoutine());
         }
-    
+
+        private IEnumerator OpenCauldronRoutine()
+        {
+            // Switch camera priority
+            _cauldronCam.Priority = 20;
+            _mainCam.Priority = 10;
+
+            // Wait one frame for Cinemachine to blend
+            yield return new WaitForSeconds(1f);
+
+            // Disable player movement
+            _playerFPS.enabled = false;
+
+            // Show UI
+            _cauldronCanvas.SetActive(true);
+
+            // Unlock cursor
+            UnlockCursor();
+        }
+
+        private IEnumerator CloseCauldronRoutine()
+        {
+            // Switch camera back
+            _mainCam.Priority = 20;
+            _cauldronCam.Priority = 10;
+
+            // Wait one frame for blend
+            yield return null;
+
+            // Hide UI
+            _cauldronCanvas.SetActive(false);
+
+            // Enable player movement
+            _playerFPS.enabled = true;
+
+            // Lock cursor
+            LockCursor();
+        }
         private void UnlockCursor()
         {
             Cursor.lockState = CursorLockMode.None;
