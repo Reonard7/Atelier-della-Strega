@@ -2,12 +2,15 @@ using Events;
 using GameData.Scripts.Items;
 using UnityEngine;
 
-public class IngredientInteractable : Interactable
+namespace Interaction
 {
-    public Ingredient ingredient;
-
-    public override void Interact(GameObject caller)
+    public class IngredientInteractable : MonoBehaviour, IInteractable
     {
-        InteractionEvents.OnIngredientPickup?.Invoke(ingredient);
+        public Ingredient ingredient;
+
+        public void Interact(GameObject caller)
+        {
+            InteractionEvents.OnIngredientPickup?.Invoke(ingredient);
+        }
     }
 }
