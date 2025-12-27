@@ -1,5 +1,6 @@
 using System;
 using GameData.Scripts.Items;
+using Interaction;
 using UnityEngine;
 
 namespace Events

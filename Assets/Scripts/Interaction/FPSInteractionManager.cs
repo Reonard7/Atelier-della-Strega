@@ -52,11 +52,24 @@ namespace Interaction
             {
                 //Check if is interactable
                 _pointingInteractable = hit.collider?.GetComponent<IInteractable>();
-                if (_pointingInteractable is IngredientInteractable interactableIngredient)
-                {                        
-                    _name = interactableIngredient.ingredient.displayName; 
-                    if (Input.GetMouseButtonDown(0))
-                        _pointingInteractable.Interact(gameObject);
+
+                switch (_pointingInteractable)
+                {
+                    // Interactable is an Ingredient
+                    case IngredientInteractable interactableIngredient:
+                    {
+                        _name = interactableIngredient.ingredient.displayName; 
+                        if (Input.GetMouseButtonDown(0))
+                            interactableIngredient.Interact(gameObject);
+                        break;
+                    }
+                    // Interactable is the Cauldron
+                    case CauldronInteractable cauldronInteractable:
+                    {
+                        if (Input.GetMouseButtonDown(0))
+                            cauldronInteractable.Interact(gameObject);
+                        break;
+                    }
                 }
             }
             else

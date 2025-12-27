@@ -1,17 +1,33 @@
+using StarterAssets;
 using UnityEngine;
 
 namespace Interaction
 {
-    public class CauldronInteractable : Interactable
+    public class CauldronInteractable : MonoBehaviour, IInteractable
     {
         [SerializeField] private GameObject _cauldronCanvas;
         private bool _cursorLocked;
+        private FirstPersonController _playerFPS;
 
         private void Start()
         {
             // Hide cursor
-            Cursor.lockState = CursorLockMode.Locked;
-            _cursorLocked = true;
+            LockCursor();
+            // Initialize the FPSController
+            _playerFPS = GameObject.FindWithTag("Player").GetComponent<FirstPersonController>();
+            // Hide Cauldron Canvas
+            _cauldronCanvas.SetActive(false);
+        }
+
+        private void Update()
+        {
+            if (_cauldronCanvas.activeSelf && Input.GetKeyDown(KeyCode.H))
+                CloseCauldronCanvas();
+        }
+        
+        public void Interact(GameObject caller)
+        {
+            OpenCauldronCanvas();
         }
     
         private void UnlockCursor()
@@ -25,11 +41,19 @@ namespace Interaction
             Cursor.lockState = CursorLockMode.Locked;
             _cursorLocked = true;
         }
-    
-        public override void Interact(GameObject caller)
+        
+        private void OpenCauldronCanvas()
         {
-            UnlockCursor();
+            _playerFPS.enabled = false;
             _cauldronCanvas.SetActive(true);
+            UnlockCursor();
+        }
+
+        private void CloseCauldronCanvas()
+        {
+            _playerFPS.enabled = true;
+            _cauldronCanvas.SetActive(false);
+            LockCursor();
         }
     }
 }
