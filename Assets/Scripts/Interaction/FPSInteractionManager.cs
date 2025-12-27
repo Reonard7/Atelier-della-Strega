@@ -15,7 +15,7 @@ namespace Interaction
         [SerializeField] private TextMeshProUGUI _text;
         public string _name;
 
-        private Interactable _pointingInteractable;
+        private IInteractable _pointingInteractable;
 
         private CharacterController _fpsController;
         private Vector3 _rayOrigin;
@@ -45,16 +45,16 @@ namespace Interaction
                 InteractionEvents.OnIngredientDiscard?.Invoke();
             }
 
-            Ray ray = new Ray(_rayOrigin, _fpsCameraT.forward);
+            var ray = new Ray(_rayOrigin, _fpsCameraT.forward);
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit, _interactionDistance))
             {
                 //Check if is interactable
-                _pointingInteractable = hit.transform.GetComponent<Interactable>();
-                if (_pointingInteractable)
-                {
-                    _name = hit.transform.GetComponent<IngredientInteractable>().ingredient.displayName;
+                _pointingInteractable = hit.collider?.GetComponent<IInteractable>();
+                if (_pointingInteractable is IngredientInteractable interactableIngredient)
+                {                        
+                    _name = interactableIngredient.ingredient.displayName; 
                     if (Input.GetMouseButtonDown(0))
                         _pointingInteractable.Interact(gameObject);
                 }
@@ -67,7 +67,7 @@ namespace Interaction
 
         private void UpdateUITarget()
         {
-            if (_pointingInteractable)
+            if (_pointingInteractable != null)
             {
                 _target.color = Color.green;
                 _text.text = _name;

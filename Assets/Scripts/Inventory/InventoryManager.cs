@@ -45,6 +45,7 @@ namespace Inventory
 
         private void Update()
         {
+            if (_activeSlotIndex < 0) _activeSlotIndex = 0;
             // Detect mouse wheel
             float scroll = Input.GetAxis("Mouse ScrollWheel");
             if (scroll > 0f) // wheel up
