@@ -66,6 +66,7 @@ namespace Interaction
                     // Interactable is the Cauldron
                     case CauldronInteractable cauldronInteractable:
                     {
+                        _name = "Calderone";
                         if (Input.GetMouseButtonDown(0))
                             cauldronInteractable.Interact(gameObject);
                         break;

@@ -6,8 +6,8 @@ namespace Interaction
     public class CauldronInteractable : MonoBehaviour, IInteractable
     {
         [SerializeField] private GameObject _cauldronCanvas;
-        private bool _cursorLocked;
         private FirstPersonController _playerFPS;
+        private bool _cursorLocked;
 
         private void Start()
         {
@@ -21,7 +21,7 @@ namespace Interaction
 
         private void Update()
         {
-            if (_cauldronCanvas.activeSelf && Input.GetKeyDown(KeyCode.H))
+            if (_cursorLocked && _cauldronCanvas.activeSelf && Input.GetKeyDown(KeyCode.H))
                 CloseCauldronCanvas();
         }
         
