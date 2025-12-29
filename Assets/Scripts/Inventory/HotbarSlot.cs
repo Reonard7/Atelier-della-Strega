@@ -2,6 +2,11 @@ using GameData.Scripts.Items;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * Rappresenta lo slot nella hotbar.
+ * Expected behaviour:
+ * - Settare correttamente lo sprite corrispondente trovato dentro lo SO Ingredient
+ */
 public class HotbarSlot : MonoBehaviour
 {
     public int index;               // slot index
