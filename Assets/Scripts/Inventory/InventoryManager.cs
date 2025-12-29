@@ -11,7 +11,7 @@ namespace Inventory
     {
         [FormerlySerializedAs("_hotbar")] [SerializeField] private GameObject hotbar;
         private List<Ingredient> _inventory;
-        private Image[] _hotbarSlots;
+        private HotbarSlot[] _hotbarSlots;
         private int _activeSlotIndex;
 
         private void OnEnable()
@@ -30,12 +30,12 @@ namespace Inventory
         {
             // initialize the inventory list and hotbar slots array
             _inventory = new List<Ingredient>();
-            _hotbarSlots = new Image[6];
+            _hotbarSlots = new HotbarSlot[6];
 
-            // we create the _hotbarSlots array
             for (int i = 0; i < 6; i++)
             {
-                _hotbarSlots[i] = hotbar.transform.GetChild(i).GetComponent<Image>();
+                _hotbarSlots[i] = hotbar.transform.GetChild(i).GetComponent<HotbarSlot>();
+                _hotbarSlots[i].index = i;
             }
 
             // Initial update
@@ -81,22 +81,21 @@ namespace Inventory
 
         private void UpdateHotbar()
         {
-            // Clear hotbar first
-            foreach (var t in _hotbarSlots)
+            for (int i = 0; i < _hotbarSlots.Length; i++)
             {
-                t.sprite = null;
-                t.enabled = false;
-            }
-
-            // Fill hotbar with current inventory
-            for (var i = 0; i < _inventory.Count && i < _hotbarSlots.Length; i++)
-            {
-                _hotbarSlots[i].sprite = _inventory[i].icon;
-                _hotbarSlots[i].enabled = true;
+                if (i < _inventory.Count)
+                {
+                    _hotbarSlots[i].SetIngredient(_inventory[i]);
+                }
+                else
+                {
+                    _hotbarSlots[i].Clear();
+                }
             }
 
             UpdateSlotColors();
         }
+
 
         private void UpdateSlotColors()
         {
@@ -105,16 +104,16 @@ namespace Inventory
                 if (i == _activeSlotIndex)
                 {
                     // Active slot → red
-                    _hotbarSlots[i].color = Color.red;
+                    _hotbarSlots[i].GetComponent<Image>().color = Color.red;
                 }
                 else
                 {
                     // Inactive slot → white (or default alpha)
-                    Color c = _hotbarSlots[i].color;
+                    Color c = _hotbarSlots[i].GetComponent<Image>().color;
                     c.r = 1f;
                     c.g = 1f;
                     c.b = 1f;
-                    _hotbarSlots[i].color = c;
+                    _hotbarSlots[i].GetComponent<Image>().color = c;
                 }
             }
         }

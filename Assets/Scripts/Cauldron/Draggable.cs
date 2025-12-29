@@ -1,3 +1,5 @@
+using Events;
+using GameData.Scripts.Items;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -7,14 +9,18 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 {
     private Canvas canvas;
     private CanvasGroup canvasGroup;
+    private HotbarSlot hotbarSlot;
 
     private Transform homeParent;
     private Vector3 homeLocalPosition;
+
+    private IngredientSlot ingredientSlot;
 
     private void Awake()
     {
         canvas = GetComponentInParent<Canvas>();
         canvasGroup = gameObject.AddComponent<CanvasGroup>();
+        hotbarSlot = GetComponentInParent<HotbarSlot>();
 
         homeParent = transform.parent;
         homeLocalPosition = transform.localPosition;
@@ -22,6 +28,19 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        IngredientSlot ingredientSlot = GetComponentInParent<IngredientSlot>();
+
+        if (ingredientSlot != null)
+        {
+            Ingredient ingredient = ingredientSlot.GetIngredient();
+            if (ingredient != null)
+            {
+                AlchemyEvents.OnIngredientRemovedFromSlot?.Invoke(ingredient);
+                Debug.Log("OnIngredientRemovedFromSlot invoked");
+                ingredientSlot.Clear();
+            }
+        }
+
         transform.SetParent(canvas.transform);
         canvasGroup.blocksRaycasts = false;
     }
@@ -41,5 +60,14 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             transform.SetParent(homeParent);
             transform.localPosition = homeLocalPosition;
         }
+    }
+
+    public Ingredient GetIngredient()
+    {
+        IngredientSlot ingredientSlot = GetComponentInParent<IngredientSlot>();
+        if (ingredientSlot != null)
+            return ingredientSlot.GetIngredient();
+
+        return hotbarSlot.ingredient;
     }
 }
