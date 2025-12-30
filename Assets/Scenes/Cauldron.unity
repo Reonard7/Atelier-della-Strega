@@ -282,6 +282,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d72e120f30d1f0b49b6f4a6570d30eba, type: 2}
   - {fileID: 11400000, guid: 2ec3efae521e3a049a90b843608b6ab4, type: 2}
   ingredients: []
+  _cauldronCanvas: {fileID: 626213772}
+  _mainCam: {fileID: 287856145}
+  _cauldronCam: {fileID: 290047846}
 --- !u!4 &293799328
 Transform:
   m_ObjectHideFlags: 0
@@ -1184,9 +1187,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5382a4df5e14d5e96e377d5f1cf27b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interaction.CaudronInteractable
-  _cauldronCanvas: {fileID: 626213772}
-  _mainCam: {fileID: 287856145}
-  _cauldronCam: {fileID: 290047846}
 --- !u!1 &1754452501
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,21 +13,26 @@ namespace Inventory
         private List<Ingredient> _inventory;
         private HotbarSlot[] _hotbarSlots;
         private int _activeSlotIndex;
+        private bool _inCrafting;
 
         private void OnEnable()
         {
+            InteractionEvents.OnCauldronInteracted += OnCauldronInteracted;
             InteractionEvents.OnIngredientPickup += OnIngredientPickup;
             InteractionEvents.OnIngredientDiscard += OnIngredientDiscard;
         }
 
         private void OnDisable()
         {
+            InteractionEvents.OnCauldronInteracted -= OnCauldronInteracted;
             InteractionEvents.OnIngredientPickup -= OnIngredientPickup;
             InteractionEvents.OnIngredientDiscard -= OnIngredientDiscard;
         }
 
         private void Start()
         {
+            _inCrafting = false;
+
             // initialize the inventory list and hotbar slots array
             _inventory = new List<Ingredient>();
             _hotbarSlots = new HotbarSlot[6];
@@ -45,16 +50,19 @@ namespace Inventory
 
         private void Update()
         {
-            if (_activeSlotIndex < 0) _activeSlotIndex = 0;
-            // Detect mouse wheel
-            float scroll = Input.GetAxis("Mouse ScrollWheel");
-            if (scroll > 0f) // wheel up
+            if (!_inCrafting)
             {
-                SelectNextSlot();
-            }
-            else if (scroll < 0f) // wheel down
-            {
-                SelectPreviousSlot();
+                if (_activeSlotIndex < 0) _activeSlotIndex = 0;
+                // Detect mouse wheel
+                float scroll = Input.GetAxis("Mouse ScrollWheel");
+                if (scroll > 0f) // wheel up
+                {
+                    SelectNextSlot();
+                }
+                else if (scroll < 0f) // wheel down
+                {
+                    SelectPreviousSlot();
+                }
             }
         }
 
@@ -73,10 +81,18 @@ namespace Inventory
 
         private void OnIngredientDiscard()
         {
-            if (_inventory.Count <= 0 || _activeSlotIndex >= _inventory.Count) return;
-            _inventory.RemoveAt(_activeSlotIndex);
-            if (_activeSlotIndex == _inventory.Count) SelectPreviousSlot();
-            UpdateHotbar();
+            if (!_inCrafting)
+            {
+                if (_inventory.Count <= 0 || _activeSlotIndex >= _inventory.Count) return;
+                _inventory.RemoveAt(_activeSlotIndex);
+                if (_activeSlotIndex == _inventory.Count) SelectPreviousSlot();
+                UpdateHotbar();
+            }
+        }
+
+        private void OnCauldronInteracted()
+        {
+            _inCrafting = true;
         }
 
         private void UpdateHotbar()
