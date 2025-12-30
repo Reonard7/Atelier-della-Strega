@@ -24,6 +24,7 @@ public class AlchemyManager : MonoBehaviour
     [SerializeField] private List<Potion> craftablePotions;
     [SerializeField] private List<Ingredient> ingredients;
     private Potion currentResult;
+    private int diceResult;
 
     [Header("Canvas and Cinemachines")]
     [SerializeField] private GameObject _cauldronCanvas;
@@ -38,6 +39,7 @@ public class AlchemyManager : MonoBehaviour
         InteractionEvents.OnCauldronInteracted += OnCauldronInteracted;
         AlchemyEvents.OnIngredientDropped += OnIngredientDropped;
         AlchemyEvents.OnIngredientRemovedFromSlot += OnIngredientRemovedFromSlot;
+        AlchemyEvents.OnDiceCast += OnDiceCast;
     }
 
     private void OnDisable()
@@ -45,6 +47,7 @@ public class AlchemyManager : MonoBehaviour
         InteractionEvents.OnCauldronInteracted -= OnCauldronInteracted;
         AlchemyEvents.OnIngredientDropped -= OnIngredientDropped;
         AlchemyEvents.OnIngredientRemovedFromSlot -= OnIngredientRemovedFromSlot;
+        AlchemyEvents.OnDiceCast -= OnDiceCast;
     }
 
     private void Start()
@@ -178,15 +181,15 @@ public class AlchemyManager : MonoBehaviour
         return false;
     }
 
-    private Potion Brew()
+    public void Brew()
     {
         // chiama l'evento per far partire il dado, che sta sul suo script dedicato (Dice.cs)
         AlchemyEvents.OnBrewingStarted?.Invoke();
+        //hghw
 
         /* qua dobbiamo mettere degli switch case per le diverse pozioni da craftare.
          * 
          */
-        return null;
     }
 
     // EVENTS
@@ -211,5 +214,11 @@ public class AlchemyManager : MonoBehaviour
     private void OnCauldronInteracted()
     {
         StartCoroutine(OpenCauldronRoutine());
+    }
+
+    private void OnDiceCast(int number)
+    {
+        diceResult = number;
+        Debug.Log(diceResult);
     }
 }
