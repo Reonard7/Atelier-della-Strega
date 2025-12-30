@@ -11,7 +11,7 @@ public class AlchemyManager : MonoBehaviour
     /*
      * Cosa deve fare il manager:
      * 
-     * - Tenere una reference ai tre ingredienti negli slot
+     * - Tenere una reference ai tre ingredienti negli slot         FATTO!
      * - Un metodo chiamabile per trovare la pozione corretta in relazione ai tre ingredienti
      * - Metodo che dia in output la pozione craftata (da passare al grimorio -> evento!)
      * - Tutto relativo al dado (far startare l'animazione e restituire il numero generato)
@@ -23,6 +23,7 @@ public class AlchemyManager : MonoBehaviour
     [Header("Craftable")]
     [SerializeField] private List<Potion> craftablePotions;
     [SerializeField] private List<Ingredient> ingredients;
+    private Potion currentResult;
 
     [Header("Canvas and Cinemachines")]
     [SerializeField] private GameObject _cauldronCanvas;
@@ -131,16 +132,66 @@ public class AlchemyManager : MonoBehaviour
         LockCursor();
     }
 
+    private Potion FindCraftablePotion()
+    {
+        if (ingredients.Count != 3)
+            return null;
+
+        // usiamo un approccio sequenziale: prendiamo la lista di pozioni craftabili dal primo ingrediente e troviamo l'intersezione con quelle del secondo
+        Ingredient first = ingredients[0];
+
+        foreach (Potion candidate in first.craftablePotions)
+        {
+            bool canCraft = true;
+
+            for (int i = 1; i < ingredients.Count; i++)
+            {
+                if (!System.Array.Exists(
+                        ingredients[i].craftablePotions,
+                        p => p == candidate))
+                {
+                    canCraft = false;
+                    break;
+                }
+            }
+
+            if (canCraft) return candidate;
+        }
+
+        return null;
+    }
+
+    private bool HasDuplicateIngredients()
+    {
+        for (int i = 0; i < ingredients.Count; i++)
+        {
+            for (int j = i + 1; j < ingredients.Count; j++)
+            {
+                if (ingredients[i] == ingredients[j])
+                    return true;
+            }
+        }
+
+        return false;
+    }
+
     // EVENTS
     private void OnIngredientDropped(Ingredient ingredient)
-        {
-            ingredients.Add(ingredient);
-        }
+    {
+        ingredients.Add(ingredient);
+
+        if (ingredients.Count != 3) return;
+
+        // check se alcuni ingredienti sono doppioni (nessuna ricetta ha ingredienti doppioni)
+        if (HasDuplicateIngredients()) return;
+
+        currentResult = FindCraftablePotion();
+    }
 
     private void OnIngredientRemovedFromSlot(Ingredient ingredient)
     {
-        Debug.Log("OnIngredientRemovedFromSlot received on manager");
         ingredients.Remove(ingredient);
+        currentResult = null;
     }
 
     private void OnCauldronInteracted()
