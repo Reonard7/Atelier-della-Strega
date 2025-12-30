@@ -17,7 +17,7 @@ MonoBehaviour:
   description: "Questa barba viene raccolta durante la prima rasatura di uno gnomo,
     che segna il passaggio all'et\xE0 adulta.\nNessuno gnomo \xE8 stato maltrattato
     per questa donazione."
-  icon: {fileID: 0}
+  icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   prefab: {fileID: 0}
   craftablePotions:
   - {fileID: 11400000, guid: 1c324d533b7fd9b4c876d104db13da8e, type: 2}

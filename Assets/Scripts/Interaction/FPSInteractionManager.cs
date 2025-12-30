@@ -20,17 +20,31 @@ namespace Interaction
         private CharacterController _fpsController;
         private Vector3 _rayOrigin;
 
+        private bool _inCrafting;
 
+        private void OnEnable()
+        {
+            InteractionEvents.OnCauldronInteracted += OnCauldronInteracted;
+            InteractionEvents.OnCauldronExit += OnCauldronExit;
+        }
+
+        private void OnDisable()
+        {
+            InteractionEvents.OnCauldronInteracted -= OnCauldronInteracted;
+            InteractionEvents.OnCauldronExit -= OnCauldronExit;
+        }
         void Start()
         {
             _fpsController = GetComponent<CharacterController>();
+            _inCrafting = false;
         }
 
         void Update()
         {
             _rayOrigin = _fpsCameraT.position + _fpsController.radius * _fpsCameraT.forward;
 
-            CheckInteraction();
+            if (!_inCrafting)
+                CheckInteraction();
 
             UpdateUITarget();
 
@@ -81,6 +95,17 @@ namespace Interaction
 
         private void UpdateUITarget()
         {
+            if (_inCrafting)
+            {
+                _target.enabled = false;
+                _text.enabled = false;
+            }
+            else
+            {
+                _target.enabled = true;
+                _text.enabled = true;
+            }
+
             if (_pointingInteractable != null)
             {
                 _target.color = Color.green;
@@ -96,6 +121,16 @@ namespace Interaction
         private void DebugRaycast()
         {
             Debug.DrawRay(_rayOrigin, _fpsCameraT.forward * _interactionDistance, Color.red);
+        }
+
+        private void OnCauldronInteracted()
+        {
+            _inCrafting = true;
+        }
+
+        private void OnCauldronExit()
+        {
+            _inCrafting = false;
         }
     }
 }

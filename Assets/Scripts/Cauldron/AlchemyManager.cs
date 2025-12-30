@@ -12,7 +12,7 @@ public class AlchemyManager : MonoBehaviour
      * Cosa deve fare il manager:
      * 
      * - Tenere una reference ai tre ingredienti negli slot         FATTO!
-     * - Un metodo chiamabile per trovare la pozione corretta in relazione ai tre ingredienti
+     * - Un metodo chiamabile per trovare la pozione corretta in relazione ai tre ingredienti       FATTO!
      * - Metodo che dia in output la pozione craftata (da passare al grimorio -> evento!)
      * - Tutto relativo al dado (far startare l'animazione e restituire il numero generato)
      * - Metodo che printi la pozione creata a schermo
@@ -63,7 +63,10 @@ public class AlchemyManager : MonoBehaviour
     private void Update()
     {
         if (_cauldronCanvas.activeSelf && Input.GetKeyDown(KeyCode.H))
+        {
+            InteractionEvents.OnCauldronExit?.Invoke();
             StartCoroutine(CloseCauldronRoutine());
+        }
     }
 
     // COROUTINE
@@ -173,6 +176,17 @@ public class AlchemyManager : MonoBehaviour
         }
 
         return false;
+    }
+
+    private Potion Brew()
+    {
+        // chiama l'evento per far partire il dado, che sta sul suo script dedicato (Dice.cs)
+        AlchemyEvents.OnBrewingStarted?.Invoke();
+
+        /* qua dobbiamo mettere degli switch case per le diverse pozioni da craftare.
+         * 
+         */
+        return null;
     }
 
     // EVENTS

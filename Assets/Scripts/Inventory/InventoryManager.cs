@@ -18,6 +18,7 @@ namespace Inventory
         private void OnEnable()
         {
             InteractionEvents.OnCauldronInteracted += OnCauldronInteracted;
+            InteractionEvents.OnCauldronExit += OnCauldronExit;
             InteractionEvents.OnIngredientPickup += OnIngredientPickup;
             InteractionEvents.OnIngredientDiscard += OnIngredientDiscard;
         }
@@ -25,6 +26,7 @@ namespace Inventory
         private void OnDisable()
         {
             InteractionEvents.OnCauldronInteracted -= OnCauldronInteracted;
+            InteractionEvents.OnCauldronExit -= OnCauldronExit;
             InteractionEvents.OnIngredientPickup -= OnIngredientPickup;
             InteractionEvents.OnIngredientDiscard -= OnIngredientDiscard;
         }
@@ -93,6 +95,11 @@ namespace Inventory
         private void OnCauldronInteracted()
         {
             _inCrafting = true;
+        }
+
+        private void OnCauldronExit()
+        {
+            _inCrafting = false;
         }
 
         private void UpdateHotbar()

@@ -9,5 +9,7 @@ namespace Events
     {
         public static Action<Ingredient> OnIngredientDropped;
         public static Action<Ingredient> OnIngredientRemovedFromSlot;
+        public static Action OnBrewingStarted;
+        public static Action<Potion> OnPotionCrafted;
     }
 }
