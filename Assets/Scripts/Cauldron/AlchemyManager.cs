@@ -184,12 +184,49 @@ public class AlchemyManager : MonoBehaviour
     public void Brew()
     {
         // chiama l'evento per far partire il dado, che sta sul suo script dedicato (Dice.cs)
+        if (ingredients.Count != 3) return;
+
+        Potion thrashPotion = craftablePotions.Find(x => x.id == "thrash_potion");
+        Potion mysteriousPotion = craftablePotions.Find(x => x.id == "mysterious_potion");
+        Potion craftedPotion = null;
+        bool isMirable = false;
+
         AlchemyEvents.OnBrewingStarted?.Invoke();
-        //hghw
 
         /* qua dobbiamo mettere degli switch case per le diverse pozioni da craftare.
-         * 
+         * Le casistiche sono:
+         * - currentResult = Potion, diceResult = 1 -> Thrash Potion
+         * - currentResult = Potion, diceResult = 2-19 -> Potion of XXX
+         * - currentResult = Potion, diceResult = 20 -> Mirable Potion of XXX
+         * - currentResult = null, diceResult = 1-15 -> Thrash Potion
+         * - currentResult = null, diceResult = 16-19 -> Mysterious Potion
+         * - currentResult = null, diceResult = 20 -> Mirable Mysterious Potion
          */
+        switch (currentResult, diceResult)
+        {
+            case (not null, 1):
+                (craftedPotion, isMirable) = (thrashPotion, false);
+                break;
+            case (not null, int n) when (n > 1 && n < 20):
+                (craftedPotion, isMirable) = (currentResult, false);
+                break;
+            case (not null, 20):
+                (craftedPotion, isMirable) = (currentResult, true);
+                break;
+            case (null, int n) when (n < 16):
+                (craftedPotion, isMirable) = (thrashPotion, false);
+                break;
+            case (null, int n) when (n > 15 && n < 20):
+                (craftedPotion, isMirable) = (mysteriousPotion, false);
+                break;
+            case (null, 20):
+                (craftedPotion, isMirable) = (mysteriousPotion, true);
+                break;
+        }
+
+        AlchemyEvents.OnPotionCrafted?.Invoke(craftedPotion, isMirable);
+        Debug.Log($"{craftedPotion.id}, {isMirable}");
+
     }
 
     // EVENTS

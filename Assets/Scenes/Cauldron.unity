@@ -281,6 +281,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6a0d01459984db844856246b10d5ecbd, type: 2}
   - {fileID: 11400000, guid: d72e120f30d1f0b49b6f4a6570d30eba, type: 2}
   - {fileID: 11400000, guid: 2ec3efae521e3a049a90b843608b6ab4, type: 2}
+  - {fileID: 11400000, guid: 3b9b45bf04b9d1f44928851bfdcbf9de, type: 2}
+  - {fileID: 11400000, guid: 4f521007c8cca0a4f9edb12e0666790c, type: 2}
   ingredients: []
   _cauldronCanvas: {fileID: 626213772}
   _mainCam: {fileID: 287856145}

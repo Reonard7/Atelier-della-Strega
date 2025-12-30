@@ -18,7 +18,7 @@ public class Dice : MonoBehaviour
 
     private void OnBrewingStarted()
     {
-        int number = Random.Range(0, 21);
+        int number = Random.Range(1, 21);
         _text.text = number.ToString();
 
         AlchemyEvents.OnDiceCast?.Invoke(number);
