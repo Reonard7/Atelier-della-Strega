@@ -25,6 +25,7 @@ public class AlchemyManager : MonoBehaviour
     [SerializeField] private List<Ingredient> ingredients;
     private Potion currentResult;
     private int diceResult;
+    private bool _isBrewing = false;
 
     [Header("Canvas and Cinemachines")]
     [SerializeField] private GameObject _cauldronCanvas;
@@ -32,6 +33,7 @@ public class AlchemyManager : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera _cauldronCam;
     private FirstPersonController _playerFPS;
     private bool _cursorLocked;
+    [SerializeField] private Animator _animator;
 
 
     private void OnEnable()
@@ -40,6 +42,7 @@ public class AlchemyManager : MonoBehaviour
         AlchemyEvents.OnIngredientDropped += OnIngredientDropped;
         AlchemyEvents.OnIngredientRemovedFromSlot += OnIngredientRemovedFromSlot;
         AlchemyEvents.OnDiceCast += OnDiceCast;
+        AlchemyEvents.OnAnimationEnded += OnAnimationEnded;
     }
 
     private void OnDisable()
@@ -48,6 +51,7 @@ public class AlchemyManager : MonoBehaviour
         AlchemyEvents.OnIngredientDropped -= OnIngredientDropped;
         AlchemyEvents.OnIngredientRemovedFromSlot -= OnIngredientRemovedFromSlot;
         AlchemyEvents.OnDiceCast -= OnDiceCast;
+        AlchemyEvents.OnAnimationEnded -= OnAnimationEnded;
     }
 
     private void Start()
@@ -185,13 +189,16 @@ public class AlchemyManager : MonoBehaviour
     {
         // chiama l'evento per far partire il dado, che sta sul suo script dedicato (Dice.cs)
         if (ingredients.Count != 3) return;
+        if (_isBrewing) return;
 
         Potion thrashPotion = craftablePotions.Find(x => x.id == "thrash_potion");
         Potion mysteriousPotion = craftablePotions.Find(x => x.id == "mysterious_potion");
         Potion craftedPotion = null;
         bool isMirable = false;
 
+        _animator.SetTrigger("OnBrewingStarted");
         AlchemyEvents.OnBrewingStarted?.Invoke();
+        _isBrewing = true;
 
         /* qua dobbiamo mettere degli switch case per le diverse pozioni da craftare.
          * Le casistiche sono:
@@ -256,6 +263,10 @@ public class AlchemyManager : MonoBehaviour
     private void OnDiceCast(int number)
     {
         diceResult = number;
-        Debug.Log(diceResult);
+    }
+
+    private void OnAnimationEnded()
+    {
+        _isBrewing = false;
     }
 }

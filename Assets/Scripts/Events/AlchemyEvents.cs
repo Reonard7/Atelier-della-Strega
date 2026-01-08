@@ -11,6 +11,8 @@ namespace Events
         public static Action<Ingredient> OnIngredientRemovedFromSlot;
         public static Action OnBrewingStarted;
         public static Action<int> OnDiceCast;
+        public static Action OnAnimationEnded;
         public static Action<Potion, bool> OnPotionCrafted;
+        
     }
 }
