@@ -15,7 +15,7 @@ MonoBehaviour:
   id: heroism_potion
   displayName: Pozione di Eroismo
   description: Il liquido blu di questa pozione gorgoglia e fuma come se stesse bollendo
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: ceb59dd71ef68d94e8f34c8bf5d7ebdd, type: 3}
   prefab: {fileID: 0}
   potionRecipe:
   - {fileID: 11400000, guid: bfbed05795de30f4c8fdb3c3d30c0a91, type: 2}

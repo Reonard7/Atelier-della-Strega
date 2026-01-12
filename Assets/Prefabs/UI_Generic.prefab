@@ -86,6 +86,8 @@ GameObject:
   - component: {fileID: 7011236856775515231}
   - component: {fileID: 1913148716507510307}
   - component: {fileID: 1725006213044587335}
+  - component: {fileID: 5788047268711077829}
+  - component: {fileID: 7462315776317103448}
   m_Layer: 5
   m_Name: slot_6
   m_TagString: Untagged
@@ -150,6 +152,33 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5788047268711077829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762541885989615741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43dcee61249058f44a3a4dba4af7a91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Draggable
+--- !u!114 &7462315776317103448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762541885989615741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a583d2bc80aa3e44b1aa192783a49a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotbarSlot
+  index: 5
+  ingredient: {fileID: 0}
+  icon: {fileID: 0}
 --- !u!1 &3375094018620887904
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,6 +327,8 @@ GameObject:
   - component: {fileID: 8158306134835474298}
   - component: {fileID: 3528544513100443193}
   - component: {fileID: 1515693537782368025}
+  - component: {fileID: 73849197637976463}
+  - component: {fileID: 2797047567592702706}
   m_Layer: 5
   m_Name: slot_1
   m_TagString: Untagged
@@ -362,6 +393,33 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &73849197637976463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3778347167047586638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43dcee61249058f44a3a4dba4af7a91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Draggable
+--- !u!114 &2797047567592702706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3778347167047586638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a583d2bc80aa3e44b1aa192783a49a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotbarSlot
+  index: 0
+  ingredient: {fileID: 0}
+  icon: {fileID: 0}
 --- !u!1 &4840920914890388339
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +431,8 @@ GameObject:
   - component: {fileID: 6850563635567351619}
   - component: {fileID: 1842628166475017124}
   - component: {fileID: 5528296347922508711}
+  - component: {fileID: 6843234011583056259}
+  - component: {fileID: 8406777405294777480}
   m_Layer: 5
   m_Name: slot_3
   m_TagString: Untagged
@@ -437,6 +497,33 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6843234011583056259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4840920914890388339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43dcee61249058f44a3a4dba4af7a91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Draggable
+--- !u!114 &8406777405294777480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4840920914890388339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a583d2bc80aa3e44b1aa192783a49a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotbarSlot
+  index: 2
+  ingredient: {fileID: 0}
+  icon: {fileID: 0}
 --- !u!1 &4924637049721201909
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +576,8 @@ GameObject:
   - component: {fileID: 6036125816440473799}
   - component: {fileID: 6015002997749934282}
   - component: {fileID: 9077716400897343600}
+  - component: {fileID: 3252353671484097511}
+  - component: {fileID: 3169344588095341796}
   m_Layer: 5
   m_Name: slot_5
   m_TagString: Untagged
@@ -553,6 +642,33 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3252353671484097511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6409172162267153763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43dcee61249058f44a3a4dba4af7a91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Draggable
+--- !u!114 &3169344588095341796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6409172162267153763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a583d2bc80aa3e44b1aa192783a49a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotbarSlot
+  index: 4
+  ingredient: {fileID: 0}
+  icon: {fileID: 0}
 --- !u!1 &6702269939321699409
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,7 +731,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &8818223100222546588
 MonoBehaviour:
@@ -668,6 +784,8 @@ GameObject:
   - component: {fileID: 275842889079464427}
   - component: {fileID: 6946638478919169716}
   - component: {fileID: 6569508467648401106}
+  - component: {fileID: 5399283252203522253}
+  - component: {fileID: 4880228166098654466}
   m_Layer: 5
   m_Name: slot_4
   m_TagString: Untagged
@@ -732,6 +850,33 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5399283252203522253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412626168150581653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43dcee61249058f44a3a4dba4af7a91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Draggable
+--- !u!114 &4880228166098654466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412626168150581653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a583d2bc80aa3e44b1aa192783a49a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotbarSlot
+  index: 3
+  ingredient: {fileID: 0}
+  icon: {fileID: 0}
 --- !u!1 &8422737701433625427
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,6 +888,8 @@ GameObject:
   - component: {fileID: 684382296318399339}
   - component: {fileID: 7390029835933679658}
   - component: {fileID: 2305948052578686057}
+  - component: {fileID: 5577107516099090726}
+  - component: {fileID: 2098627000176721696}
   m_Layer: 5
   m_Name: slot_2
   m_TagString: Untagged
@@ -807,3 +954,30 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5577107516099090726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8422737701433625427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43dcee61249058f44a3a4dba4af7a91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Draggable
+--- !u!114 &2098627000176721696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8422737701433625427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a583d2bc80aa3e44b1aa192783a49a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotbarSlot
+  index: 1
+  ingredient: {fileID: 0}
+  icon: {fileID: 0}

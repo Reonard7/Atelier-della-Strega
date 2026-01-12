@@ -16,6 +16,6 @@ MonoBehaviour:
   displayName: Pozione Inutile
   description: "Una pozione senza alcune propriet\xE0 benefica: forse non dovresti
     berla"
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: c723cc42c6406c647a7c53416b7195cd, type: 3}
   prefab: {fileID: 0}
   potionRecipe: []

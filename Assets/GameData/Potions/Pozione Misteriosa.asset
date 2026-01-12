@@ -15,6 +15,6 @@ MonoBehaviour:
   id: mysterious_potion
   displayName: Pozione Misteriosa
   description: "Una pozione dalle propriet\xE0 sconosciute."
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 357cc08bed8464543a02dd6962bde82b, type: 3}
   prefab: {fileID: 0}
   potionRecipe: []

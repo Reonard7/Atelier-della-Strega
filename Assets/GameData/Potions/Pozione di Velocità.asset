@@ -15,7 +15,7 @@ MonoBehaviour:
   id: speed_potion
   displayName: "Pozione di Velocit\xE0"
   description: "Il fluido giallo della pozione \xE8 striato di nero e vortica costantemente."
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 3160806f651ad904591a44be2c558e05, type: 3}
   prefab: {fileID: 0}
   potionRecipe:
   - {fileID: 11400000, guid: d81c6c26b07443e48940c73610055783, type: 2}

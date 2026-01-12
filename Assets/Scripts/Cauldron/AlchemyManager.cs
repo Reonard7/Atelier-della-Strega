@@ -209,6 +209,7 @@ public class AlchemyManager : MonoBehaviour
          * - currentResult = null, diceResult = 16-19 -> Mysterious Potion
          * - currentResult = null, diceResult = 20 -> Mirable Mysterious Potion
          */
+
         switch (currentResult, diceResult)
         {
             case (not null, 1):
@@ -232,8 +233,6 @@ public class AlchemyManager : MonoBehaviour
         }
 
         AlchemyEvents.OnPotionCrafted?.Invoke(craftedPotion, isMirable);
-        Debug.Log($"{craftedPotion.id}, {isMirable}");
-
     }
 
     // EVENTS

@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: "Pozione del Respirare Sott\u2019Acqua"
   description: Il suo liquido verde torbido ha un odore salmastro e al suo interno
     galleggia una bolla a forma di medusa
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 810bc236b2f11454f9d99353ea868b5e, type: 3}
   prefab: {fileID: 0}
   potionRecipe:
   - {fileID: 11400000, guid: ce5a8c76594d6fa458b5a58a39c64582, type: 2}

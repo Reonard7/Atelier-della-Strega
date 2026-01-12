@@ -52,17 +52,18 @@ public class Dice : MonoBehaviour
         diceResult.enabled = false;
 
         isRolling = true;
+
+        int number = Random.Range(1, 21);
+        diceResult.text = number.ToString();
+
+        AlchemyEvents.OnDiceCast?.Invoke(number);
     }
 
     public void OnRollAnimationFinished()
     {
         if (!isRolling) return;
 
-        int number = Random.Range(1, 21);
-        diceResult.text = number.ToString();
         diceResult.enabled = true;
-
-        AlchemyEvents.OnDiceCast?.Invoke(number);
         isRolling = false;
     }
 

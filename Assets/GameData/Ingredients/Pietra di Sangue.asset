@@ -17,7 +17,7 @@ MonoBehaviour:
   description: Popoli antichi chiamavano questa pietra "pietra filosofale" ed era
     la base di molti processi alchemici. Al giorno d'oggi viene creata a partire
     dal sangue di gentili donatori.
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: ff7bfa7addf40784d86f62b8e4a034a6, type: 3}
   prefab: {fileID: 0}
   craftablePotions:
   - {fileID: 11400000, guid: 25d5be15fe2a7134e9d5385cd6ac57e5, type: 2}

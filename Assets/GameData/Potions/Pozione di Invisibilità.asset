@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: "Pozione di Invisibilit\xE0"
   description: Il contenitore di questa pozione sembra vuoto, ma pesa come se contenesse
     del liquido
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 7984bb4fdaabc1e4b9d882e4e19aa7d3, type: 3}
   prefab: {fileID: 0}
   potionRecipe:
   - {fileID: 11400000, guid: d81c6c26b07443e48940c73610055783, type: 2}

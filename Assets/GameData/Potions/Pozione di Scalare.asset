@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Pozione di Scalare
   description: La pozione si presenta in fasce separate di colore marrone, argento
     e grigio, simili a strati geologici sovrapposti.
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: fab2acfd596fc644b86a132fc97648dc, type: 3}
   prefab: {fileID: 0}
   potionRecipe:
   - {fileID: 11400000, guid: dbe245709b55aac408e7d4118b26dd25, type: 2}

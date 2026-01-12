@@ -15,7 +15,7 @@ MonoBehaviour:
   id: invulnerability_potion
   displayName: "Pozione di Invulnerabilit\xE0"
   description: Il liquido pastoso della pozione sembra ferro fuso.
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 9e46682d258e89b4db1bae6beb416012, type: 3}
   prefab: {fileID: 0}
   potionRecipe:
   - {fileID: 11400000, guid: 93341c3a3287f2049b4c6323139966d1, type: 2}

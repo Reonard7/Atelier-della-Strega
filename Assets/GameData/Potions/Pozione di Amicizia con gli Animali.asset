@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Pozione di Amicizia con gli Animali
   description: Agitando questo liquido melmoso si notano alcuni ingredienti al suo
     interno, come piume, tentacoli o zampe.
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 9ce9bdd9cb3017540b7f7689b8b06d47, type: 3}
   prefab: {fileID: 0}
   potionRecipe:
   - {fileID: 11400000, guid: 42294e25fff135742a574b5f501e3f77, type: 2}
