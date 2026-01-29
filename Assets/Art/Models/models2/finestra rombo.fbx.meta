@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: fda15c0a2f042fe43addeb9f6dc395e7
+guid: a17f4932a8dda8e4eb37a767c67ce593
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: finestra rombo
+    second: {fileID: 2100000, guid: 21d1268be52c5e04e9a422cf2d6be06a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: muro
+    second: {fileID: 2100000, guid: 46bf1661c39a3a24189e5e272cea9571, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
