@@ -2,9 +2,14 @@ using Events;
 using GameData.Scripts.Items;
 using System.Collections.Generic;
 using UnityEngine;
+using StarterAssets;
 
 public class GrimoireManager : MonoBehaviour
 {
+    [SerializeField] private GameObject grimoireCanvas;
+    private FirstPersonController playerFPS;
+    private bool inCrafting;
+
     [Header("All Scriptable Objects")]
     [SerializeField] private List<Ingredient> allIngredients;
     [SerializeField] private List<Potion> allPotions;
@@ -14,16 +19,24 @@ public class GrimoireManager : MonoBehaviour
     private List<GrimoireEntry<Potion>> potionEntries;
     private List<GrimoireEntry<Spell>> spellEntries;
 
+    public List<GrimoireEntry<Ingredient>> IngredientEntries => ingredientEntries;
+    public List<GrimoireEntry<Potion>> PotionEntries => potionEntries;
+    public List<GrimoireEntry<Spell>> SpellEntries => spellEntries;
+
     private void OnEnable()
     {
         InteractionEvents.OnIngredientPickup += OnIngredientPickup;
         AlchemyEvents.OnPotionCrafted += OnPotionCrafted;
+        InteractionEvents.OnCauldronInteracted += OnCauldronInteracted;
+        InteractionEvents.OnCauldronExit += OnCauldronExit;
     }
 
     private void OnDisable()
     {
         InteractionEvents.OnIngredientPickup -= OnIngredientPickup;
         AlchemyEvents.OnPotionCrafted -= OnPotionCrafted;
+        InteractionEvents.OnCauldronInteracted -= OnCauldronInteracted;
+        InteractionEvents.OnCauldronExit -= OnCauldronExit;
     }
     private void Awake()
     {
@@ -32,7 +45,32 @@ public class GrimoireManager : MonoBehaviour
         spellEntries = BuildEntries(allSpells);
     }
 
-    private List<GrimoireEntry<T>> BuildEntries<T>(List<T> list) where T : ScriptableObject
+    private void Start()
+    {
+        playerFPS = GameObject.FindWithTag("Player").GetComponent<FirstPersonController>();
+        grimoireCanvas.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (!inCrafting && Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (!grimoireCanvas.activeSelf)
+            {
+                playerFPS.enabled = false;
+                grimoireCanvas.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
+            }
+            else
+            {
+                playerFPS.enabled = true;
+                grimoireCanvas.SetActive(false);
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+        }
+    }
+
+    private List<GrimoireEntry<T>> BuildEntries<T>(List<T> list) where T : IGrimoireData
     {
         var result = new List<GrimoireEntry<T>>();
         foreach (var item in list)
@@ -58,5 +96,14 @@ public class GrimoireManager : MonoBehaviour
         var entry = potionEntries.Find(e => e.data == potion);
         if (entry != null)
             entry.discovered = true;
+    }
+    private void OnCauldronInteracted()
+    {
+        inCrafting = true;
+    }
+
+    private void OnCauldronExit()
+    {
+        inCrafting = false;
     }
 }

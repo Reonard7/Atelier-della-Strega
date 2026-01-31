@@ -3,7 +3,7 @@ using UnityEngine;
 namespace GameData.Scripts.Items
 {
     [CreateAssetMenu(fileName = "Ingredient", menuName = "GameData/Ingredient")]
-    public class Ingredient : ScriptableObject
+    public class Ingredient : ScriptableObject, IGrimoireData
     {
         [Header("General")]
         public string id;
@@ -17,5 +17,9 @@ namespace GameData.Scripts.Items
 
         [Header("Ingredient")]
         public Potion[] craftablePotions;
+
+        public string DisplayName => displayName;
+        public string Description => description;
+        public Sprite Icon => icon;
     }
 }
