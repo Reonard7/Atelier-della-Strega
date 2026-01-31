@@ -13,6 +13,5 @@ namespace Events
         public static Action<int> OnDiceCast;
         public static Action OnAnimationEnded;
         public static Action<Potion, bool> OnPotionCrafted;
-        
     }
 }

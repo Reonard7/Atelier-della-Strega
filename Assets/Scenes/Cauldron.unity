@@ -1370,6 +1370,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247991961}
   m_CullTransparentMesh: 1
+--- !u!1 &1298770135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1298770137}
+  - component: {fileID: 1298770136}
+  m_Layer: 0
+  m_Name: GrimoireManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1298770136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298770135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c7779843a8b914bada65a6199b70c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GrimoireManager
+  allIngredients:
+  - {fileID: 11400000, guid: ce5a8c76594d6fa458b5a58a39c64582, type: 2}
+  - {fileID: 11400000, guid: c2e7001a9ad083043a05d9a1140c377c, type: 2}
+  - {fileID: 11400000, guid: d81c6c26b07443e48940c73610055783, type: 2}
+  - {fileID: 11400000, guid: dbe245709b55aac408e7d4118b26dd25, type: 2}
+  - {fileID: 11400000, guid: bfbed05795de30f4c8fdb3c3d30c0a91, type: 2}
+  - {fileID: 11400000, guid: d8286b45d9369444a9d68cca3bb6e147, type: 2}
+  - {fileID: 11400000, guid: 93341c3a3287f2049b4c6323139966d1, type: 2}
+  - {fileID: 11400000, guid: 9f6165d26821f8944ad3813c73897419, type: 2}
+  - {fileID: 11400000, guid: 156768524ecd2e1458a3d75113d4411f, type: 2}
+  - {fileID: 11400000, guid: 42294e25fff135742a574b5f501e3f77, type: 2}
+  - {fileID: 11400000, guid: 3cfd160f461c77b4aa8d8b8b1a378a69, type: 2}
+  - {fileID: 11400000, guid: 111fd8164509a6b48ad3eec72745c72d, type: 2}
+  - {fileID: 11400000, guid: 6517bf937a33ac34eae7718e37effb4f, type: 2}
+  - {fileID: 11400000, guid: f15f309f288a4f1448f9d08da4e5d295, type: 2}
+  allPotions:
+  - {fileID: 11400000, guid: e5091b74c15db2d409df9ca98eb1d011, type: 2}
+  - {fileID: 11400000, guid: f5423c6e7ee877e4c9c9c25cccc3ce0a, type: 2}
+  - {fileID: 11400000, guid: 08702ee1f2d2f4b499871beb003e8cb3, type: 2}
+  - {fileID: 11400000, guid: c500564848ae1984c8f8d4bd79836da5, type: 2}
+  - {fileID: 11400000, guid: 731529ed201e1f64386d78262e242e8c, type: 2}
+  - {fileID: 11400000, guid: 1c324d533b7fd9b4c876d104db13da8e, type: 2}
+  - {fileID: 11400000, guid: 2e1e00168244f2f49a6e2482774907c5, type: 2}
+  - {fileID: 11400000, guid: d60185664fe59274db0d646e5d72c041, type: 2}
+  - {fileID: 11400000, guid: 4a316acbf0e5bbc47986fa84a4db10ee, type: 2}
+  - {fileID: 11400000, guid: 6a0d01459984db844856246b10d5ecbd, type: 2}
+  - {fileID: 11400000, guid: d72e120f30d1f0b49b6f4a6570d30eba, type: 2}
+  - {fileID: 11400000, guid: 2ec3efae521e3a049a90b843608b6ab4, type: 2}
+  - {fileID: 11400000, guid: 3b9b45bf04b9d1f44928851bfdcbf9de, type: 2}
+  - {fileID: 11400000, guid: 4f521007c8cca0a4f9edb12e0666790c, type: 2}
+  allSpells:
+  - {fileID: 11400000, guid: 5bbbae468de554c4a9948079a9628751, type: 2}
+  - {fileID: 11400000, guid: 050f7f46fd23e804bb615063555fbc72, type: 2}
+  - {fileID: 11400000, guid: 1c1927a883d3f354ab5719bc3ab3bce4, type: 2}
+  - {fileID: 11400000, guid: dc556ba10fc550645b58346de487df6e, type: 2}
+  - {fileID: 11400000, guid: 53b561cb59f5a3644a96faced9242adc, type: 2}
+--- !u!4 &1298770137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298770135}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.97522, y: -0, z: -6.44918}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1370847718
 GameObject:
   m_ObjectHideFlags: 0
@@ -2303,3 +2383,4 @@ SceneRoots:
   - {fileID: 1460436036}
   - {fileID: 566683604}
   - {fileID: 1065586443789724164}
+  - {fileID: 1298770137}
