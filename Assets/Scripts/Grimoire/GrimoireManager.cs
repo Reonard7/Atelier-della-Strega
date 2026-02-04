@@ -26,6 +26,7 @@ public class GrimoireManager : MonoBehaviour
     private void OnEnable()
     {
         InteractionEvents.OnIngredientPickup += OnIngredientPickup;
+        InteractionEvents.OnSpellPickup += OnSpellPickup;
         AlchemyEvents.OnPotionCrafted += OnPotionCrafted;
         InteractionEvents.OnCauldronInteracted += OnCauldronInteracted;
         InteractionEvents.OnCauldronExit += OnCauldronExit;
@@ -34,6 +35,7 @@ public class GrimoireManager : MonoBehaviour
     private void OnDisable()
     {
         InteractionEvents.OnIngredientPickup -= OnIngredientPickup;
+        InteractionEvents.OnSpellPickup -= OnSpellPickup;
         AlchemyEvents.OnPotionCrafted -= OnPotionCrafted;
         InteractionEvents.OnCauldronInteracted -= OnCauldronInteracted;
         InteractionEvents.OnCauldronExit -= OnCauldronExit;
@@ -89,6 +91,16 @@ public class GrimoireManager : MonoBehaviour
         var entry = ingredientEntries.Find(e => e.data == ingredient);
         if (entry != null)
             entry.discovered = true;
+    }
+
+    private void OnSpellPickup(Spell spell)
+    {
+        var entry = spellEntries.Find(e => e.data == spell);
+        if (entry != null)
+        {
+            entry.discovered = true;
+            GrimoireEvents.OnEntryDiscovered?.Invoke(entry.data);
+        }
     }
 
     private void OnPotionCrafted(Potion potion, bool rarity)

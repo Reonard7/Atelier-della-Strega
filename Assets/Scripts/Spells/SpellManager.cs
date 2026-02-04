@@ -13,6 +13,12 @@ public class SpellManager : MonoBehaviour
     private int _activeSlotIndex;
     [SerializeField] private List<string> usableIDs;
 
+    [SerializeField] private float holdTimeToCast = 1f;
+    private float _holdTimer;
+    private bool _isHolding;
+    [SerializeField] private RectTransform chargeBar;
+
+
     private void OnEnable()
     {
         GrimoireEvents.OnEntryDiscovered += OnEntryDiscovered;
@@ -40,6 +46,8 @@ public class SpellManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (abilityList.Count == 0) return;
+
         if (_activeSlotIndex < 0) _activeSlotIndex = 0;
         // Detect mouse wheel
         float scroll = Input.GetAxis("Mouse ScrollWheel");
@@ -51,8 +59,137 @@ public class SpellManager : MonoBehaviour
         {
             SelectPreviousSlot();
         }
+
+        // gestire l'interazione col tastro sinistro
+        if (Input.GetMouseButtonDown(0))
+        {
+            _isHolding = true;
+            _holdTimer = 0f;
+            chargeBar.localScale = new Vector3(0f,1f,1f);
+            chargeBar.gameObject.SetActive(true);
+        }
+
+        if (Input.GetMouseButton(0) && _isHolding)
+        {
+            _holdTimer += Time.deltaTime;
+            chargeBar.localScale = new Vector3(Mathf.Clamp01(_holdTimer / holdTimeToCast), 1f, 1f);
+
+            if (_holdTimer >= holdTimeToCast)
+            {
+                UseAbility(abilityList[_activeSlotIndex]);
+                _isHolding = false;
+                chargeBar.gameObject.SetActive(false);
+            }
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            _isHolding = false;
+            _holdTimer = 0f;
+            chargeBar.gameObject.SetActive(false);
+        }
     }
 
+    // Ability functions
+    private void UseAbility(IGrimoireData data)
+    {
+        switch (data.Id)
+        {
+            case "firebreath_potion":
+                {
+                    UseFirebreathPotion();
+                    break;
+                }
+            case "clarovegency_potion":
+                {
+                    UseClarovencyPotion();
+                    break;
+                }
+            case "invulnerability_potion":
+                {
+                    UseInvulnerabilityPotion();
+                    break;
+                }
+            case "speed_potion":
+                {
+                    UseSpeedPotion();
+                    break;
+                }
+            case "vitality_potion":
+                {
+                    UseVitalityPotion();
+                    break;
+                }
+            case "light":
+                {
+                    UseLight();
+                    break;
+                }
+            case "fireball":
+                {
+                    UseFireball();
+                    break;
+                }
+            case "swift_retreat":
+                {
+                    UseSwiftRetreat();
+                    break;
+                }
+            case "jumping":
+                {
+                    UseJumping();
+                    break;
+                }
+            case "shield":
+                {
+                    UseShield();
+                    break;
+                }
+        }
+    }
+
+    private void UseFirebreathPotion()
+    {
+        Debug.Log("Firebreath Potion used");
+    }
+    private void UseClarovencyPotion()
+    {
+        Debug.Log("Calrovency Potion used");
+    }
+    private void UseInvulnerabilityPotion()
+    {
+        Debug.Log("Invulnerability Potion used");
+    }
+    private void UseSpeedPotion()
+    {
+        Debug.Log("Speed Potion used");
+    }
+    private void UseVitalityPotion()
+    {
+        Debug.Log("Vitality Potion used");
+    }
+    private void UseLight()
+    {
+        Debug.Log("Light Spell used");
+    }
+    private void UseFireball()
+    {
+        Debug.Log("Fireball Spell used");
+    }
+    private void UseSwiftRetreat()
+    {
+        Debug.Log("Swift Retreat Spell used");
+    }
+    private void UseJumping()
+    {
+        Debug.Log("Jumping Spell used");
+    }
+    private void UseShield()
+    {
+        Debug.Log("Shield Spell used");
+    }
+
+    // Helper methods
     private void UpdateHotbar()
     {
         for (int i = 0; i < spellSlots.Length; i++)
@@ -69,7 +206,6 @@ public class SpellManager : MonoBehaviour
 
         UpdateSlotColors();
     }
-
 
     private void UpdateSlotColors()
     {
@@ -107,6 +243,7 @@ public class SpellManager : MonoBehaviour
         UpdateSlotColors();
     }
 
+    // Events handler
     private void OnEntryDiscovered(IGrimoireData data)
     {
         if (!usableIDs.Contains(data.Id))

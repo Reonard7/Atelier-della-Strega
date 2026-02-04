@@ -85,6 +85,14 @@ namespace Interaction
                             cauldronInteractable.Interact(gameObject);
                         break;
                     }
+                    // Interactable is a Spell
+                    case SpellInteractable spellInteractable:
+                    {
+                        _name = spellInteractable.spell.displayName;
+                        if (Input.GetMouseButtonDown(0))
+                            spellInteractable.Interact(gameObject);
+                        break;
+                    }
                 }
             }
             else
