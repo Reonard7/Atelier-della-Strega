@@ -95,7 +95,10 @@ public class GrimoireManager : MonoBehaviour
     {
         var entry = potionEntries.Find(e => e.data == potion);
         if (entry != null)
+        {
             entry.discovered = true;
+            GrimoireEvents.OnEntryDiscovered?.Invoke(entry.data);
+        }
     }
     private void OnCauldronInteracted()
     {
