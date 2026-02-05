@@ -7,13 +7,16 @@ public class SpellSlot : MonoBehaviour
     public IGrimoireData ability;   // ability in this slot
     public Image icon;
 
-    private void Awake()
+    private void EnsureIcon()
     {
-        icon = GetComponent<Image>();
+        if (icon == null)
+            icon = GetComponent<Image>();
     }
 
     public void SetAbility(IGrimoireData newAbility)
     {
+        EnsureIcon();
+
         if (newAbility != null)
         {
             icon.sprite = newAbility.Icon;

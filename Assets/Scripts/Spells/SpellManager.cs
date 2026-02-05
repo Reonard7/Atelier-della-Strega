@@ -12,6 +12,7 @@ public class SpellManager : MonoBehaviour
     private SpellSlot[] spellSlots;
     private int _activeSlotIndex;
     [SerializeField] private List<string> usableIDs;
+    private bool _isActive;
 
     [SerializeField] private float holdTimeToCast = 1f;
     private float _holdTimer;
@@ -22,14 +23,17 @@ public class SpellManager : MonoBehaviour
     private void OnEnable()
     {
         GrimoireEvents.OnEntryDiscovered += OnEntryDiscovered;
+        SpellEvents.OnSpellZoneTrigger += OnSpellZoneTrigger;
     }
 
     private void OnDisable()
     {
         GrimoireEvents.OnEntryDiscovered -= OnEntryDiscovered;
+        SpellEvents.OnSpellZoneTrigger -= OnSpellZoneTrigger;
     }
     void Start()
     {
+        _isActive = false;
         abilityList = new List<IGrimoireData>();
         spellSlots = new SpellSlot[10];
 
@@ -46,6 +50,8 @@ public class SpellManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!_isActive) { return; }
+
         if (abilityList.Count == 0) return;
 
         if (_activeSlotIndex < 0) _activeSlotIndex = 0;
@@ -251,5 +257,11 @@ public class SpellManager : MonoBehaviour
 
         abilityList.Add(data);
         UpdateHotbar();
+    }
+
+    private void OnSpellZoneTrigger(bool active)
+    {
+        _isActive = active;
+        hotbar.SetActive(active);   // show/hide UI
     }
 }

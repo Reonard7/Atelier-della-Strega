@@ -54,11 +54,6 @@ namespace Interaction
 
         private void CheckInteraction()
         {
-            if (Input.GetMouseButtonDown(1))
-            {
-                InteractionEvents.OnIngredientDiscard?.Invoke();
-            }
-
             var ray = new Ray(_rayOrigin, _fpsCameraT.forward);
             RaycastHit hit;
 

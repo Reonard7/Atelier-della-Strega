@@ -14,6 +14,7 @@ namespace Inventory
         private HotbarSlot[] _hotbarSlots;
         private int _activeSlotIndex;
         private bool _inCrafting;
+        private bool _isActive;
 
         private void OnEnable()
         {
@@ -21,6 +22,7 @@ namespace Inventory
             InteractionEvents.OnCauldronExit += OnCauldronExit;
             InteractionEvents.OnIngredientPickup += OnIngredientPickup;
             InteractionEvents.OnIngredientDiscard += OnIngredientDiscard;
+            SpellEvents.OnSpellZoneTrigger += OnSpellZoneTrigger;
         }
 
         private void OnDisable()
@@ -29,11 +31,13 @@ namespace Inventory
             InteractionEvents.OnCauldronExit -= OnCauldronExit;
             InteractionEvents.OnIngredientPickup -= OnIngredientPickup;
             InteractionEvents.OnIngredientDiscard -= OnIngredientDiscard;
+            SpellEvents.OnSpellZoneTrigger -= OnSpellZoneTrigger;
         }
 
         private void Start()
         {
             _inCrafting = false;
+            _isActive = true;
 
             // initialize the inventory list and hotbar slots array
             _inventory = new List<Ingredient>();
@@ -52,8 +56,15 @@ namespace Inventory
 
         private void Update()
         {
+            if (!_isActive) { return; }
+
             if (!_inCrafting)
             {
+                if (Input.GetMouseButtonDown(1))
+                {
+                    InteractionEvents.OnIngredientDiscard?.Invoke();
+                }
+
                 if (_activeSlotIndex < 0) _activeSlotIndex = 0;
                 // Detect mouse wheel
                 float scroll = Input.GetAxis("Mouse ScrollWheel");
@@ -100,6 +111,12 @@ namespace Inventory
         private void OnCauldronExit()
         {
             _inCrafting = false;
+        }
+
+        private void OnSpellZoneTrigger(bool active)
+        {
+            _isActive = !active;
+            hotbar.SetActive(_isActive);
         }
 
         private void UpdateHotbar()
