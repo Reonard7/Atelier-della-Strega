@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 818a0860a23a18444be8ab19f10f8220
+guid: ea1218412adf3d14fbbf5f075029ebf1
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,13 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: material_vasetto.003
-    second: {fileID: 2100000, guid: cfc0c49ef66804043b796b0fd9f7a7cf, type: 2}
+      name: material_vasetto.001
+    second: {fileID: 2100000, guid: 83b352740a258b944b96074b436ed3a7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: tappo_mat.003
-    second: {fileID: 2100000, guid: 874acc7cb035da74898618adc38b5bf5, type: 2}
+      name: tappo_mat.001
+    second: {fileID: 2100000, guid: 0d8b4c9ea50a5274795c8c85da9fc0cd, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
