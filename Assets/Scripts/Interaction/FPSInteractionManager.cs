@@ -54,11 +54,6 @@ namespace Interaction
 
         private void CheckInteraction()
         {
-            if (Input.GetMouseButtonDown(1))
-            {
-                InteractionEvents.OnIngredientDiscard?.Invoke();
-            }
-
             var ray = new Ray(_rayOrigin, _fpsCameraT.forward);
             RaycastHit hit;
 
@@ -83,6 +78,14 @@ namespace Interaction
                         _name = "Calderone";
                         if (Input.GetMouseButtonDown(0))
                             cauldronInteractable.Interact(gameObject);
+                        break;
+                    }
+                    // Interactable is a Spell
+                    case SpellInteractable spellInteractable:
+                    {
+                        _name = spellInteractable.spell.displayName;
+                        if (Input.GetMouseButtonDown(0))
+                            spellInteractable.Interact(gameObject);
                         break;
                     }
                 }

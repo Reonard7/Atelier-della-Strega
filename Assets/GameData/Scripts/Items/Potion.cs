@@ -18,6 +18,7 @@ namespace GameData.Scripts.Items
         [Header("Potion")]
         public Ingredient[] potionRecipe;
 
+        public string Id => id;
         public string DisplayName => displayName;
         public string Description => description;
         public Sprite Icon => icon;
