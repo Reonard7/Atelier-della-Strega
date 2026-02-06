@@ -10,6 +10,7 @@ namespace Inventory
     public class InventoryManager : MonoBehaviour
     {
         [FormerlySerializedAs("_hotbar")] [SerializeField] private GameObject hotbar;
+        [SerializeField] private Canvas canvas;
         private List<Ingredient> _inventory;
         private HotbarSlot[] _hotbarSlots;
         private int _activeSlotIndex;
@@ -41,9 +42,9 @@ namespace Inventory
 
             // initialize the inventory list and hotbar slots array
             _inventory = new List<Ingredient>();
-            _hotbarSlots = new HotbarSlot[6];
+            _hotbarSlots = new HotbarSlot[3];
 
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 3; i++)
             {
                 _hotbarSlots[i] = hotbar.transform.GetChild(i).GetComponent<HotbarSlot>();
                 _hotbarSlots[i].index = i;
@@ -84,7 +85,7 @@ namespace Inventory
             // we need to populate the _inventory of the Ingredient picked up
             // firstly, we check if the _inventory is full
             if (ingredient is null) return;
-            if (_inventory.Count < 6)
+            if (_inventory.Count < 3)
             {
                 _inventory.Add(ingredient);
             }
@@ -116,7 +117,7 @@ namespace Inventory
         private void OnSpellZoneTrigger(bool active)
         {
             _isActive = !active;
-            hotbar.SetActive(_isActive);
+            canvas.enabled = _isActive;
         }
 
         private void UpdateHotbar()

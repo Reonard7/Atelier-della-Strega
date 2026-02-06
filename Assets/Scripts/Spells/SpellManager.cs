@@ -9,6 +9,7 @@ public class SpellManager : MonoBehaviour
 {
     private List<IGrimoireData> abilityList;
     [SerializeField] private GameObject hotbar;
+    [SerializeField] private Canvas canvas;
     private SpellSlot[] spellSlots;
     private int _activeSlotIndex;
     [SerializeField] private List<string> usableIDs;
@@ -262,6 +263,6 @@ public class SpellManager : MonoBehaviour
     private void OnSpellZoneTrigger(bool active)
     {
         _isActive = active;
-        hotbar.SetActive(active);   // show/hide UI
+        canvas.enabled = _isActive;   // show/hide UI
     }
 }
