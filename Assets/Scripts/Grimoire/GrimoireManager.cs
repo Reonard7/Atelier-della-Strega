@@ -57,18 +57,23 @@ public class GrimoireManager : MonoBehaviour
     {
         if (!inCrafting && Input.GetKeyDown(KeyCode.Tab))
         {
-            if (!grimoireCanvas.activeSelf)
-            {
-                playerFPS.enabled = false;
-                grimoireCanvas.SetActive(true);
-                Cursor.lockState = CursorLockMode.None;
-            }
-            else
-            {
-                playerFPS.enabled = true;
-                grimoireCanvas.SetActive(false);
-                Cursor.lockState = CursorLockMode.Locked;
-            }
+            TabToggle();
+        }
+    }
+
+    public void TabToggle()
+    {
+        if (!grimoireCanvas.activeSelf)
+        {
+            playerFPS.enabled = false;
+            grimoireCanvas.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            playerFPS.enabled = true;
+            grimoireCanvas.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 

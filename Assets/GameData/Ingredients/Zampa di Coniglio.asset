@@ -19,7 +19,7 @@ MonoBehaviour:
 
     Questi conigli sembrano poter ricrescere le proprie zampe,
     qualora ne perdessero una durante uno scontro territoriale.'
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 66a2ace79c8ac0143879052925444046, type: 3}
   prefab: {fileID: 0}
   craftablePotions:
   - {fileID: 11400000, guid: c500564848ae1984c8f8d4bd79836da5, type: 2}

@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Etere in Bottiglia
   description: Questa fiaschetta contiene magia allo stato liquido. Alcuni pensano
     che siano delle nuvole in bottiglia, dato il colore biancastro della sostanza.
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: ead030d540b245b4bbe8b3dfd1e73d88, type: 3}
   prefab: {fileID: 0}
   craftablePotions:
   - {fileID: 11400000, guid: 51ede6f332341f848bc69ebf16cc0dd2, type: 2}

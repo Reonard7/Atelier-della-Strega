@@ -17,7 +17,7 @@ MonoBehaviour:
   description: "Questo campione di ferro, ottenuto dalle profondit\xE0 delle miniere
     naniche, ha la peculiarit\xE0 di non solidificarsi neanche a temperatura ambiente.\nStudiosi
     di regni ormai scomparsi chiamavano questo metallo \"mercurio\"."
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: a0fced2bc51dee54da0aec1ae7c4d036, type: 3}
   prefab: {fileID: 0}
   craftablePotions:
   - {fileID: 11400000, guid: f5423c6e7ee877e4c9c9c25cccc3ce0a, type: 2}

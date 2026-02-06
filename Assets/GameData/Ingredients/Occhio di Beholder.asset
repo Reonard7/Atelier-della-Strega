@@ -18,7 +18,7 @@ MonoBehaviour:
     Beholder. Questo non \xE8 altro che uno degli occhi secondari pi\xF9 piccoli,
     che spesso vengono troncati di netto dagli avventurieri che uccidono queste creature
     immonde."
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: c1928f4720bea56469613561a80726f0, type: 3}
   prefab: {fileID: 0}
   craftablePotions:
   - {fileID: 11400000, guid: 731529ed201e1f64386d78262e242e8c, type: 2}

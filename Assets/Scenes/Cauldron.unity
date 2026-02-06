@@ -1883,6 +1883,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpellCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8114338339524884969, guid: d8cc2c097c2163f4ab0e1235b0718c96, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
