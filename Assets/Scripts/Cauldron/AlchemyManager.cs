@@ -22,7 +22,7 @@ public class AlchemyManager : MonoBehaviour
 
     [Header("Craftable")]
     [SerializeField] private List<Potion> craftablePotions;
-    [SerializeField] private List<Ingredient> ingredients;
+    [SerializeField] public List<Ingredient> ingredients;
     private Potion currentResult;
     private int diceResult;
     private bool _isBrewing = false;
