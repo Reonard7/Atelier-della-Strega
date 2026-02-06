@@ -15,6 +15,7 @@ namespace GameData.Scripts.Items
         public Sprite icon;
         public GameObject prefab;
 
+        public string Id => id;
         public string DisplayName => displayName;
         public string Description => description;
         public Sprite Icon => icon;
