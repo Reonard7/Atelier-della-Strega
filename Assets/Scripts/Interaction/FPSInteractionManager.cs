@@ -13,6 +13,10 @@ namespace Interaction
 
         [SerializeField] private Image _target;
         [SerializeField] private TextMeshProUGUI _text;
+
+        [SerializeField] private Color normalColor = new Color(1f, 0.6f, 0.2f);
+        [SerializeField] private Color interactableColor = new Color(0.8f, 0.3f, 0.1f);
+
         public string _name;
 
         private IInteractable _pointingInteractable;
@@ -111,12 +115,12 @@ namespace Interaction
 
             if (_pointingInteractable != null)
             {
-                _target.color = Color.green;
+                _target.color = interactableColor;
                 _text.text = _name;
             }
             else
             {
-                _target.color = Color.red;
+                _target.color = normalColor;
                 _text.text = "";
             }
         }
