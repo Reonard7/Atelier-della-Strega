@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: Alga Revitalizzante
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   id: revital_seaweed
-  displayName: 'Alga Revitalizzante '
-  description: Pianta sottomarina che cresce solo nelle zone cariche di magia selvaggia.
-    Le popolazioni locali giurano di aver visto alcune piante muoversi da sole e
-    avvinghiare i natanti locali.
+  displayName: Revitalizing Algae
+  description: "A submarine plant that grows only in areas saturated with wild magic\nLocals
+    swear they\u2019ve seen some plants move on their own and entwine local boats"
   icon: {fileID: 21300000, guid: 791ca40553c783643ba652baf173b545, type: 3}
   prefab: {fileID: 0}
   craftablePotions:

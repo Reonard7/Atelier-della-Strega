@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Polvere di medusa essiccata
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   id: jellyfish_powder
-  displayName: Polvere di medusa essiccata
-  description: "Ottenuta dalle famose Meduse Regine, variet\xE0 che cresce solo molto
-    a largo della Costa della Spada."
+  displayName: Dried Medusa Powder
+  description: Obtained from the famed Queen Medusae, a variety that grows only far
+    off the Sword Coast
   icon: {fileID: 21300000, guid: a130302a272b0c04b91c130ffe281aef, type: 3}
   prefab: {fileID: 0}
   craftablePotions:

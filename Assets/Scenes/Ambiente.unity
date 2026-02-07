@@ -32219,11 +32219,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1467249462254964131, guid: 3d6c052fd13697043ac7b52d51c90c9c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 115.9
+      value: 138
       objectReference: {fileID: 0}
     - target: {fileID: 1467249462254964131, guid: 3d6c052fd13697043ac7b52d51c90c9c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -489.5
+      value: -488
       objectReference: {fileID: 0}
     - target: {fileID: 1467249462254964131, guid: 3d6c052fd13697043ac7b52d51c90c9c, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -32645,6 +32645,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 3e1baba83581f0b4d8041e150c54923c, type: 3}
+    - target: {fileID: 5355456652244320166, guid: 3d6c052fd13697043ac7b52d51c90c9c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355456652244320166, guid: 3d6c052fd13697043ac7b52d51c90c9c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5416393420326621260, guid: 3d6c052fd13697043ac7b52d51c90c9c, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
       value: 0.5176471
@@ -59165,7 +59173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6645473757878390270, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7682634798025110334, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
       propertyPath: m_text

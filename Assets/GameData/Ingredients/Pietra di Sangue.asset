@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Pietra di Sangue
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   id: blood_stone
-  displayName: Pietra di Sangue
-  description: Popoli antichi chiamavano questa pietra "pietra filosofale" ed era
-    la base di molti processi alchemici. Al giorno d'oggi viene creata a partire
-    dal sangue di gentili donatori.
+  displayName: Bloodstone
+  description: "Ancient peoples called this stone the \u201Cphilosopher\u2019s stone\u201D
+    and it was used in many alchemical processes\n\nToday it is created from the
+    blood of willing donors"
   icon: {fileID: 21300000, guid: c9fa8a144548ef84784d31c839aba4bf, type: 3}
   prefab: {fileID: 0}
   craftablePotions:

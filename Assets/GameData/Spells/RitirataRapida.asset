@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: RitirataRapida
   m_EditorClassIdentifier: Assembly-CSharp::GameData.Scripts.Items.Spell
   id: swift_retreat
-  displayName: Ritirata Rapida
-  description: Incantesimo Ritirata Rapida
+  displayName: Expeditious Retreat
+  description: "A magical surge hastens the caster\u2019s movement, allowing rapid
+    retreat in battle\n\nIf you can't win a battle, you should always retreat"
   icon: {fileID: 21300000, guid: b0fa70abd2a79904cb00b175dfd8ec7e, type: 3}
   prefab: {fileID: 0}

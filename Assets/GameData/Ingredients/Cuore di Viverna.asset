@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Cuore di Viverna
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   id: wyvern_heart
-  displayName: Cuore di Viverna
-  description: "In realt\xE0, questo \"cuore\" non ha la funzione di pompare sangue,
-    ma si tratta di un organo che genera fiamme. Cionondimeno, colpire una viverna
-    a questo organo \xE8 come colpirla al cuore stesso."
-  icon: {fileID: 0}
+  displayName: Wyvern Heart
+  description: "This \u201Cheart\u201D does not pump blood, but is an organ that
+    generates flames\n\nNonetheless, striking a wyvern at this organ is as effective
+    as hitting its actual heart"
+  icon: {fileID: 21300000, guid: 81ea8759475f9234d9d6391c5a15cf64, type: 3}
   prefab: {fileID: 0}
   craftablePotions:
   - {fileID: 11400000, guid: f5423c6e7ee877e4c9c9c25cccc3ce0a, type: 2}

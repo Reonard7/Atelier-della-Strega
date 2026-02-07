@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Zampa di Coniglio
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   id: rabbit_foot
-  displayName: Zampa di Coniglio
-  description: 'La zampa di un coniglio proveniente da una delle tante foreste della
-    Selva Fatata.
+  displayName: "Rabbit\u2019s Foot"
+  description: 'The foot of a rabbit from one of the many forests of the Feywild
 
-    Questi conigli sembrano poter ricrescere le proprie zampe,
-    qualora ne perdessero una durante uno scontro territoriale.'
+
+    These
+    rabbits can reportedly regrow lost legs after territorial fights'
   icon: {fileID: 21300000, guid: 66a2ace79c8ac0143879052925444046, type: 3}
   prefab: {fileID: 0}
   craftablePotions:

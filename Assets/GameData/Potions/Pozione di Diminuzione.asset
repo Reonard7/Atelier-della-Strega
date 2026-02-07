@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Pozione di Diminuzione
   m_EditorClassIdentifier: Assembly-CSharp::Potion
   id: shrinking_potion
-  displayName: Pozione di Diminuzione
-  description: "All\u2019interno della pozione \xE8 visibile un nucleo rosso che
-    si contrae progressivamente fino a diventare un granello minuscolo per poi esplodere
-    e tingere tutto il liquido trasparente intorno a esso."
+  displayName: Diminution
+  description: "A red core within the potion steadily contracts into a tiny grain
+    before bursting and coloring the surrounding clear liquid.\nThis potion causes
+    the drinker to shrink in size for a short time\n\n- Gnome Beard\n- Rabbit\u2019s
+    Foot\n- Bloodstone"
   icon: {fileID: 21300000, guid: 45e498276af87bb4bb24f7296635dd2c, type: 3}
   prefab: {fileID: 0}
   potionRecipe:

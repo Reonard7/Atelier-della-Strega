@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: Barba di Gnomo
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   id: gnome_beard
-  displayName: Barba di Gnomo
-  description: "Questa barba viene raccolta durante la prima rasatura di uno gnomo,
-    che segna il passaggio all'et\xE0 adulta.\nNessuno gnomo \xE8 stato maltrattato
-    per questa donazione."
-  icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  displayName: Gnome Beard
+  description: "Collected during a gnome\u2019s first shave, marking the passage
+    into adulthood\nNo gnome was harmed for this donation"
+  icon: {fileID: 21300000, guid: 383b6415062deb24095b0349ded2eb13, type: 3}
   prefab: {fileID: 0}
   craftablePotions:
   - {fileID: 11400000, guid: 1c324d533b7fd9b4c876d104db13da8e, type: 2}

@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: "Pozione di Invisibilit\xE0"
   m_EditorClassIdentifier: Assembly-CSharp::Potion
   id: invisibility_potion
-  displayName: "Pozione di Invisibilit\xE0"
-  description: Il contenitore di questa pozione sembra vuoto, ma pesa come se contenesse
-    del liquido
+  displayName: Invisibility
+  description: "The container of this potion appears empty, yet it carries the weight
+    of a full vial. \nThis potion grants the drinker temporary invisibility\n\n-
+    Gnome Beard\n- Sulfur Powder\n- Beholder Eye"
   icon: {fileID: 21300000, guid: 7984bb4fdaabc1e4b9d882e4e19aa7d3, type: 3}
   prefab: {fileID: 0}
   potionRecipe:

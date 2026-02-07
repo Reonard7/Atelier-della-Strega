@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Acqua di Palude
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   id: swamp_water
-  displayName: Acqua di Palude
-  description: "Purissimo (e nauseabondo) campione di acqua proveniente dal Mare
-    dei Morti, a nord di Waterdeep. La sua esatta composizone non \xE8 ancora stata
-    studiata, ma vi sono tracce di creature marine ritenute scomparse."
+  displayName: Swamp Water
+  description: 'A pure (and nauseating) sample of water from the Sea of the Dead,
+    north of Waterdeep
+
+
+    Its exact composition is unknown, but traces of marine
+    creatures long thought extinct have been found'
   icon: {fileID: 21300000, guid: f6b24ddbeabd2354d88114188f5143e9, type: 3}
   prefab: {fileID: 0}
   craftablePotions:

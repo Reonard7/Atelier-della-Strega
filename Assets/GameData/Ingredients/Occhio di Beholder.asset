@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: Occhio di Beholder
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   id: beholder_eye
-  displayName: Occhio di Beholder
-  description: "Nessuno sognerebbe di rubare il gigantesco occhio centrale di un
-    Beholder. Questo non \xE8 altro che uno degli occhi secondari pi\xF9 piccoli,
-    che spesso vengono troncati di netto dagli avventurieri che uccidono queste creature
-    immonde."
+  displayName: Beholder Eye
+  description: "No one dreams of stealing a beholder\u2019s massive central eye\n\nThis
+    is merely one of the smaller secondary eyes, often cleanly severed by adventurers
+    who slay these vile creatures"
   icon: {fileID: 21300000, guid: c1928f4720bea56469613561a80726f0, type: 3}
   prefab: {fileID: 0}
   craftablePotions:

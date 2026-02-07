@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Etere in Bottiglia
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   id: flasked_ether
-  displayName: Etere in Bottiglia
-  description: Questa fiaschetta contiene magia allo stato liquido. Alcuni pensano
-    che siano delle nuvole in bottiglia, dato il colore biancastro della sostanza.
+  displayName: Bottled Ether
+  description: "This vial contains magic \nin liquid form\n\nSome think of it as
+    bottled clouds, given the whitish color of the substance"
   icon: {fileID: 21300000, guid: ead030d540b245b4bbe8b3dfd1e73d88, type: 3}
   prefab: {fileID: 0}
   craftablePotions:

@@ -13,9 +13,17 @@ MonoBehaviour:
   m_Name: Pozione di Chiaroveggenza
   m_EditorClassIdentifier: Assembly-CSharp::Potion
   id: clarovegency_potion
-  displayName: Pozione di Chiaroveggenza
-  description: Nel liquido giallastro della pozione galleggia un globo oculare, che
-    scompare quando la pozione viene aperta
+  displayName: Clairvoyance
+  description: 'A floating eyeball drifts within the yellowish liquid, vanishing
+    the moment the bottle is opened. Allows the drinker to sense dangers before they
+    arrive
+
+
+    - Beholder Eye
+
+    - Bottled Ether
+
+    - Swamp Water'
   icon: {fileID: 21300000, guid: d82f36ebb32b59f42af94db43e7b43ec, type: 3}
   prefab: {fileID: 0}
   potionRecipe:
