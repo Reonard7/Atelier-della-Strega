@@ -7249,6 +7249,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55919ac34a26952479f3fc91f777b2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &202660779 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4696997357352401597, guid: b7a572efa6a57d04ab20a18b0b02a61b, type: 3}
+  m_PrefabInstance: {fileID: 1223517245}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &203905769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55028,6 +55033,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1447873801}
   - component: {fileID: 1447873802}
+  - component: {fileID: 1447873803}
   m_Layer: 0
   m_Name: TriggerTutorial
   m_TagString: Untagged
@@ -55065,12 +55071,25 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1447873803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447873800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c1f0a94c50e4384abce09d8183415f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MageTrigger
+  tutorialManager: {fileID: 1714629462}
 --- !u!1001 &1450500190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80060,6 +80079,10 @@ PrefabInstance:
       propertyPath: tutorialPanel
       value: 
       objectReference: {fileID: 1027476739045055702}
+    - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
+      propertyPath: PlayerTransform
+      value: 
+      objectReference: {fileID: 202660779}
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: scriptsToDisable.Array.size
       value: 1
