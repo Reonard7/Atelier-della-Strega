@@ -87435,6 +87435,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1156289622}
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
+      propertyPath: fpsController
+      value: 
+      objectReference: {fileID: 202660778}
+    - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: tutorialPanel
       value: 
       objectReference: {fileID: 1027476739045055702}

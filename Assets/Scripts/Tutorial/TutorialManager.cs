@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using StarterAssets;
 
 public enum TutorialState
 {
@@ -10,18 +11,33 @@ public enum TutorialState
 
 public class TutorialManager : MonoBehaviour
 {
+    // =========================
+    // UI
+    // =========================
     [Header("UI Tutorial")]
     [SerializeField] private GameObject tutorialPanel;
     [SerializeField] private TextMeshProUGUI tutorialText;
 
+    // =========================
+    // PLAYER
+    // =========================
     [Header("Player")]
     [SerializeField] private MonoBehaviour[] scriptsToDisable;
-    [SerializeField] private Transform PlayerTransform;
-    [SerializeField] private Camera playerCamera;
+    [SerializeField] private FirstPersonController fpsController;
 
+    [Header("Rotation Settings")]
+    [SerializeField, Range(1f, 10f)]
+    private float rotationSpeed = 5f; // velocità rotazione verso la maga
+
+    // =========================
+    // MAGE
+    // =========================
     [Header("Mage")]
     [SerializeField] private MageController mage;
 
+    // =========================
+    // DIALOGHI
+    // =========================
     [Header("Intro Dialogue Lines")]
     [TextArea(2, 4)]
     [SerializeField] private string[] introLines =
@@ -39,25 +55,37 @@ public class TutorialManager : MonoBehaviour
         "Segui attentamente e vedrai come funziona il calderone!"
     };
 
+    // =========================
+    // STATE
+    // =========================
     private int _currentLineIndex;
     private TutorialState _currentState;
 
-    void Start()
+    // Flag per attivare la rotazione lenta
+    private bool _isLookingAtMage = false;
+
+    // =========================
+    // UNITY
+    // =========================
+    private void Start()
     {
-        Debug.Log("[TutorialManager] Start della scena");
+        Debug.Log("[TutorialManager] Start scena");
         StartIntro();
     }
 
-    void Update()
+    private void Update()
     {
-        // Gestione click solo per scorrere le linee dei dialoghi
+        // Gestione click dialogo
         if (_currentState == TutorialState.IntroDialogue || _currentState == TutorialState.MageDialogue)
         {
             if (Input.GetMouseButtonDown(0))
-            {
-                Debug.Log("[TutorialManager] Click mouse rilevato durante dialogo");
                 NextLine();
-            }
+        }
+
+        // Rotazione lenta verso la maga
+        if (_isLookingAtMage && fpsController != null && mage != null)
+        {
+            SmoothLookAtMage();
         }
     }
 
@@ -66,8 +94,6 @@ public class TutorialManager : MonoBehaviour
     // =========================
     private void StartIntro()
     {
-        Debug.Log("[TutorialManager] StartIntro: inizializzo dialogo introduttivo");
-
         _currentState = TutorialState.IntroDialogue;
         _currentLineIndex = 0;
 
@@ -75,40 +101,8 @@ public class TutorialManager : MonoBehaviour
         tutorialText.text = introLines[_currentLineIndex];
 
         LockPlayer(true);
-        Debug.Log("[TutorialManager] Player bloccato durante intro");
-        Debug.Log("[TutorialManager] Mostrata linea: " + introLines[_currentLineIndex]);
-    }
 
-    private void NextLine()
-    {
-        _currentLineIndex++;
-
-        if (_currentState == TutorialState.IntroDialogue)
-        {
-            if (_currentLineIndex >= introLines.Length)
-            {
-                Debug.Log("[TutorialManager] Fine dialogo intro");
-                EndIntro();
-            }
-            else
-            {
-                tutorialText.text = introLines[_currentLineIndex];
-                Debug.Log("[TutorialManager] Mostrata linea intro: " + introLines[_currentLineIndex]);
-            }
-        }
-        else if (_currentState == TutorialState.MageDialogue)
-        {
-            if (_currentLineIndex >= mageLines.Length)
-            {
-                Debug.Log("[TutorialManager] Fine dialogo maga");
-                EndMageDialogue();
-            }
-            else
-            {
-                tutorialText.text = mageLines[_currentLineIndex];
-                Debug.Log("[TutorialManager] Mostrata linea maga: " + mageLines[_currentLineIndex]);
-            }
-        }
+        Debug.Log("[TutorialManager] Intro avviato");
     }
 
     private void EndIntro()
@@ -117,38 +111,64 @@ public class TutorialManager : MonoBehaviour
 
         if (mage != null)
         {
-            Debug.Log("[TutorialManager] Teletrasporto della maga al piano di sotto");
             mage.TeleportDownstairs();
-        }
-        else
-        {
-            Debug.LogWarning("[TutorialManager] MageController non assegnato!");
+            Debug.Log("[TutorialManager] Maga teletrasportata");
         }
 
         LockPlayer(false);
-        Debug.Log("[TutorialManager] Player sbloccato dopo intro");
 
         _currentState = TutorialState.ReachMageDownstairs;
-        Debug.Log("[TutorialManager] Stato aggiornato a ReachMageDownstairs");
+        Debug.Log("[TutorialManager] Stato: ReachMageDownstairs");
     }
 
     // =========================
-    // STEP 2 – Trigger zona maga
+    // DIALOGHI
+    // =========================
+    private void NextLine()
+    {
+        _currentLineIndex++;
+
+        if (_currentState == TutorialState.IntroDialogue)
+        {
+            if (_currentLineIndex >= introLines.Length)
+            {
+                EndIntro();
+            }
+            else
+            {
+                tutorialText.text = introLines[_currentLineIndex];
+            }
+        }
+        else if (_currentState == TutorialState.MageDialogue)
+        {
+            if (_currentLineIndex >= mageLines.Length)
+            {
+                EndMageDialogue();
+            }
+            else
+            {
+                tutorialText.text = mageLines[_currentLineIndex];
+            }
+        }
+    }
+
+    // =========================
+    // STEP 2 – PLAYER RAGGIUNGE LA MAGA
     // =========================
     public void OnPlayerReachedMage()
     {
-        FacePlayerToMage();
-        FaceMageToPlayer();
-
-        Debug.Log("[TutorialManager] OnPlayerReachedMage chiamato");
+        Debug.Log("[TutorialManager] OnPlayerReachedMage");
 
         if (_currentState != TutorialState.ReachMageDownstairs)
-        {
-            Debug.Log("[TutorialManager] Ignoro OnPlayerReachedMage, stato corrente: " + _currentState);
             return;
-        }
 
-        Debug.Log("[TutorialManager] Player ha raggiunto la maga, avvio dialogo pozioni");
+        LockPlayer(true);
+
+        // attiva la rotazione lenta verso la maga
+        _isLookingAtMage = true;
+
+        // gira la maga verso il player (solo estetica)
+        FaceMageToPlayer();
 
         _currentState = TutorialState.MageDialogue;
         _currentLineIndex = 0;
@@ -156,72 +176,53 @@ public class TutorialManager : MonoBehaviour
         tutorialPanel.SetActive(true);
         tutorialText.text = mageLines[_currentLineIndex];
 
-        LockPlayer(true);
-        Debug.Log("[TutorialManager] Player bloccato durante dialogo maga");
-        Debug.Log("[TutorialManager] Mostrata linea: " + mageLines[_currentLineIndex]);
+        Debug.Log("[TutorialManager] Dialogo maga avviato");
     }
-
-    private void FaceMageToPlayer()
-{
-    if (mage == null) return;
-
-    Vector3 direction = (PlayerTransform.position - mage.transform.position).normalized;
-
-    direction.y = 0;
-
-    if (direction != Vector3.zero)
-    {
-        mage.transform.forward = direction;
-        Debug.Log("[TutorialManager] Maga ruotata verso il player");
-    }
-}
-
-private void FacePlayerToMage()
-{
-    if (mage == null || PlayerTransform == null || playerCamera == null)
-        return;
-
-    // ===== 1. ROTAZIONE CAPSULE (YAW) =====
-    Vector3 flatDirection = mage.transform.position - PlayerTransform.position;
-    flatDirection.y = 0f;
-
-    if (flatDirection.sqrMagnitude > 0.001f)
-    {
-        Quaternion bodyRotation = Quaternion.LookRotation(flatDirection);
-        PlayerTransform.rotation = bodyRotation;
-    }
-
-    // ===== 2. ROTAZIONE CAMERA (PITCH) =====
-    Vector3 cameraTarget = mage.transform.position;
-
-    // piccolo offset verso l'alto (testa/busto maga)
-    cameraTarget.y += 1.5f;
-
-    Vector3 cameraDirection = cameraTarget - playerCamera.transform.position;
-    Quaternion lookRotation = Quaternion.LookRotation(cameraDirection);
-
-    // prendiamo SOLO l'asse X (pitch)
-    Vector3 cameraEuler = lookRotation.eulerAngles;
-    Vector3 currentEuler = playerCamera.transform.localEulerAngles;
-
-    playerCamera.transform.localEulerAngles = new Vector3(
-        NormalizeAngle(cameraEuler.x),
-        currentEuler.y,
-        0f
-    );
-
-    Debug.Log("[TutorialManager] Player e camera allineati verso la maga");
-}
 
     private void EndMageDialogue()
     {
         tutorialPanel.SetActive(false);
         LockPlayer(false);
 
-        Debug.Log("[TutorialManager] Player sbloccato dopo dialogo maga");
-        Debug.Log("[TutorialManager] Dialogo maga completato, possibile passare allo step successivo");
+        _isLookingAtMage = false; // disattiva rotazione lenta
 
-        _currentState = TutorialState.ReachMageDownstairs; // oppure nuovo stato
+        Debug.Log("[TutorialManager] Dialogo maga terminato");
+
+        _currentState = TutorialState.ReachMageDownstairs;
+    }
+
+    // =========================
+    // ROTAZIONE SMOOTH
+    // =========================
+    private void SmoothLookAtMage()
+    {
+        Vector3 targetPos = mage.transform.position + Vector3.up * 1.5f;
+
+        // --- CAPSULE (YAW) ---
+        Vector3 flatDir = targetPos - fpsController.transform.position;
+        flatDir.y = 0f;
+        if (flatDir.sqrMagnitude > 0.01f)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(flatDir);
+            fpsController.transform.rotation =
+                Quaternion.Slerp(fpsController.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        }
+
+        // --- CAMERA (PITCH) ---
+       Vector3 camDir = targetPos - fpsController.CinemachineCameraTarget.transform.position;
+Quaternion camRotation = Quaternion.LookRotation(camDir);
+
+float targetPitch = camRotation.eulerAngles.x;
+if (targetPitch > 180f) targetPitch -= 360f;
+
+fpsController.CinemachineTargetPitch = Mathf.Lerp(
+    fpsController.CinemachineTargetPitch,
+    Mathf.Clamp(targetPitch, fpsController.BottomClamp, fpsController.TopClamp),
+    rotationSpeed * Time.deltaTime
+);
+
+fpsController.CinemachineCameraTarget.transform.localRotation =
+    Quaternion.Euler(fpsController.CinemachineTargetPitch, 0f, 0f);
     }
 
     // =========================
@@ -235,13 +236,21 @@ private void FacePlayerToMage()
                 script.enabled = !lockPlayer;
         }
 
-        Debug.Log("[TutorialManager] LockPlayer(" + lockPlayer + ")");
+        Debug.Log("[TutorialManager] LockPlayer: " + lockPlayer);
     }
 
-    private float NormalizeAngle(float angle)
-{
-    if (angle > 180f)
-        angle -= 360f;
-    return angle;
+    private void FaceMageToPlayer()
+    {
+        if (mage == null || fpsController == null) return;
+
+        Vector3 playerPos = fpsController.transform.position;
+        Vector3 dir = playerPos - mage.transform.position;
+        dir.y = 0f;
+
+        if (dir.sqrMagnitude > 0.01f)
+        {
+            mage.transform.forward = dir.normalized;
+        }
+    }
 }
-}
+
