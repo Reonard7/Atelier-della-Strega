@@ -7,7 +7,7 @@ using StarterAssets;
 public class GrimoireManager : MonoBehaviour
 {
     [SerializeField] private GameObject grimoireCanvas;
-    private FirstPersonController playerFPS;
+    [SerializeField] private FirstPersonController playerFPS;
     private bool inCrafting;
 
     [Header("All Scriptable Objects")]
@@ -49,7 +49,6 @@ public class GrimoireManager : MonoBehaviour
 
     private void Start()
     {
-        playerFPS = GameObject.FindWithTag("Player").GetComponent<FirstPersonController>();
         grimoireCanvas.SetActive(false);
     }
 

@@ -31,7 +31,7 @@ public class AlchemyManager : MonoBehaviour
     [SerializeField] private GameObject _cauldronCanvas;
     [SerializeField] private CinemachineVirtualCamera _mainCam;
     [SerializeField] private CinemachineVirtualCamera _cauldronCam;
-    private FirstPersonController _playerFPS;
+    [SerializeField] private FirstPersonController _playerFPS;
     private bool _cursorLocked;
     [SerializeField] private Animator _animator;
 
@@ -58,8 +58,6 @@ public class AlchemyManager : MonoBehaviour
     {
         // Hide cursor
         LockCursor();
-        // Initialize the FPSController
-        _playerFPS = GameObject.FindWithTag("Player").GetComponent<FirstPersonController>();
         // Hide Cauldron Canvas
         _cauldronCanvas.SetActive(false);
 

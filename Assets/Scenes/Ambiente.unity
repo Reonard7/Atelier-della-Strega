@@ -53128,6 +53128,34 @@ PrefabInstance:
       propertyPath: chargeBar
       value: 
       objectReference: {fileID: 1473773750}
+    - target: {fileID: 5484569267772091910, guid: 531dc7066a83f3d42bcf5b2b0e0c472e, type: 3}
+      propertyPath: speedPrefab
+      value: 
+      objectReference: {fileID: 3903464789989465290, guid: 84639aea19e22724d919eaf8acec54ec, type: 3}
+    - target: {fileID: 5484569267772091910, guid: 531dc7066a83f3d42bcf5b2b0e0c472e, type: 3}
+      propertyPath: shieldPrefab
+      value: 
+      objectReference: {fileID: 6006648558742143086, guid: c9dc8b6ebbca35744aa25f07244db68c, type: 3}
+    - target: {fileID: 5484569267772091910, guid: 531dc7066a83f3d42bcf5b2b0e0c472e, type: 3}
+      propertyPath: jumpingPrefab
+      value: 
+      objectReference: {fileID: 9105254923314137747, guid: 79c097d77a1cd154c8b59df7e0d2ea60, type: 3}
+    - target: {fileID: 5484569267772091910, guid: 531dc7066a83f3d42bcf5b2b0e0c472e, type: 3}
+      propertyPath: vitalityPrefab
+      value: 
+      objectReference: {fileID: 5640353400717478366, guid: 486fc2d7fdbf0484cb5ee76c1d4ef7f0, type: 3}
+    - target: {fileID: 5484569267772091910, guid: 531dc7066a83f3d42bcf5b2b0e0c472e, type: 3}
+      propertyPath: clarovencyPrefab
+      value: 
+      objectReference: {fileID: 1699042691242301312, guid: c411c7722e4f50d4b8e03258554819c6, type: 3}
+    - target: {fileID: 5484569267772091910, guid: 531dc7066a83f3d42bcf5b2b0e0c472e, type: 3}
+      propertyPath: fireBreathPrefab
+      value: 
+      objectReference: {fileID: 6885853577914137885, guid: d3c5bc2d0e78f0144b1479a2bb95b357, type: 3}
+    - target: {fileID: 5484569267772091910, guid: 531dc7066a83f3d42bcf5b2b0e0c472e, type: 3}
+      propertyPath: invulnerabilityPrefab
+      value: 
+      objectReference: {fileID: 5819147329508461796, guid: 2af542671c4a9b644830ba160bc2ce25, type: 3}
     - target: {fileID: 5597064277109850707, guid: 531dc7066a83f3d42bcf5b2b0e0c472e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.1677
@@ -55115,6 +55143,10 @@ PrefabInstance:
       propertyPath: _animator
       value: 
       objectReference: {fileID: 1266470731}
+    - target: {fileID: 9013964581922199893, guid: 7b169862bdbf1834292c80c7cf724525, type: 3}
+      propertyPath: _playerFPS
+      value: 
+      objectReference: {fileID: 202660778}
     - target: {fileID: 9013964581922199893, guid: 7b169862bdbf1834292c80c7cf724525, type: 3}
       propertyPath: _cauldronCam
       value: 
@@ -80204,6 +80236,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrimoireManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7477040437808723296, guid: 0be577e19d63cce4493a652064282a6a, type: 3}
+      propertyPath: playerFPS
+      value: 
+      objectReference: {fileID: 202660778}
     - target: {fileID: 7477040437808723296, guid: 0be577e19d63cce4493a652064282a6a, type: 3}
       propertyPath: grimoireCanvas
       value: 
