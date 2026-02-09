@@ -1,5 +1,7 @@
 ﻿using GameData.Scripts.Items;
 using NUnit.Framework;
+using StarterAssets;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -21,6 +23,11 @@ public class SpellManager : MonoBehaviour
     private float _holdTimer;
     private bool _isHolding;
     [SerializeField] private RectTransform chargeBar;
+
+    private Coroutine _speedCoroutine;
+    private Coroutine _jumpCoroutine;
+    [SerializeField] private GameObject player;
+
 
 
     private void OnEnable()
@@ -123,7 +130,7 @@ public class SpellManager : MonoBehaviour
                 }
             case "speed_potion":
                 {
-                    UseSpeedPotion();
+                    StartCoroutine(UseSpeedPotion());
                     break;
                 }
             case "vitality_potion":
@@ -148,7 +155,7 @@ public class SpellManager : MonoBehaviour
                 }
             case "jumping":
                 {
-                    UseJumping();
+                    StartCoroutine(UseJumping());
                     break;
                 }
             case "shield":
@@ -159,46 +166,94 @@ public class SpellManager : MonoBehaviour
         }
     }
 
+    // FIREBREATH POTION
     private void UseFirebreathPotion()
     {
         Debug.Log("Firebreath Potion used");
     }
+    // CLAROVENCY POTION
     private void UseClarovencyPotion()
     {
         Debug.Log("Calrovency Potion used");
     }
+    // INVULNERABILITY POTION
     private void UseInvulnerabilityPotion()
     {
         Debug.Log("Invulnerability Potion used");
     }
-    private void UseSpeedPotion()
+    // SPEED POTION
+    private IEnumerator UseSpeedPotion()
     {
-        Debug.Log("Speed Potion used");
+        var playerdata = player.GetComponent<FirstPersonController>();
+
+        if (_speedCoroutine != null)
+            StopCoroutine(_speedCoroutine);
+
+        _speedCoroutine = StartCoroutine(SpeedRoutine(playerdata));
+        yield break;
     }
+
+    private IEnumerator SpeedRoutine(FirstPersonController playerdata)
+    {
+        float originalSpeed = playerdata.MoveSpeed;
+        playerdata.MoveSpeed = 10f;
+        SpellEvents.OnSpeedUsed?.Invoke();
+
+        yield return new WaitForSeconds(10f);
+
+        playerdata.MoveSpeed = originalSpeed;
+        _speedCoroutine = null;
+        SpellEvents.OnSpeedEnded?.Invoke();
+    }
+    // VITALITY POTION
     private void UseVitalityPotion()
     {
         Debug.Log("Vitality Potion used");
     }
+    // LIGHT SPELL
     private void UseLight()
     {
         Debug.Log("Light Spell used");
     }
+    // FIREBALL SPELL
     private void UseFireball()
     {
         Debug.Log("Fireball Spell used");
     }
+    // SWIFT RETREAT SPELL
     private void UseSwiftRetreat()
     {
         Debug.Log("Swift Retreat Spell used");
     }
-    private void UseJumping()
+    // JUMPING SPELL
+    private IEnumerator UseJumping()
     {
-        Debug.Log("Jumping Spell used");
+        var playerdata = player.GetComponent<FirstPersonController>();
+
+        if (_jumpCoroutine != null)
+            StopCoroutine(_jumpCoroutine);
+
+        _jumpCoroutine = StartCoroutine(JumpRoutine(playerdata));
+        yield break;
     }
-    private void UseShield()
+    private IEnumerator JumpRoutine(FirstPersonController playerdata)
     {
-        Debug.Log("Shield Spell used");
+        float originalJump = playerdata.JumpHeight;
+        playerdata.JumpHeight = 3f;
+        SpellEvents.OnJumpingUsed?.Invoke();
+
+        yield return new WaitForSeconds(10f);
+
+        playerdata.JumpHeight = originalJump;
+        _jumpCoroutine = null;
+        SpellEvents.OnJumpingEnded?.Invoke();
     }
+    // SHIELD SPELL
+    private IEnumerator UseShield()
+    {
+        yield break;
+    }
+    
 
     // Helper methods
     private void UpdateHotbar()
