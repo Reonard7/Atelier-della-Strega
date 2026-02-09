@@ -135,6 +135,15 @@ public class AlchemyManager : MonoBehaviour
         UnlockCursor();
     }
 
+    public void CloseFunction()
+    {
+        if (_cauldronCanvas.activeSelf)
+        {
+            InteractionEvents.OnCauldronExit?.Invoke();
+            StartCoroutine(CloseCauldronRoutine());
+        }
+    }
+
     private void CloseCauldronCanvas()
     {
         _playerFPS.enabled = true;
@@ -238,6 +247,7 @@ public class AlchemyManager : MonoBehaviour
     // EVENTS
     private void OnIngredientDropped(Ingredient ingredient)
     {
+        InteractionEvents.OnIngredientLocked?.Invoke(ingredient);
         ingredients.Add(ingredient);
 
         if (ingredients.Count != 3) return;
@@ -250,6 +260,7 @@ public class AlchemyManager : MonoBehaviour
 
     private void OnIngredientRemovedFromSlot(Ingredient ingredient)
     {
+        InteractionEvents.OnIngredientUnlocked?.Invoke(ingredient);
         ingredients.Remove(ingredient);
         currentResult = null;
     }

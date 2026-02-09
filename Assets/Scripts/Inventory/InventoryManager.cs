@@ -13,6 +13,7 @@ namespace Inventory
         [SerializeField] private Canvas canvas;
         private List<Ingredient> _inventory;
         private HotbarSlot[] _hotbarSlots;
+        private HashSet<Ingredient> _lockedIngredients = new();
         private int _activeSlotIndex;
         private bool _inCrafting;
         private bool _isActive;
@@ -24,6 +25,8 @@ namespace Inventory
             InteractionEvents.OnIngredientPickup += OnIngredientPickup;
             InteractionEvents.OnIngredientDiscard += OnIngredientDiscard;
             SpellEvents.OnSpellZoneTrigger += OnSpellZoneTrigger;
+            InteractionEvents.OnIngredientLocked += OnIngredientLocked;
+            InteractionEvents.OnIngredientUnlocked += OnIngredientUnlocked;
         }
 
         private void OnDisable()
@@ -33,6 +36,8 @@ namespace Inventory
             InteractionEvents.OnIngredientPickup -= OnIngredientPickup;
             InteractionEvents.OnIngredientDiscard -= OnIngredientDiscard;
             SpellEvents.OnSpellZoneTrigger -= OnSpellZoneTrigger;
+            InteractionEvents.OnIngredientLocked -= OnIngredientLocked;
+            InteractionEvents.OnIngredientUnlocked -= OnIngredientUnlocked;
         }
 
         private void Start()
@@ -95,13 +100,16 @@ namespace Inventory
 
         private void OnIngredientDiscard()
         {
-            if (!_inCrafting)
-            {
-                if (_inventory.Count <= 0 || _activeSlotIndex >= _inventory.Count) return;
-                _inventory.RemoveAt(_activeSlotIndex);
-                if (_activeSlotIndex == _inventory.Count) SelectPreviousSlot();
-                UpdateHotbar();
-            }
+            if (_inventory.Count <= 0 || _activeSlotIndex >= _inventory.Count) return;
+
+            var ingredient = _inventory[_activeSlotIndex];
+
+            if (_lockedIngredients.Contains(ingredient))
+                return; // cannot discard ingredient in cauldron
+
+            _inventory.RemoveAt(_activeSlotIndex);
+            if (_activeSlotIndex == _inventory.Count) SelectPreviousSlot();
+            UpdateHotbar();
         }
 
         private void OnCauldronInteracted()
@@ -118,6 +126,16 @@ namespace Inventory
         {
             _isActive = !active;
             canvas.enabled = _isActive;
+        }
+
+        private void OnIngredientLocked(Ingredient ingredient)
+        {
+            _lockedIngredients.Add(ingredient);
+        }
+
+        private void OnIngredientUnlocked(Ingredient ingredient)
+        {
+            _lockedIngredients.Remove(ingredient);
         }
 
         private void UpdateHotbar()
