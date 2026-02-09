@@ -20,5 +20,5 @@ MonoBehaviour:
 
     Notably, this spell is dangerous indoors and should be avoided
     in enclosed spaces!!!'
-  icon: {fileID: 21300000, guid: 90ded0611e490aa4ba6961afbfc2280d, type: 3}
+  icon: {fileID: 21300000, guid: ec3f45eb46306814ea276e12d55a094d, type: 3}
   prefab: {fileID: 0}

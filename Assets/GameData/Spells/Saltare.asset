@@ -16,5 +16,5 @@ MonoBehaviour:
   displayName: Magic Jump
   description: "This spell enhances the caster\u2019s agility, allowing them to leap
     extraordinary distances for a short time"
-  icon: {fileID: 21300000, guid: 751aa1b6637101946b2fdbb7aa27d6ad, type: 3}
+  icon: {fileID: 21300000, guid: 7e296938b10d209428c5e87ccb23fdd9, type: 3}
   prefab: {fileID: 0}
