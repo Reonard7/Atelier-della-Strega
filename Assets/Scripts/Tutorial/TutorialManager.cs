@@ -15,7 +15,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI tutorialText;
 
     [Header("Player")]
-    [SerializeField] private MonoBehaviour[] scriptsToDisable; // metti qui tutti gli script da bloccare
+    [SerializeField] private MonoBehaviour[] scriptsToDisable;
     [SerializeField] private Transform PlayerTransform;
 
     [Header("Mage")]
@@ -49,7 +49,7 @@ public class TutorialManager : MonoBehaviour
 
     void Update()
     {
-        // Click per scorrere le linee dei dialoghi
+        // Gestione click solo per scorrere le linee dei dialoghi
         if (_currentState == TutorialState.IntroDialogue || _currentState == TutorialState.MageDialogue)
         {
             if (Input.GetMouseButtonDown(0))
@@ -124,32 +124,20 @@ public class TutorialManager : MonoBehaviour
             Debug.LogWarning("[TutorialManager] MageController non assegnato!");
         }
 
-        // Blocca solo le interazioni, ma lascia il player libero di muoversi
-        LockInteractions(true);
+        LockPlayer(false);
+        Debug.Log("[TutorialManager] Player sbloccato dopo intro");
 
         _currentState = TutorialState.ReachMageDownstairs;
-        Debug.Log("[TutorialManager] Stato aggiornato a ReachMageDownstairs (interazioni bloccate, movimento attivo)");
+        Debug.Log("[TutorialManager] Stato aggiornato a ReachMageDownstairs");
     }
 
     // =========================
     // STEP 2 – Trigger zona maga
     // =========================
-    private void FaceMageToPlayer()
-    {
-        if (mage == null || PlayerTransform == null) return;
-
-        Vector3 direction = (PlayerTransform.position - mage.transform.position).normalized;
-        direction.y = 0; // ruota solo sull'asse Y
-
-        if (direction != Vector3.zero)
-        {
-            mage.transform.forward = direction;
-            Debug.Log("[TutorialManager] Maga ruotata verso il player");
-        }
-    }
-
     public void OnPlayerReachedMage()
     {
+        FaceMageToPlayer();
+
         Debug.Log("[TutorialManager] OnPlayerReachedMage chiamato");
 
         if (_currentState != TutorialState.ReachMageDownstairs)
@@ -158,7 +146,7 @@ public class TutorialManager : MonoBehaviour
             return;
         }
 
-        FaceMageToPlayer();
+        Debug.Log("[TutorialManager] Player ha raggiunto la maga, avvio dialogo pozioni");
 
         _currentState = TutorialState.MageDialogue;
         _currentLineIndex = 0;
@@ -166,27 +154,35 @@ public class TutorialManager : MonoBehaviour
         tutorialPanel.SetActive(true);
         tutorialText.text = mageLines[_currentLineIndex];
 
-        // Blocca tutte le interazioni durante il dialogo (compreso movimento se vuoi)
         LockPlayer(true);
-
         Debug.Log("[TutorialManager] Player bloccato durante dialogo maga");
         Debug.Log("[TutorialManager] Mostrata linea: " + mageLines[_currentLineIndex]);
     }
 
+    private void FaceMageToPlayer()
+{
+    if (mage == null) return;
+
+    Vector3 direction = (PlayerTransform.position - mage.transform.position).normalized;
+
+    direction.y = 0;
+
+    if (direction != Vector3.zero)
+    {
+        mage.transform.forward = direction;
+        Debug.Log("[TutorialManager] Maga ruotata verso il player");
+    }
+}
+
     private void EndMageDialogue()
     {
         tutorialPanel.SetActive(false);
+        LockPlayer(false);
 
-        // Riattiva tutti gli script
-        foreach (var script in scriptsToDisable)
-        {
-            if (script != null)
-                script.enabled = true;
-        }
+        Debug.Log("[TutorialManager] Player sbloccato dopo dialogo maga");
+        Debug.Log("[TutorialManager] Dialogo maga completato, possibile passare allo step successivo");
 
-        Debug.Log("[TutorialManager] Player sbloccato dopo dialogo maga, tutte le interazioni ripristinate");
-
-        _currentState = TutorialState.ReachMageDownstairs; // o nuovo stato
+        _currentState = TutorialState.ReachMageDownstairs; // oppure nuovo stato
     }
 
     // =========================
@@ -201,16 +197,5 @@ public class TutorialManager : MonoBehaviour
         }
 
         Debug.Log("[TutorialManager] LockPlayer(" + lockPlayer + ")");
-    }
-
-    private void LockInteractions(bool lockInteractions)
-    {
-        foreach (var script in scriptsToDisable)
-        {
-            if (script != null && !(script is CharacterController))
-                script.enabled = !lockInteractions;
-        }
-
-        Debug.Log("[TutorialManager] Interazioni bloccate: " + lockInteractions);
     }
 }
