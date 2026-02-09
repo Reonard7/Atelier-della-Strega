@@ -13373,6 +13373,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6009634945489582074, guid: b7085718fc2cd6b42b65e21b9628f8e5, type: 3}
   m_PrefabInstance: {fileID: 330698937}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &331561453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6667405004045050957, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+  m_PrefabInstance: {fileID: 1562120551}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &331561458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331561453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.HorizontalLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 1
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 1
+  m_ReverseArrangement: 0
 --- !u!1001 &331919494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23195,6 +23226,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6009634945489582074, guid: b7085718fc2cd6b42b65e21b9628f8e5, type: 3}
   m_PrefabInstance: {fileID: 544297135}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &545284816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 404181081387947685, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+  m_PrefabInstance: {fileID: 1562120551}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &545284821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545284816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.HorizontalLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 1
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 1
+  m_ReverseArrangement: 0
 --- !u!1001 &550193506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66127,7 +66189,16 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1288152303901752400, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
       insertIndex: 1
       addedObject: {fileID: 1865672388}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6667405004045050957, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 331561458}
+    - targetCorrespondingSourceObject: {fileID: 404181081387947685, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 545284821}
+    - targetCorrespondingSourceObject: {fileID: 1144746840730931588, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1739697806}
   m_SourcePrefab: {fileID: 100100000, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
 --- !u!1 &1562120552 stripped
 GameObject:
@@ -72164,6 +72235,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7198971506138548238, guid: 4a8f01f2378e33c4e8409306585a8fa2, type: 3}
   m_PrefabInstance: {fileID: 1739196058}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1739697801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1144746840730931588, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+  m_PrefabInstance: {fileID: 1562120551}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1739697806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739697801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.HorizontalLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 1
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 1
+  m_ReverseArrangement: 0
 --- !u!1001 &1744711027
 PrefabInstance:
   m_ObjectHideFlags: 0
