@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Events;
 using GameData.Scripts.Items;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -11,6 +12,7 @@ namespace Inventory
     {
         [FormerlySerializedAs("_hotbar")] [SerializeField] private GameObject hotbar;
         [SerializeField] private Canvas canvas;
+        [SerializeField] private TextMeshProUGUI name;
         private List<Ingredient> _inventory;
         private HotbarSlot[] _hotbarSlots;
         private HashSet<Ingredient> _lockedIngredients = new();
@@ -83,6 +85,8 @@ namespace Inventory
                     SelectPreviousSlot();
                 }
             }
+
+            name.text = (_inventory.Count == 0 ? "" : _inventory[_activeSlotIndex].displayName);
         }
 
         private void OnIngredientPickup(Ingredient ingredient)

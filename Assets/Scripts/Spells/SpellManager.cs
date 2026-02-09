@@ -1,6 +1,7 @@
 ﻿using GameData.Scripts.Items;
 using NUnit.Framework;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -10,6 +11,7 @@ public class SpellManager : MonoBehaviour
     private List<IGrimoireData> abilityList;
     [SerializeField] private GameObject hotbar;
     [SerializeField] private Canvas canvas;
+    [SerializeField] private TextMeshProUGUI name;
     private SpellSlot[] spellSlots;
     private int _activeSlotIndex;
     [SerializeField] private List<string> usableIDs;
@@ -95,6 +97,8 @@ public class SpellManager : MonoBehaviour
             _holdTimer = 0f;
             chargeBar.gameObject.SetActive(false);
         }
+
+        name.text = (abilityList.Count == 0 ? "" : abilityList[_activeSlotIndex].DisplayName);
     }
 
     // Ability functions
