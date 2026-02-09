@@ -17,6 +17,7 @@ public class TutorialManager : MonoBehaviour
     [Header("Player")]
     [SerializeField] private MonoBehaviour[] scriptsToDisable;
     [SerializeField] private Transform PlayerTransform;
+    [SerializeField] private Camera playerCamera;
 
     [Header("Mage")]
     [SerializeField] private MageController mage;
@@ -136,6 +137,7 @@ public class TutorialManager : MonoBehaviour
     // =========================
     public void OnPlayerReachedMage()
     {
+        FacePlayerToMage();
         FaceMageToPlayer();
 
         Debug.Log("[TutorialManager] OnPlayerReachedMage chiamato");
@@ -174,6 +176,43 @@ public class TutorialManager : MonoBehaviour
     }
 }
 
+private void FacePlayerToMage()
+{
+    if (mage == null || PlayerTransform == null || playerCamera == null)
+        return;
+
+    // ===== 1. ROTAZIONE CAPSULE (YAW) =====
+    Vector3 flatDirection = mage.transform.position - PlayerTransform.position;
+    flatDirection.y = 0f;
+
+    if (flatDirection.sqrMagnitude > 0.001f)
+    {
+        Quaternion bodyRotation = Quaternion.LookRotation(flatDirection);
+        PlayerTransform.rotation = bodyRotation;
+    }
+
+    // ===== 2. ROTAZIONE CAMERA (PITCH) =====
+    Vector3 cameraTarget = mage.transform.position;
+
+    // piccolo offset verso l'alto (testa/busto maga)
+    cameraTarget.y += 1.5f;
+
+    Vector3 cameraDirection = cameraTarget - playerCamera.transform.position;
+    Quaternion lookRotation = Quaternion.LookRotation(cameraDirection);
+
+    // prendiamo SOLO l'asse X (pitch)
+    Vector3 cameraEuler = lookRotation.eulerAngles;
+    Vector3 currentEuler = playerCamera.transform.localEulerAngles;
+
+    playerCamera.transform.localEulerAngles = new Vector3(
+        NormalizeAngle(cameraEuler.x),
+        currentEuler.y,
+        0f
+    );
+
+    Debug.Log("[TutorialManager] Player e camera allineati verso la maga");
+}
+
     private void EndMageDialogue()
     {
         tutorialPanel.SetActive(false);
@@ -198,4 +237,11 @@ public class TutorialManager : MonoBehaviour
 
         Debug.Log("[TutorialManager] LockPlayer(" + lockPlayer + ")");
     }
+
+    private float NormalizeAngle(float angle)
+{
+    if (angle > 180f)
+        angle -= 360f;
+    return angle;
+}
 }
