@@ -50,7 +50,7 @@ public class SpellManager : MonoBehaviour
     [SerializeField] private GameObject fireBreathPrefab;
     [SerializeField] private float fireBreathDuration = 3f;
     [SerializeField] private GameObject clarovencyPrefab;
-    [SerializeField] private float clarovencyDuration = 3f;
+    [SerializeField] private float clarovencyDuration = 1f;
     [SerializeField] private GameObject invulnerabilityPrefab;
     [SerializeField] private float invulnerabilityDuration = 3f;
     [SerializeField] private GameObject speedPrefab;

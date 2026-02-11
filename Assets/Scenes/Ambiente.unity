@@ -45529,7 +45529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirstTrial
   player: {fileID: 1695515383}
-  treasureMat: {fileID: 0}
+  mimicGroup: {fileID: 81049513}
   invulnerability: 0
 --- !u!4 &928444761
 Transform:
@@ -65250,8 +65250,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 9.036296, y: 3.206138, z: 8.02605}
-  m_Center: {x: -0.14914846, y: -0.20626247, z: 3.5130248}
+  m_Size: {x: 6.0957975, y: 3.206138, z: 8.02605}
+  m_Center: {x: -1.3043952, y: -0.20626247, z: 3.5130248}
 --- !u!1001 &1335408881
 PrefabInstance:
   m_ObjectHideFlags: 0

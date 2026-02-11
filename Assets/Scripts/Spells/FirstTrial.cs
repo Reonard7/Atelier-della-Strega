@@ -4,7 +4,7 @@ using UnityEngine;
 public class FirstTrial : MonoBehaviour
 {
     [SerializeField] private GameObject player;
-    [SerializeField] private Material treasureMat;
+    [SerializeField] private GameObject mimicGroup;
     public bool invulnerability = false;
 
     private void OnEnable()
@@ -56,12 +56,12 @@ public class FirstTrial : MonoBehaviour
 
     private void EnableHighlight()
     {
-        //treasureMat.EnableKeyword("_EMISSION");
+        mimicGroup.SetActive(false);
     }
 
     private void DisableHighlight()
     {
-        //treasureMat.DisableKeyword("_EMISSION");
+        mimicGroup.SetActive(true);
     }
 
     private void OnTrialStarted(int trialIndex)
