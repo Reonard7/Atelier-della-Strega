@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pozione della Forma Gassosa
   m_EditorClassIdentifier: Assembly-CSharp::Potion
   id: gaseousform_potion
-  displayName: Pozione della Forma Gassosa
+  displayName: Gaseous Form
   description: 'The container of this potion appears filled with mist that swirls
     and spills outward like flowing water_
 
