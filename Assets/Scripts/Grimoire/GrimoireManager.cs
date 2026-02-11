@@ -102,6 +102,10 @@ public class GrimoireManager : MonoBehaviour
         var entry = spellEntries.Find(e => e.data == spell);
         if (entry != null)
         {
+            if (entry.data.Id == "swift_retreat")
+            {
+                GrimoireEvents.OnRetreatDiscovered?.Invoke();
+            }
             entry.discovered = true;
             GrimoireEvents.OnEntryDiscovered?.Invoke(entry.data);
         }
