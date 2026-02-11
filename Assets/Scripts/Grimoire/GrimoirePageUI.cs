@@ -14,7 +14,7 @@ public class GrimoirePageUI : MonoBehaviour
         {
             icon.enabled = false;
             nameText.text = "???";
-            descriptionText.text = "Non ancora scoperto";
+            descriptionText.text = "Not yet discovered";
             return;
         }
 
