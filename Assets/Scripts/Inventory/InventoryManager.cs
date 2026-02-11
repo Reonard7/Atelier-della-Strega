@@ -11,6 +11,8 @@ namespace Inventory
     public class InventoryManager : MonoBehaviour
     {
         [FormerlySerializedAs("_hotbar")] [SerializeField] private GameObject hotbar;
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip pickupClip;
         [SerializeField] private Canvas canvas;
         [SerializeField] private TextMeshProUGUI name;
         private List<Ingredient> _inventory;
@@ -97,6 +99,7 @@ namespace Inventory
             if (_inventory.Count < 3)
             {
                 _inventory.Add(ingredient);
+                audioSource.PlayOneShot(pickupClip);
             }
 
             UpdateHotbar();
@@ -112,6 +115,7 @@ namespace Inventory
                 return; // cannot discard ingredient in cauldron
 
             _inventory.RemoveAt(_activeSlotIndex);
+            audioSource.PlayOneShot(pickupClip);
             if (_activeSlotIndex == _inventory.Count) SelectPreviousSlot();
             UpdateHotbar();
         }
