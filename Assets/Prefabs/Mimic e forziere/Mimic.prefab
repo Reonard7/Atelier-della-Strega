@@ -289,3 +289,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 729514c0274d7e248a4430f94997428c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::openTreasure
+  audioSource: {fileID: 0}

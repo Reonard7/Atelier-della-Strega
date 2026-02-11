@@ -14,8 +14,8 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.5282377, g: 0.6208665, b: 0.6377357, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -43888,7 +43888,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -61206,7 +61206,7 @@ Transform:
   m_GameObject: {fileID: 1275393525}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -90493,6 +90493,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1591985420132083558, guid: 79f3f59e3161e984e97498a75d5666eb, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591985420132083558, guid: 79f3f59e3161e984e97498a75d5666eb, type: 3}
       propertyPath: InitialModule.startSpeed.minMaxState
       value: 0
       objectReference: {fileID: 0}
@@ -104789,34 +104793,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: 'introLines.Array.data[0]'
-      value: 'Welcome, adventurer
-
-        You have entered my atelier a place where
-        magic is studied
+      value: 'Welcome young mage!
 
 '
       objectReference: {fileID: 0}
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: 'introLines.Array.data[1]'
-      value: 'There are various school of Magic each with its own rules, powers,
-        and dangers. To master one of them, you must explore them
+      value: 'You have entered my atelier of Arcane Arts, a place where the magic
+        of the Weave is studied
 
 '
       objectReference: {fileID: 0}
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: 'introLines.Array.data[2]'
-      value: 'Before I entrust you with a true quest, you must first learn the basics
-
-        Follow
-        me
+      value: 'Follow me downstairs and I will show you how to brew a potion and lern
+        new spells!
 
 '
       objectReference: {fileID: 0}
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: 'introLines.Array.data[3]'
-      value: 'TELEPORT
-
-'
+      value: TELEPORT!
       objectReference: {fileID: 0}
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: scriptsToDisable.Array.size
@@ -106089,7 +106086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5178709340684826703, guid: 1d5914d9002ce0443ade0470640fcfd9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.59
+      value: 4.89
       objectReference: {fileID: 0}
     - target: {fileID: 5178709340684826703, guid: 1d5914d9002ce0443ade0470640fcfd9, type: 3}
       propertyPath: m_LocalPosition.z

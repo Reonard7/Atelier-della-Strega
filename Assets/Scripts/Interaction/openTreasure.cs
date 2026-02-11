@@ -14,4 +14,11 @@ public class openTreasure : MonoBehaviour
             SpellEvents.OnMimicInteracted?.Invoke();
         }
     }
+
+    [SerializeField] private AudioSource audioSource;
+
+    public void PlayOpenSound()
+    {
+        audioSource.Play();
+    }
 }
