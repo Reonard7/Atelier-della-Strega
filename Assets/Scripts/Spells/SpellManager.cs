@@ -19,8 +19,6 @@ public class SpellManager : MonoBehaviour
     [SerializeField] private List<string> usableIDs;
     private bool _isActive;
 
-    private int _zoneCounter = 0;
-
     [SerializeField] private float holdTimeToCast = 1f;
     private float _holdTimer;
     private bool _isHolding;
@@ -72,15 +70,13 @@ public class SpellManager : MonoBehaviour
     private void OnEnable()
     {
         GrimoireEvents.OnEntryDiscovered += OnEntryDiscovered;
-        SpellEvents.OnSpellZoneEnter += OnZoneEnter;
-        SpellEvents.OnSpellZoneExit += OnZoneExit;
+        SpellEvents.OnSpellZoneTrigger += OnSpellZoneTrigger;
     }
 
     private void OnDisable()
     {
         GrimoireEvents.OnEntryDiscovered -= OnEntryDiscovered;
-        SpellEvents.OnSpellZoneEnter -= OnZoneEnter;
-        SpellEvents.OnSpellZoneExit -= OnZoneExit;
+        SpellEvents.OnSpellZoneTrigger -= OnSpellZoneTrigger;
     }
     void Start()
     {
@@ -528,23 +524,10 @@ public class SpellManager : MonoBehaviour
         UpdateHotbar();
     }
 
-    private void OnZoneEnter()
+    private void OnSpellZoneTrigger(bool active)
     {
-        _zoneCounter++;
-
-        if (_zoneCounter == 1)
-            SetSpellMode(true);
-    }
-
-    private void OnZoneExit()
-    {
-        _zoneCounter--;
-
-        if (_zoneCounter <= 0)
-        {
-            _zoneCounter = 0;
-            SetSpellMode(false);
-        }
+        // active = outside main room
+        SetSpellMode(active);
     }
 
     private void SetSpellMode(bool active)

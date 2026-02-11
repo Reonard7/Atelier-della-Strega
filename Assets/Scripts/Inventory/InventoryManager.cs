@@ -20,8 +20,6 @@ namespace Inventory
         private bool _inCrafting;
         private bool _isActive;
 
-        private int _zoneCounter = 0;
-
         private void OnEnable()
         {
             InteractionEvents.OnCauldronInteracted += OnCauldronInteracted;
@@ -30,9 +28,7 @@ namespace Inventory
             InteractionEvents.OnIngredientDiscard += OnIngredientDiscard;
             InteractionEvents.OnIngredientLocked += OnIngredientLocked;
             InteractionEvents.OnIngredientUnlocked += OnIngredientUnlocked;
-            SpellEvents.OnSpellZoneEnter += OnZoneEnter;
-            SpellEvents.OnSpellZoneExit += OnZoneExit;
-
+            SpellEvents.OnSpellZoneTrigger += OnSpellZoneTrigger;
         }
 
         private void OnDisable()
@@ -43,9 +39,7 @@ namespace Inventory
             InteractionEvents.OnIngredientDiscard -= OnIngredientDiscard;
             InteractionEvents.OnIngredientLocked -= OnIngredientLocked;
             InteractionEvents.OnIngredientUnlocked -= OnIngredientUnlocked;
-            SpellEvents.OnSpellZoneEnter -= OnZoneEnter;
-            SpellEvents.OnSpellZoneExit -= OnZoneExit;
-
+            SpellEvents.OnSpellZoneTrigger -= OnSpellZoneTrigger;
         }
 
         private void Start()
@@ -132,23 +126,10 @@ namespace Inventory
             _inCrafting = false;
         }
 
-        private void OnZoneEnter()
+        private void OnSpellZoneTrigger(bool active)
         {
-            _zoneCounter++;
-
-            if (_zoneCounter == 1)
-                SetInventoryMode(false);
-        }
-
-        private void OnZoneExit()
-        {
-            _zoneCounter--;
-
-            if (_zoneCounter <= 0)
-            {
-                _zoneCounter = 0;
-                SetInventoryMode(true);
-            }
+            // active = outside main room
+            SetInventoryMode(!active);
         }
 
         private void SetInventoryMode(bool active)

@@ -1,16 +1,20 @@
 using UnityEngine;
 
-public class SpellZoneTrigger : MonoBehaviour
+public class HubZoneTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
-            SpellEvents.OnSpellZoneEnter?.Invoke();
+        {
+            SpellEvents.OnSpellZoneTrigger?.Invoke(false);
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
-            SpellEvents.OnSpellZoneExit?.Invoke();
+        {
+            SpellEvents.OnSpellZoneTrigger?.Invoke(true);
+        }
     }
 }
