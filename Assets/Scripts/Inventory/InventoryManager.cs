@@ -20,15 +20,19 @@ namespace Inventory
         private bool _inCrafting;
         private bool _isActive;
 
+        private int _zoneCounter = 0;
+
         private void OnEnable()
         {
             InteractionEvents.OnCauldronInteracted += OnCauldronInteracted;
             InteractionEvents.OnCauldronExit += OnCauldronExit;
             InteractionEvents.OnIngredientPickup += OnIngredientPickup;
             InteractionEvents.OnIngredientDiscard += OnIngredientDiscard;
-            SpellEvents.OnSpellZoneTrigger += OnSpellZoneTrigger;
             InteractionEvents.OnIngredientLocked += OnIngredientLocked;
             InteractionEvents.OnIngredientUnlocked += OnIngredientUnlocked;
+            SpellEvents.OnSpellZoneEnter += OnZoneEnter;
+            SpellEvents.OnSpellZoneExit += OnZoneExit;
+
         }
 
         private void OnDisable()
@@ -37,9 +41,11 @@ namespace Inventory
             InteractionEvents.OnCauldronExit -= OnCauldronExit;
             InteractionEvents.OnIngredientPickup -= OnIngredientPickup;
             InteractionEvents.OnIngredientDiscard -= OnIngredientDiscard;
-            SpellEvents.OnSpellZoneTrigger -= OnSpellZoneTrigger;
             InteractionEvents.OnIngredientLocked -= OnIngredientLocked;
             InteractionEvents.OnIngredientUnlocked -= OnIngredientUnlocked;
+            SpellEvents.OnSpellZoneEnter -= OnZoneEnter;
+            SpellEvents.OnSpellZoneExit -= OnZoneExit;
+
         }
 
         private void Start()
@@ -126,10 +132,29 @@ namespace Inventory
             _inCrafting = false;
         }
 
-        private void OnSpellZoneTrigger(bool active)
+        private void OnZoneEnter()
         {
-            _isActive = !active;
-            canvas.enabled = _isActive;
+            _zoneCounter++;
+
+            if (_zoneCounter == 1)
+                SetInventoryMode(false);
+        }
+
+        private void OnZoneExit()
+        {
+            _zoneCounter--;
+
+            if (_zoneCounter <= 0)
+            {
+                _zoneCounter = 0;
+                SetInventoryMode(true);
+            }
+        }
+
+        private void SetInventoryMode(bool active)
+        {
+            _isActive = active;
+            canvas.enabled = active;
         }
 
         private void OnIngredientLocked(Ingredient ingredient)

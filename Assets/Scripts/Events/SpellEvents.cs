@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class SpellEvents : MonoBehaviour
 {
-    public static Action<bool> OnSpellZoneTrigger;
+    public static Action OnSpellZoneEnter;
+    public static Action OnSpellZoneExit;
 
     public static Action OnFirebreathUsed;
     public static Action OnClarovencyUsed;
@@ -26,4 +27,7 @@ public class SpellEvents : MonoBehaviour
     public static Action OnSwiftretreatEnded;
     public static Action OnJumpingEnded;
     public static Action OnShieldEnded;
+
+    public static Action<int> OnTrialStarted;
+    public static Action<int> OnTrialCompleted;
 }

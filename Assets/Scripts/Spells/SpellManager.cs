@@ -19,6 +19,8 @@ public class SpellManager : MonoBehaviour
     [SerializeField] private List<string> usableIDs;
     private bool _isActive;
 
+    private int _zoneCounter = 0;
+
     [SerializeField] private float holdTimeToCast = 1f;
     private float _holdTimer;
     private bool _isHolding;
@@ -70,13 +72,15 @@ public class SpellManager : MonoBehaviour
     private void OnEnable()
     {
         GrimoireEvents.OnEntryDiscovered += OnEntryDiscovered;
-        SpellEvents.OnSpellZoneTrigger += OnSpellZoneTrigger;
+        SpellEvents.OnSpellZoneEnter += OnZoneEnter;
+        SpellEvents.OnSpellZoneExit += OnZoneExit;
     }
 
     private void OnDisable()
     {
         GrimoireEvents.OnEntryDiscovered -= OnEntryDiscovered;
-        SpellEvents.OnSpellZoneTrigger -= OnSpellZoneTrigger;
+        SpellEvents.OnSpellZoneEnter -= OnZoneEnter;
+        SpellEvents.OnSpellZoneExit -= OnZoneExit;
     }
     void Start()
     {
@@ -113,8 +117,8 @@ public class SpellManager : MonoBehaviour
             SelectPreviousSlot();
         }
 
-        // gestire l'interazione col tastro sinistro
-        if (Input.GetMouseButtonDown(0))
+        // gestire l'interazione col tastro destro
+        if (Input.GetMouseButtonDown(1))
         {
             _isHolding = true;
             _holdTimer = 0f;
@@ -122,7 +126,7 @@ public class SpellManager : MonoBehaviour
             chargeBar.gameObject.SetActive(true);
         }
 
-        if (Input.GetMouseButton(0) && _isHolding)
+        if (Input.GetMouseButton(1) && _isHolding)
         {
             _holdTimer += Time.deltaTime;
             chargeBar.localScale = new Vector3(Mathf.Clamp01(_holdTimer / holdTimeToCast), 1f, 1f);
@@ -135,7 +139,7 @@ public class SpellManager : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(1))
         {
             _isHolding = false;
             _holdTimer = 0f;
@@ -524,9 +528,28 @@ public class SpellManager : MonoBehaviour
         UpdateHotbar();
     }
 
-    private void OnSpellZoneTrigger(bool active)
+    private void OnZoneEnter()
+    {
+        _zoneCounter++;
+
+        if (_zoneCounter == 1)
+            SetSpellMode(true);
+    }
+
+    private void OnZoneExit()
+    {
+        _zoneCounter--;
+
+        if (_zoneCounter <= 0)
+        {
+            _zoneCounter = 0;
+            SetSpellMode(false);
+        }
+    }
+
+    private void SetSpellMode(bool active)
     {
         _isActive = active;
-        canvas.enabled = _isActive;   // show/hide UI
+        canvas.enabled = active;
     }
 }

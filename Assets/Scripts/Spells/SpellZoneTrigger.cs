@@ -5,16 +5,12 @@ public class SpellZoneTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
-        {
-            SpellEvents.OnSpellZoneTrigger?.Invoke(true);
-        }
+            SpellEvents.OnSpellZoneEnter?.Invoke();
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
-        {
-            SpellEvents.OnSpellZoneTrigger?.Invoke(false);
-        }    
+            SpellEvents.OnSpellZoneExit?.Invoke();
     }
 }
