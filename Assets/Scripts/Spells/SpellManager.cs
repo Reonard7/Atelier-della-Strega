@@ -418,7 +418,7 @@ public class SpellManager : MonoBehaviour
 
         ps.Play();
         float originalJump = playerdata.JumpHeight;
-        playerdata.JumpHeight = 3f;
+        playerdata.JumpHeight = 10f;
         SpellEvents.OnJumpingUsed?.Invoke();
 
         yield return new WaitForSeconds(jumpingDuration);
