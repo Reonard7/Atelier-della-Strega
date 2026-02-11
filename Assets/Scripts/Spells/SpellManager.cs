@@ -390,7 +390,7 @@ public class SpellManager : MonoBehaviour
     // SWIFT RETREAT SPELL
     private void UseSwiftRetreat()
     {
-        Debug.Log("Swift Retreat Spell used");
+        SpellEvents.OnSwiftretreatUsed?.Invoke();
     }
     // JUMPING SPELL
     private void UseJumping()
