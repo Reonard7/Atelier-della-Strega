@@ -5,16 +5,17 @@ using UnityEngine;
 
 public class TreasureInteractable : MonoBehaviour, IInteractable
 {
+     
+    //[SerializeField] private Animator animator;
+    private Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponentInParent<Animator>();
+    }
+    
     public void Interact(GameObject caller)
     {
-        Debug.Log(this.tag);
-        if (this.CompareTag("Treasure"))
-        {
-            SpellEvents.OnTreasureInteracted?.Invoke();
-        }
-        else
-        {
-            SpellEvents.OnMimicInteracted?.Invoke();
-        }
+        animator.SetTrigger("open");
     }
 }
