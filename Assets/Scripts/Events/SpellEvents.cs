@@ -28,6 +28,7 @@ public class SpellEvents : MonoBehaviour
     public static Action OnJumpingEnded;
     public static Action OnShieldEnded;
 
+    public static Action<int> TrailState;
     public static Action<int> OnTrialStarted;
     public static Action<int> OnTrialCompleted;
 }

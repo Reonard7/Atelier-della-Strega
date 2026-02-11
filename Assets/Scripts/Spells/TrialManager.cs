@@ -12,16 +12,39 @@ public class TrialManager : MonoBehaviour
         Completed
     }
 
-    [Header("Trial States")]
-    public TrialState[] trialStates = new TrialState[3];
+    public static TrialManager Instance;
 
-    public int CurrentTrialIndex { get; private set; } = 1;
+    public List<TrialState> trialStates;
+    public int CurrentTrialIndex { get; private set; } = 0;
 
-    private void Start()
+    private void Awake()
     {
-        trialStates[0] = TrialState.Idle;
-        trialStates[1] = TrialState.Idle;
-        trialStates[2] = TrialState.Idle;
+        Instance = this;
+
+        trialStates = new List<TrialState>
+        {
+            TrialState.Idle,
+            TrialState.Idle,
+            TrialState.Idle
+        };
+    }
+
+    public TrialState GetTrialState(int index)
+    {
+        return trialStates[index];
+    }
+
+    public void StartTrial(int index)
+    {
+        if (trialStates[index] != TrialState.InProgress) return;
+
+        CurrentTrialIndex = index;
+        Debug.Log($"Trial {index + 1} started");
+    }
+
+    public void CompleteCurrentTrial()
+    {
+        trialStates[CurrentTrialIndex] = TrialState.Completed;
     }
 
     /*
