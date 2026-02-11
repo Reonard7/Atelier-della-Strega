@@ -31,4 +31,6 @@ public class SpellEvents : MonoBehaviour
     public static Action<int> OnTrialStarted;
     public static Action OnTrialSuspended;
     public static Action OnTrialCompleted;
+
+    public static Action OnArrowCollision;
 }

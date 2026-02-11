@@ -15,6 +15,8 @@ public class PortalInteractable : MonoBehaviour, IInteractable
     }
     public void Interact(GameObject caller)
     {
+        if (TrialManager.Instance.GetTrialState(trailIndex) != TrialManager.TrialState.Idle) return;
+
         Debug.Log($"Trail started: {trailIndex + 1}");
         SpellEvents.OnTrialStarted?.Invoke(trailIndex);
     }

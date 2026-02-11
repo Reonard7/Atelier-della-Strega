@@ -32,6 +32,7 @@ public class TrialManager : MonoBehaviour
     private void OnEnable()
     {
         SpellEvents.OnTrialStarted += StartTrial;
+        SpellEvents.OnTrialSuspended += SuspendCurrentTrial;
         SpellEvents.OnTrialCompleted += CompleteCurrentTrial;
     }
     private void OnDisable()
@@ -54,6 +55,10 @@ public class TrialManager : MonoBehaviour
         Debug.Log($"Trial {index + 1} started");
     }
 
+    public void SuspendCurrentTrial()
+    {
+        trialStates[CurrentTrialIndex] = TrialState.Idle;
+    }
     public void CompleteCurrentTrial()
     {
         trialStates[CurrentTrialIndex] = TrialState.Completed;
