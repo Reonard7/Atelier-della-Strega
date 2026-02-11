@@ -19,5 +19,7 @@ public class SpellInteractable : MonoBehaviour, IInteractable
     {
         audioSource.PlayOneShot(pickupSound);
         InteractionEvents.OnSpellPickup?.Invoke(spell);
+        GetComponent<MeshRenderer>().enabled = false;
+        GetComponent<Collider>().enabled = false;
     }
 }
