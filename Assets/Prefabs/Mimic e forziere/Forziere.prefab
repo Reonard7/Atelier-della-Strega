@@ -82,15 +82,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9e1e79f9189b6ec41a945e05f06f60fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 0.00000030062213
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9e1e79f9189b6ec41a945e05f06f60fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -0.00000007478791
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9e1e79f9189b6ec41a945e05f06f60fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -1.7838507
+      objectReference: {fileID: 0}
+    - target: {fileID: -7963455914095031883, guid: 9e1e79f9189b6ec41a945e05f06f60fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.45217776
+      objectReference: {fileID: 0}
+    - target: {fileID: -7963455914095031883, guid: 9e1e79f9189b6ec41a945e05f06f60fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.000000017196902
+      objectReference: {fileID: 0}
+    - target: {fileID: -7963455914095031883, guid: 9e1e79f9189b6ec41a945e05f06f60fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.38781342
+      objectReference: {fileID: 0}
+    - target: {fileID: -5676145728915080695, guid: 9e1e79f9189b6ec41a945e05f06f60fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 88.28993
+      objectReference: {fileID: 0}
+    - target: {fileID: -5676145728915080695, guid: 9e1e79f9189b6ec41a945e05f06f60fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 166.8969
+      objectReference: {fileID: 0}
+    - target: {fileID: -5676145728915080695, guid: 9e1e79f9189b6ec41a945e05f06f60fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 166.50348
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9e1e79f9189b6ec41a945e05f06f60fb, type: 3}
       propertyPath: m_Name
@@ -201,7 +225,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: c7b1503b3993e5a408be1d9b5f13f988, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
