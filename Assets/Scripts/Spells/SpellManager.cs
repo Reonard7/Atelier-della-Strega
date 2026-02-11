@@ -520,6 +520,8 @@ public class SpellManager : MonoBehaviour
         if (!usableIDs.Contains(data.Id))
             return;
 
+        if (abilityList.Contains(data)) return;
+
         abilityList.Add(data);
         UpdateHotbar();
     }
