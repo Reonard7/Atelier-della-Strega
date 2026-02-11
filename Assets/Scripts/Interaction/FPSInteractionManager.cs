@@ -92,6 +92,14 @@ namespace Interaction
                             spellInteractable.Interact(gameObject);
                         break;
                     }
+                    // Interactable is a Portal
+                    case PortalInteractable portalInteractable:
+                    {
+                        _name = portalInteractable.name;
+                        if (Input.GetMouseButtonDown(0))
+                            portalInteractable.Interact(gameObject);
+                        break;
+                    }
                 }
             }
             else

@@ -15,7 +15,7 @@ public class TrialManager : MonoBehaviour
     public static TrialManager Instance;
 
     public List<TrialState> trialStates;
-    public int CurrentTrialIndex { get; private set; } = 0;
+    public int CurrentTrialIndex = 0;
 
     private void Awake()
     {
@@ -29,6 +29,17 @@ public class TrialManager : MonoBehaviour
         };
     }
 
+    private void OnEnable()
+    {
+        SpellEvents.OnTrialStarted += StartTrial;
+        SpellEvents.OnTrialCompleted += CompleteCurrentTrial;
+    }
+    private void OnDisable()
+    {
+        SpellEvents.OnTrialStarted -= StartTrial;
+        SpellEvents.OnTrialCompleted -= CompleteCurrentTrial;
+    }
+
     public TrialState GetTrialState(int index)
     {
         return trialStates[index];
@@ -36,9 +47,10 @@ public class TrialManager : MonoBehaviour
 
     public void StartTrial(int index)
     {
-        if (trialStates[index] != TrialState.InProgress) return;
+        if (trialStates[index] == TrialState.InProgress) return;
 
         CurrentTrialIndex = index;
+        trialStates[CurrentTrialIndex] = TrialState.InProgress;
         Debug.Log($"Trial {index + 1} started");
     }
 

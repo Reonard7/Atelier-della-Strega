@@ -36520,6 +36520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrialManager
   trialStates: 
+  CurrentTrialIndex: 0
 --- !u!4 &784833143
 Transform:
   m_ObjectHideFlags: 0
@@ -59597,7 +59598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7037135804212712176, guid: b7a572efa6a57d04ab20a18b0b02a61b, type: 3}
       propertyPath: _interactionDistance
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7878712801153715051, guid: b7a572efa6a57d04ab20a18b0b02a61b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -74669,7 +74670,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6583774183654007177, guid: 8e017af9beea94d4d837f441357d2a95, type: 3}
       propertyPath: m_Name
-      value: portale (2)
+      value: Trail of Ascension
       objectReference: {fileID: 0}
     - target: {fileID: 6583774183654007177, guid: 8e017af9beea94d4d837f441357d2a95, type: 3}
       propertyPath: m_IsActive
@@ -91493,7 +91494,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6583774183654007177, guid: 8e017af9beea94d4d837f441357d2a95, type: 3}
       propertyPath: m_Name
-      value: portale (1)
+      value: Trial of Fire
       objectReference: {fileID: 0}
     - target: {fileID: 6583774183654007177, guid: 8e017af9beea94d4d837f441357d2a95, type: 3}
       propertyPath: m_IsActive
@@ -106099,7 +106100,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6583774183654007177, guid: 8e017af9beea94d4d837f441357d2a95, type: 3}
       propertyPath: m_Name
-      value: portale
+      value: Trial of Deceit
       objectReference: {fileID: 0}
     - target: {fileID: 6660694148200332591, guid: 8e017af9beea94d4d837f441357d2a95, type: 3}
       propertyPath: m_LocalPosition.x

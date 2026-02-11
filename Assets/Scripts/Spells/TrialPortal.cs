@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TrialPortal : MonoBehaviour
 {
-    [SerializeField] private int trialIndex;
+    [SerializeField] public int trialIndex;
     [SerializeField] private GameObject[] vfxLists;
 
     private void Start()

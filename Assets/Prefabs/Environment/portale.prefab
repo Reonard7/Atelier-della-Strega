@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6660694148200332591}
   - component: {fileID: 2047461697639475325}
   - component: {fileID: 8768138940244709525}
+  - component: {fileID: 4826641252723875156}
   m_Layer: 0
   m_Name: portale
   m_TagString: Untagged
@@ -74,6 +75,18 @@ MonoBehaviour:
   - {fileID: 808062416695522427}
   - {fileID: 4335439995224286758}
   - {fileID: 5526271619341441794}
+--- !u!114 &4826641252723875156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6583774183654007177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf344827e4fa864598d8eda4aefd5ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PortalInteractable
 --- !u!1001 &5108253603915061514
 PrefabInstance:
   m_ObjectHideFlags: 0
