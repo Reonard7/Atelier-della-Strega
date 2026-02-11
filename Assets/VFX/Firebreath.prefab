@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Firebreath
       objectReference: {fileID: 0}
+    - target: {fileID: 4318940320840401929, guid: 842eb98046e1ca348b3c0807fcfe362d, type: 3}
+      propertyPath: m_TagString
+      value: Firebreath
+      objectReference: {fileID: 0}
     - target: {fileID: 8419178667490943989, guid: 842eb98046e1ca348b3c0807fcfe362d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.9092674
@@ -53,6 +57,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8419802679652866803, guid: 842eb98046e1ca348b3c0807fcfe362d, type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419802679652866803, guid: 842eb98046e1ca348b3c0807fcfe362d, type: 3}
+      propertyPath: TriggerModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419802679652866803, guid: 842eb98046e1ca348b3c0807fcfe362d, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419802679652866803, guid: 842eb98046e1ca348b3c0807fcfe362d, type: 3}
       propertyPath: InitialModule.gravitySource
       value: 1
       objectReference: {fileID: 0}
@@ -71,5 +87,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4318940320840401929, guid: 842eb98046e1ca348b3c0807fcfe362d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 460898977129565957}
   m_SourcePrefab: {fileID: 100100000, guid: 842eb98046e1ca348b3c0807fcfe362d, type: 3}
+--- !u!1 &6885853577914137885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4318940320840401929, guid: 842eb98046e1ca348b3c0807fcfe362d, type: 3}
+  m_PrefabInstance: {fileID: 7232923999995525396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &460898977129565957
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6885853577914137885}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.56
+  m_Height: 8.46
+  m_Direction: 1
+  m_Center: {x: 0, y: 8.000003, z: -0.0000009536745}
