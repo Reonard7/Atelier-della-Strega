@@ -45556,6 +45556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirstTrial
   player: {fileID: 1695515383}
+  treasureMat: {fileID: 0}
   invulnerability: 0
 --- !u!4 &928444761
 Transform:

@@ -4,6 +4,7 @@ using UnityEngine;
 public class FirstTrial : MonoBehaviour
 {
     [SerializeField] private GameObject player;
+    [SerializeField] private Material treasureMat;
     public bool invulnerability = false;
 
     private void OnEnable()
@@ -14,6 +15,8 @@ public class FirstTrial : MonoBehaviour
         SpellEvents.OnInvulnerabilityUsed += ProtectionStarted;
         SpellEvents.OnInvulnerabilityEnded += ProtectionEnded;
         SpellEvents.OnSwiftretreatUsed += TeleportAndSuspend;
+        SpellEvents.OnClarovencyUsed += EnableHighlight;
+        SpellEvents.OnClarovencyEnded += DisableHighlight;
         SpellEvents.OnArrowCollision += CollisionCheck;
         SpellEvents.OnTreasureInteracted += EndTrial;
         SpellEvents.OnMimicInteracted += TeleportAndSuspend;
@@ -26,6 +29,8 @@ public class FirstTrial : MonoBehaviour
         SpellEvents.OnInvulnerabilityUsed -= ProtectionStarted;
         SpellEvents.OnInvulnerabilityEnded -= ProtectionEnded;
         SpellEvents.OnSwiftretreatUsed -= TeleportAndSuspend;
+        SpellEvents.OnClarovencyUsed -= EnableHighlight;
+        SpellEvents.OnClarovencyEnded -= DisableHighlight;
         SpellEvents.OnArrowCollision -= CollisionCheck;
         SpellEvents.OnTreasureInteracted -= EndTrial;
         SpellEvents.OnMimicInteracted -= TeleportAndSuspend;
@@ -47,6 +52,16 @@ public class FirstTrial : MonoBehaviour
     {
         SpellEvents.OnTrialSuspended?.Invoke();
         Teleport(new Vector3(8f, 0.2f, 20f));
+    }
+
+    private void EnableHighlight()
+    {
+        //treasureMat.EnableKeyword("_EMISSION");
+    }
+
+    private void DisableHighlight()
+    {
+        //treasureMat.DisableKeyword("_EMISSION");
     }
 
     private void OnTrialStarted(int trialIndex)
