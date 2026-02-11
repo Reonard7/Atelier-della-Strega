@@ -9,16 +9,12 @@ public class ThirdTrial : MonoBehaviour
     {
         SpellEvents.OnTrialStarted += OnTrialStarted;
         SpellEvents.OnSwiftretreatUsed += TeleportAndSuspend;
-        SpellEvents.OnTreasureInteracted += EndTrial;
-        SpellEvents.OnMimicInteracted += TeleportAndSuspend;
         SpellEvents.OnPlatformCollision += EndTrial;
     }
     private void OnDisable()
     {
         SpellEvents.OnTrialStarted -= OnTrialStarted;
         SpellEvents.OnSwiftretreatUsed -= TeleportAndSuspend;
-        SpellEvents.OnTreasureInteracted -= EndTrial;
-        SpellEvents.OnMimicInteracted -= TeleportAndSuspend;
         SpellEvents.OnPlatformCollision -= EndTrial;
     }
 

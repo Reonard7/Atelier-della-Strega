@@ -33482,10 +33482,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5254840249412460160, guid: 6a921c10dff99f340833dc4759a2b151, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2056138664}
+      addedObject: {fileID: 2056138663}
     - targetCorrespondingSourceObject: {fileID: 5254840249412460160, guid: 6a921c10dff99f340833dc4759a2b151, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2056138663}
+      addedObject: {fileID: 2056138668}
   m_SourcePrefab: {fileID: 100100000, guid: 6a921c10dff99f340833dc4759a2b151, type: 3}
 --- !u!1001 &720403931
 PrefabInstance:
@@ -36874,10 +36874,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5254840249412460160, guid: 6a921c10dff99f340833dc4759a2b151, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2084702963}
+      addedObject: {fileID: 2084702962}
     - targetCorrespondingSourceObject: {fileID: 5254840249412460160, guid: 6a921c10dff99f340833dc4759a2b151, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2084702962}
+      addedObject: {fileID: 2084702967}
   m_SourcePrefab: {fileID: 100100000, guid: 6a921c10dff99f340833dc4759a2b151, type: 3}
 --- !u!1001 &792714967
 PrefabInstance:
@@ -72245,6 +72245,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SecondTrial
   player: {fileID: 1695515383}
+  braziers:
+  - {fileID: 1469361914}
+  - {fileID: 1868516854}
 --- !u!4 &1465437680
 Transform:
   m_ObjectHideFlags: 0
@@ -100163,7 +100166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6554d6f717dcf5844aec95feb642e774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BrazerCollider
---- !u!65 &2056138664
+--- !u!65 &2056138668
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100182,8 +100185,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.6902792, y: 3.0369298, z: 1.6902792}
-  m_Center: {x: 0, y: 1.5184649, z: 0}
+  m_Size: {x: 7.28, y: 3.0369298, z: 4.53}
+  m_Center: {x: 1.71, y: 1.5184649, z: 0}
 --- !u!4 &2058152035 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 440115892228223628, guid: 79f3f59e3161e984e97498a75d5666eb, type: 3}
@@ -101942,7 +101945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6554d6f717dcf5844aec95feb642e774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BrazerCollider
---- !u!65 &2084702963
+--- !u!65 &2084702967
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101961,8 +101964,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.6902792, y: 3.0369298, z: 1.6902792}
-  m_Center: {x: 0, y: 1.5184649, z: 0}
+  m_Size: {x: 7.28, y: 3.0369298, z: 4.53}
+  m_Center: {x: 1.71, y: 1.5184649, z: 0}
 --- !u!1001 &2087600216
 PrefabInstance:
   m_ObjectHideFlags: 0
