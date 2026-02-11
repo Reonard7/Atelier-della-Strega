@@ -376,12 +376,68 @@ public class SpellManager : MonoBehaviour
     // LIGHT SPELL
     private void UseLight()
     {
-        Debug.Log("Light Spell used");
+        if (_lightCoroutine != null)
+            return; // already active, do not restart
+
+        _lightCoroutine = StartCoroutine(LightRoutine());
+    }
+    private IEnumerator LightRoutine()
+    {
+        // Instantiate if not existing
+        if (_lightInstance == null)
+        {
+            _lightInstance = Instantiate(
+                lightPrefab,
+                player.transform.position + new Vector3(0, 2, 0),
+                player.transform.rotation,
+                player.transform //follows player
+            );
+        }
+
+        var ps = _lightInstance.GetComponent<ParticleSystem>();
+
+        ps.Play();
+        SpellEvents.OnLightUsed?.Invoke();
+
+        yield return new WaitForSeconds(lightDuration);
+
+        ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+
+        _lightCoroutine = null;
+        SpellEvents.OnLightEnded?.Invoke();
     }
     // FIREBALL SPELL
     private void UseFireball()
     {
-        Debug.Log("Fireball Spell used");
+        if (_fireballCoroutine != null)
+            return; // already active, do not restart
+
+        _fireballCoroutine = StartCoroutine(FireballRoutine());
+    }
+    private IEnumerator FireballRoutine()
+    {
+        // Instantiate if not existing
+        if (_fireballInstance == null)
+        {
+            _fireballInstance = Instantiate(
+                fireballPrefab,
+                player.transform.position + new Vector3(0, 1, 0),
+                player.transform.rotation,
+                player.transform //follows player
+            );
+        }
+
+        var ps = _fireballInstance.GetComponent<ParticleSystem>();
+
+        ps.Play();
+        SpellEvents.OnFireballUsed?.Invoke();
+
+        yield return new WaitForSeconds(fireballDuration);
+
+        ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+
+        _fireballCoroutine = null;
+        SpellEvents.OnFireballEnded?.Invoke();
     }
     // SWIFT RETREAT SPELL
     private void UseSwiftRetreat()

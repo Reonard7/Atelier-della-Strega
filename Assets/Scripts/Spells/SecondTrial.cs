@@ -12,12 +12,14 @@ public class SecondTrial : MonoBehaviour
         SpellEvents.OnTrialStarted += OnTrialStarted;
         SpellEvents.OnSwiftretreatUsed += TeleportAndSuspend;
         SpellEvents.OnFirebreathEnded += CheckIfEnded;
+        SpellEvents.OnFireballEnded += TeleportAndSuspend;
     }
     private void OnDisable()
     {
         SpellEvents.OnTrialStarted -= OnTrialStarted;
         SpellEvents.OnSwiftretreatUsed -= TeleportAndSuspend;
         SpellEvents.OnFirebreathEnded -= CheckIfEnded;
+        SpellEvents.OnFireballEnded -= TeleportAndSuspend;
     }
     private void Teleport(Vector3 teleportPos)
     {
@@ -33,8 +35,14 @@ public class SecondTrial : MonoBehaviour
 
     private void TeleportAndSuspend()
     {
-        SpellEvents.OnTrialSuspended?.Invoke();
-        Teleport(new Vector3(8f, 0.2f, 20f));
+        var state = TrialManager.Instance.trialStates[1];
+
+        if (state == TrialManager.TrialState.InProgress)
+        {
+            SpellEvents.OnTrialSuspended?.Invoke();
+            Teleport(new Vector3(8f, 0.2f, 20f));
+        }
+        
     }
 
     private void OnTrialStarted(int trialIndex)
