@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SpellEvents : MonoBehaviour
@@ -33,4 +34,6 @@ public class SpellEvents : MonoBehaviour
     public static Action OnTrialCompleted;
 
     public static Action OnArrowCollision;
+    public static Action OnMimicInteracted;
+    public static Action OnTreasureInteracted;
 }

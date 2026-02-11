@@ -15,6 +15,8 @@ public class FirstTrial : MonoBehaviour
         SpellEvents.OnInvulnerabilityEnded += ProtectionEnded;
         SpellEvents.OnSwiftretreatUsed += TeleportAndSuspend;
         SpellEvents.OnArrowCollision += CollisionCheck;
+        SpellEvents.OnTreasureInteracted += EndTrial;
+        SpellEvents.OnMimicInteracted += TeleportAndSuspend;
     }
     private void OnDisable()
     {
@@ -25,6 +27,8 @@ public class FirstTrial : MonoBehaviour
         SpellEvents.OnInvulnerabilityEnded -= ProtectionEnded;
         SpellEvents.OnSwiftretreatUsed -= TeleportAndSuspend;
         SpellEvents.OnArrowCollision -= CollisionCheck;
+        SpellEvents.OnTreasureInteracted -= EndTrial;
+        SpellEvents.OnMimicInteracted -= TeleportAndSuspend;
     }
 
     private void Teleport(Vector3 teleportPos)
@@ -68,5 +72,11 @@ public class FirstTrial : MonoBehaviour
         if (invulnerability) return;
 
         TeleportAndSuspend();
+    }
+
+    private void EndTrial()
+    {
+        SpellEvents.OnTrialCompleted?.Invoke();
+        Teleport(new Vector3(8f, 0.2f, 20f));
     }
 }

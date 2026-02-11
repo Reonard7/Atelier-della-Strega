@@ -100,6 +100,14 @@ namespace Interaction
                             portalInteractable.Interact(gameObject);
                         break;
                     }
+                    //Interactable is a Treasure
+                    case TreasureInteractable treasureInteractable:
+                    {
+                        _name = "Inspect";
+                        if (Input.GetMouseButtonDown(0))
+                            treasureInteractable.Interact(gameObject);
+                        break;
+                    }
                 }
             }
             else

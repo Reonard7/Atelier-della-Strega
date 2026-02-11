@@ -4235,7 +4235,7 @@ GameObject:
   - component: {fileID: 81049514}
   m_Layer: 0
   m_Name: mimic
-  m_TagString: Untagged
+  m_TagString: Mimic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26768,6 +26768,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7198971506138548238, guid: 4a8f01f2378e33c4e8409306585a8fa2, type: 3}
   m_PrefabInstance: {fileID: 553390701}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &554255734 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5388020284518934097, guid: ff44088ed77d02b4c9461b031ba1053b, type: 3}
+  m_PrefabInstance: {fileID: 561481947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &554255740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554255734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e1eb42a6731ee4f94e1149a22a9587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TreasureInteractable
 --- !u!1 &554634597
 GameObject:
   m_ObjectHideFlags: 0
@@ -27029,6 +27046,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 54070191}
     m_Modifications:
+    - target: {fileID: 5388020284518934097, guid: ff44088ed77d02b4c9461b031ba1053b, type: 3}
+      propertyPath: m_TagString
+      value: Treasure
+      objectReference: {fileID: 0}
     - target: {fileID: 6941891242481156048, guid: ff44088ed77d02b4c9461b031ba1053b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30.620075
@@ -27073,10 +27094,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Forziere
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7474633504994404575, guid: ff44088ed77d02b4c9461b031ba1053b, type: 3}
+      propertyPath: m_TagString
+      value: Treasure
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1406983616003728392, guid: ff44088ed77d02b4c9461b031ba1053b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5388020284518934097, guid: ff44088ed77d02b4c9461b031ba1053b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 554255740}
   m_SourcePrefab: {fileID: 100100000, guid: ff44088ed77d02b4c9461b031ba1053b, type: 3}
 --- !u!4 &562294425 stripped
 Transform:
