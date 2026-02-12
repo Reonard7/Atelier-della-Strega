@@ -159,22 +159,22 @@ public class TutorialManager : MonoBehaviour
     // =========================
     // ROTAZIONE PLAYER
     // =========================
-    private void SmoothLookAtMage()
-    {
+    private void SmoothLookAtMage() { 
         Vector3 targetPos = mage.transform.position + Vector3.up * 1.5f;
-
-        Vector3 flatDir = targetPos - fpsController.transform.position;
-        flatDir.y = 0f;
-
-        if (flatDir.sqrMagnitude > 0.01f)
-        {
-            Quaternion targetRotation = Quaternion.LookRotation(flatDir);
-            fpsController.transform.rotation =
-                Quaternion.Slerp(fpsController.transform.rotation,
-                                 targetRotation,
-                                 rotationSpeed * Time.deltaTime);
-        }
-    }
+     // --- CAPSULE (YAW) --- 
+     Vector3 flatDir = targetPos - fpsController.transform.position;
+      flatDir.y = 0f;
+       if (flatDir.sqrMagnitude > 0.01f) { 
+        Quaternion targetRotation = Quaternion.LookRotation(flatDir);
+        fpsController.transform.rotation = Quaternion.Slerp(fpsController.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+         } 
+         // --- CAMERA (PITCH) ---
+         Vector3 camDir = targetPos - fpsController.CinemachineCameraTarget.transform.position;
+          Quaternion camRotation = Quaternion.LookRotation(camDir); float targetPitch = camRotation.eulerAngles.x;
+           if (targetPitch > 180f) targetPitch -= 360f;
+            fpsController.CinemachineTargetPitch = Mathf.Lerp( fpsController.CinemachineTargetPitch, Mathf.Clamp(targetPitch, fpsController.BottomClamp, fpsController.TopClamp), rotationSpeed * Time.deltaTime );
+             fpsController.CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(fpsController.CinemachineTargetPitch, 0f, 0f); 
+            }
 
     // =========================
     // ROTAZIONE MAGA
