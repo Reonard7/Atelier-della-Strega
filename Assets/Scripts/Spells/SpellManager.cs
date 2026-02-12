@@ -460,7 +460,7 @@ public class SpellManager : MonoBehaviour
             _jumpingInstance = Instantiate(
                 jumpingPrefab,
                 player.transform.position + new Vector3(0, 1, 0),
-                player.transform.rotation * Quaternion.Euler(new Vector3(90, 0, 0)),
+                player.transform.rotation * Quaternion.Euler(new Vector3(0, 0, 0)),
                 player.transform //follows player
             );
         }
