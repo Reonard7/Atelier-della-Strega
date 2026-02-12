@@ -1,6 +1,9 @@
 ﻿using GameData.Scripts.Items;
 using NUnit.Framework;
+using StarterAssets;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -9,6 +12,8 @@ public class SpellManager : MonoBehaviour
 {
     private List<IGrimoireData> abilityList;
     [SerializeField] private GameObject hotbar;
+    [SerializeField] private Canvas canvas;
+    [SerializeField] private TextMeshProUGUI name;
     private SpellSlot[] spellSlots;
     private int _activeSlotIndex;
     [SerializeField] private List<string> usableIDs;
@@ -18,6 +23,48 @@ public class SpellManager : MonoBehaviour
     private float _holdTimer;
     private bool _isHolding;
     [SerializeField] private RectTransform chargeBar;
+
+    private Coroutine _speedCoroutine;
+    private GameObject _speedInstance;
+    private Coroutine _jumpingCoroutine;
+    private GameObject _jumpingInstance;
+    private Coroutine _fireBreathCoroutine;
+    private GameObject _fireBreathInstance;
+    private Coroutine _clarovencyCoroutine;
+    private GameObject _clarovencyInstance;
+    private Coroutine _invulnerabilityCoroutine;
+    private GameObject _invulnerabilityInstance;
+    private Coroutine _vitalityCoroutine;
+    private GameObject _vitalityInstance;
+    private Coroutine _lightCoroutine;
+    private GameObject _lightInstance;
+    private Coroutine _fireballCoroutine;
+    private GameObject _fireballInstance;
+    private Coroutine _swiftRetreatCoroutine;
+    private GameObject _swiftRetreatInstance;
+    private Coroutine _shieldCoroutine;
+    private GameObject _shieldInstance;
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject fireBreathPrefab;
+    [SerializeField] private float fireBreathDuration = 3f;
+    [SerializeField] private GameObject clarovencyPrefab;
+    [SerializeField] private float clarovencyDuration = 1f;
+    [SerializeField] private GameObject invulnerabilityPrefab;
+    [SerializeField] private float invulnerabilityDuration = 3f;
+    [SerializeField] private GameObject speedPrefab;
+    [SerializeField] private float speedDuration = 10f;
+    [SerializeField] private GameObject vitalityPrefab;
+    [SerializeField] private float vitalityDuration = 3f;
+    [SerializeField] private GameObject lightPrefab;
+    [SerializeField] private float lightDuration = 3f;
+    [SerializeField] private GameObject fireballPrefab;
+    [SerializeField] private float fireballDuration = 3f;
+    [SerializeField] private GameObject swiftRetreatPrefab;
+    [SerializeField] private float swiftRetreatDuration = 3f;
+    [SerializeField] private GameObject jumpingPrefab;
+    [SerializeField] private float jumpingDuration = 10f;
+    [SerializeField] private GameObject shieldPrefab;
+    [SerializeField] private float shieldDuration = 3f;
 
 
     private void OnEnable()
@@ -66,8 +113,8 @@ public class SpellManager : MonoBehaviour
             SelectPreviousSlot();
         }
 
-        // gestire l'interazione col tastro sinistro
-        if (Input.GetMouseButtonDown(0))
+        // gestire l'interazione col tastro destro
+        if (Input.GetMouseButtonDown(1))
         {
             _isHolding = true;
             _holdTimer = 0f;
@@ -75,7 +122,7 @@ public class SpellManager : MonoBehaviour
             chargeBar.gameObject.SetActive(true);
         }
 
-        if (Input.GetMouseButton(0) && _isHolding)
+        if (Input.GetMouseButton(1) && _isHolding)
         {
             _holdTimer += Time.deltaTime;
             chargeBar.localScale = new Vector3(Mathf.Clamp01(_holdTimer / holdTimeToCast), 1f, 1f);
@@ -88,12 +135,14 @@ public class SpellManager : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(1))
         {
             _isHolding = false;
             _holdTimer = 0f;
             chargeBar.gameObject.SetActive(false);
         }
+
+        name.text = (abilityList.Count == 0 ? "" : abilityList[_activeSlotIndex].DisplayName);
     }
 
     // Ability functions
@@ -154,46 +203,318 @@ public class SpellManager : MonoBehaviour
         }
     }
 
+    // FIREBREATH POTION
     private void UseFirebreathPotion()
     {
-        Debug.Log("Firebreath Potion used");
+        if (_fireBreathCoroutine != null)
+            return; // already active, do not restart
+
+        _fireBreathCoroutine = StartCoroutine(FireBreathRoutine());
     }
+    private IEnumerator FireBreathRoutine()
+    {
+        // Instantiate if not existing
+        if (_fireBreathInstance == null)
+        {
+            _fireBreathInstance = Instantiate(
+                fireBreathPrefab,
+                player.transform.position + new Vector3(0, 1, 0),
+                player.transform.rotation * Quaternion.Euler(new Vector3(90, 0, 0)),
+                player.transform //follows player
+            );
+        }
+
+        var ps = _fireBreathInstance.GetComponent<ParticleSystem>();
+
+        ps.Play();
+        SpellEvents.OnFirebreathUsed?.Invoke();
+
+        yield return new WaitForSeconds(fireBreathDuration);
+
+        ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+
+        _fireBreathCoroutine = null;
+        SpellEvents.OnFirebreathEnded?.Invoke();
+    }
+    // CLAROVENCY POTION
     private void UseClarovencyPotion()
     {
-        Debug.Log("Calrovency Potion used");
+        if (_clarovencyCoroutine != null)
+            return; // already active, do not restart
+
+        _clarovencyCoroutine = StartCoroutine(ClarovencyRoutine());
     }
+    private IEnumerator ClarovencyRoutine()
+    {
+        // Instantiate if not existing
+        if (_clarovencyInstance == null)
+        {
+            _clarovencyInstance = Instantiate(
+                clarovencyPrefab,
+                player.transform.position + new Vector3(0, 1, 0),
+                player.transform.rotation * Quaternion.Euler(new Vector3(90, 0, 0)),
+                player.transform //follows player
+            );
+        }
+
+        var ps = _clarovencyInstance.GetComponent<ParticleSystem>();
+
+        ps.Play();
+        SpellEvents.OnClarovencyUsed?.Invoke();
+
+        yield return new WaitForSeconds(clarovencyDuration);
+
+        ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+
+        _clarovencyCoroutine = null;
+        SpellEvents.OnClarovencyEnded?.Invoke();
+    }
+    // INVULNERABILITY POTION
     private void UseInvulnerabilityPotion()
     {
-        Debug.Log("Invulnerability Potion used");
+        if (_invulnerabilityCoroutine != null)
+            return; // already active, do not restart
+
+        _invulnerabilityCoroutine = StartCoroutine(InvulnerabilityRoutine());
     }
+    private IEnumerator InvulnerabilityRoutine()
+    {
+        // Instantiate if not existing
+        if (_invulnerabilityInstance == null)
+        {
+            _invulnerabilityInstance = Instantiate(
+                invulnerabilityPrefab,
+                player.transform.position + new Vector3(0, 1, 0),
+                player.transform.rotation * Quaternion.Euler(new Vector3(90, 0, 0)),
+                player.transform //follows player
+            );
+        }
+
+        var ps = _invulnerabilityInstance.GetComponent<ParticleSystem>();
+
+        ps.Play();
+        SpellEvents.OnInvulnerabilityUsed?.Invoke();
+
+        yield return new WaitForSeconds(invulnerabilityDuration);
+
+        ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+
+        _invulnerabilityCoroutine = null;
+        SpellEvents.OnInvulnerabilityEnded?.Invoke();
+    }
+    // SPEED POTION
     private void UseSpeedPotion()
     {
-        Debug.Log("Speed Potion used");
+        if (_speedCoroutine != null)
+            return; // already active, do not restart
+
+        _speedCoroutine = StartCoroutine(SpeedRoutine());
     }
+    private IEnumerator SpeedRoutine()
+    {
+        // Instantiate if not existing
+        if (_speedInstance == null)
+        {
+            _speedInstance = Instantiate(
+                speedPrefab,
+                player.transform.position + new Vector3(0, 1, 0),
+                player.transform.rotation * Quaternion.Euler(new Vector3(90, 0, 0)),
+                player.transform //follows player
+            );
+        }
+
+        var ps = _speedInstance.GetComponent<ParticleSystem>();
+        var playerdata = player.GetComponent<FirstPersonController>();
+
+        ps.Play();
+        float originalSpeed = playerdata.MoveSpeed;
+        playerdata.MoveSpeed = 10f;
+        SpellEvents.OnSpeedUsed?.Invoke();
+
+        yield return new WaitForSeconds(speedDuration);
+
+        ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+        playerdata.MoveSpeed = originalSpeed;
+
+        _speedCoroutine = null;
+        SpellEvents.OnSpeedEnded?.Invoke();
+    }
+
+    // VITALITY POTION
     private void UseVitalityPotion()
     {
-        Debug.Log("Vitality Potion used");
+        if (_vitalityCoroutine != null)
+            return; // already active, do not restart
+
+        _vitalityCoroutine = StartCoroutine(VitalityRoutine());
     }
+    private IEnumerator VitalityRoutine()
+    {
+        // Instantiate if not existing
+        if (_vitalityInstance == null)
+        {
+            _vitalityInstance = Instantiate(
+                vitalityPrefab,
+                player.transform.position + new Vector3(0, 1, 0),
+                player.transform.rotation * Quaternion.Euler(new Vector3(90, 0, 0)),
+                player.transform //follows player
+            );
+        }
+
+        var ps = _vitalityInstance.GetComponent<ParticleSystem>();
+
+        ps.Play();
+        SpellEvents.OnVitalityUsed?.Invoke();
+
+        yield return new WaitForSeconds(vitalityDuration);
+
+        ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+
+        _vitalityCoroutine = null;
+        SpellEvents.OnVitalityEnded?.Invoke();
+    }
+    // LIGHT SPELL
     private void UseLight()
     {
-        Debug.Log("Light Spell used");
+        if (_lightCoroutine != null)
+            return; // already active, do not restart
+
+        _lightCoroutine = StartCoroutine(LightRoutine());
     }
+    private IEnumerator LightRoutine()
+    {
+        // Instantiate if not existing
+        if (_lightInstance == null)
+        {
+            _lightInstance = Instantiate(
+                lightPrefab,
+                player.transform.position + new Vector3(0, 2, 0),
+                player.transform.rotation,
+                player.transform //follows player
+            );
+        }
+
+        var ps = _lightInstance.GetComponent<ParticleSystem>();
+
+        ps.Play();
+        SpellEvents.OnLightUsed?.Invoke();
+
+        yield return new WaitForSeconds(lightDuration);
+
+        ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+
+        _lightCoroutine = null;
+        SpellEvents.OnLightEnded?.Invoke();
+    }
+    // FIREBALL SPELL
     private void UseFireball()
     {
-        Debug.Log("Fireball Spell used");
+        if (_fireballCoroutine != null)
+            return; // already active, do not restart
+
+        _fireballCoroutine = StartCoroutine(FireballRoutine());
     }
+    private IEnumerator FireballRoutine()
+    {
+        // Instantiate if not existing
+        if (_fireballInstance == null)
+        {
+            _fireballInstance = Instantiate(
+                fireballPrefab,
+                player.transform.position + new Vector3(0, 1, 0),
+                player.transform.rotation,
+                player.transform //follows player
+            );
+        }
+
+        var ps = _fireballInstance.GetComponent<ParticleSystem>();
+
+        ps.Play();
+        SpellEvents.OnFireballUsed?.Invoke();
+
+        yield return new WaitForSeconds(fireballDuration);
+
+        ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+
+        _fireballCoroutine = null;
+        SpellEvents.OnFireballEnded?.Invoke();
+    }
+    // SWIFT RETREAT SPELL
     private void UseSwiftRetreat()
     {
-        Debug.Log("Swift Retreat Spell used");
+        SpellEvents.OnSwiftretreatUsed?.Invoke();
     }
+    // JUMPING SPELL
     private void UseJumping()
     {
-        Debug.Log("Jumping Spell used");
+        if (_jumpingCoroutine != null)
+            return; // already active, do not restart
+
+        _jumpingCoroutine = StartCoroutine(JumpingRoutine());
     }
+    private IEnumerator JumpingRoutine()
+    {
+        // Instantiate if not existing
+        if (_jumpingInstance == null)
+        {
+            _jumpingInstance = Instantiate(
+                jumpingPrefab,
+                player.transform.position + new Vector3(0, 1, 0),
+                player.transform.rotation * Quaternion.Euler(new Vector3(90, 0, 0)),
+                player.transform //follows player
+            );
+        }
+
+        var ps = _jumpingInstance.GetComponent<ParticleSystem>();
+        var playerdata = player.GetComponent<FirstPersonController>();
+
+        ps.Play();
+        float originalJump = playerdata.JumpHeight;
+        playerdata.JumpHeight = 10f;
+        SpellEvents.OnJumpingUsed?.Invoke();
+
+        yield return new WaitForSeconds(jumpingDuration);
+
+        ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+        playerdata.JumpHeight = originalJump;
+
+        _jumpingCoroutine = null;
+        SpellEvents.OnJumpingEnded?.Invoke();
+    }
+    // SHIELD SPELL
     private void UseShield()
     {
-        Debug.Log("Shield Spell used");
+        if (_shieldCoroutine != null)
+            return; // already active, do not restart
+
+        _shieldCoroutine = StartCoroutine(ShieldRoutine());
     }
+    private IEnumerator ShieldRoutine()
+    {
+        // Instantiate if not existing
+        if (_shieldInstance == null)
+        {
+            _shieldInstance = Instantiate(
+                shieldPrefab,
+                player.transform.position + new Vector3(0, 1, 0),
+                player.transform.rotation * Quaternion.Euler(new Vector3(90, 0, 0)),
+                player.transform //follows player
+            );
+        }
+
+        var ps = _shieldInstance.GetComponent<ParticleSystem>();
+
+        ps.Play();
+        SpellEvents.OnShieldUsed?.Invoke();
+
+        yield return new WaitForSeconds(shieldDuration);
+
+        ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+
+        _shieldCoroutine = null;
+        SpellEvents.OnShieldEnded?.Invoke();
+    }
+
 
     // Helper methods
     private void UpdateHotbar()
@@ -255,13 +576,21 @@ public class SpellManager : MonoBehaviour
         if (!usableIDs.Contains(data.Id))
             return;
 
+        if (abilityList.Contains(data)) return;
+
         abilityList.Add(data);
         UpdateHotbar();
     }
 
     private void OnSpellZoneTrigger(bool active)
     {
+        // active = outside main room
+        SetSpellMode(active);
+    }
+
+    private void SetSpellMode(bool active)
+    {
         _isActive = active;
-        hotbar.SetActive(active);   // show/hide UI
+        canvas.enabled = active;
     }
 }

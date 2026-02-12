@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Pozione di Amicizia con gli Animali
   m_EditorClassIdentifier: Assembly-CSharp::Potion
   id: animalbefriend_potion
-  displayName: Pozione di Amicizia con gli Animali
-  description: Agitando questo liquido melmoso si notano alcuni ingredienti al suo
-    interno, come piume, tentacoli o zampe.
+  displayName: Animal Friendship
+  description: "When shaken, this murky liquid reveals ingredients suspended inside,
+    such as feathers, tentacles, or small paws\n\n- Owlbear Feather\n- Dried Medusa
+    Powder\n- Rabbit\u2019s Foot"
   icon: {fileID: 21300000, guid: 9ce9bdd9cb3017540b7f7689b8b06d47, type: 3}
   prefab: {fileID: 0}
   potionRecipe:

@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Polvere di pelle di Gigante
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   id: giant_skin
-  displayName: Polvere di pelle di Gigante
-  description: "La pelle dei Giganti deteriora molto velocemente una volta morti:
-    infatti, questo campione \xE8 frutto di innumerevoli donazioni di giganti ancora
-    in vita."
-  icon: {fileID: 0}
+  displayName: Giant Skin Powder
+  description: 'Giant skin deteriorates rapidly after death
+
+
+    This sample comes
+    from countless donations from giants still alive'
+  icon: {fileID: 21300000, guid: 80c3712a63c3b094bb1ac8162f029d10, type: 3}
   prefab: {fileID: 0}
   craftablePotions:
   - {fileID: 11400000, guid: 51ede6f332341f848bc69ebf16cc0dd2, type: 2}

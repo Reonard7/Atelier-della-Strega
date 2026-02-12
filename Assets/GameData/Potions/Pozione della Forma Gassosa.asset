@@ -13,9 +13,17 @@ MonoBehaviour:
   m_Name: Pozione della Forma Gassosa
   m_EditorClassIdentifier: Assembly-CSharp::Potion
   id: gaseousform_potion
-  displayName: Pozione della Forma Gassosa
-  description: "Il contenitore di questa pozione sembra pieno di nebbia che ondeggia
-    e sgorga all\u2019esterno come se fosse acqua"
+  displayName: Gaseous Form
+  description: 'The container of this potion appears filled with mist that swirls
+    and spills outward like flowing water_
+
+
+    - Swamp Water
+
+    - Owlbear Feather
+
+    -
+    Sulfur Powder'
   icon: {fileID: 21300000, guid: 94f536d7231ce6f49a80db9038b569e8, type: 3}
   prefab: {fileID: 0}
   potionRecipe:

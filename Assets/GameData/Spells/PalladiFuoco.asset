@@ -13,7 +13,12 @@ MonoBehaviour:
   m_Name: PalladiFuoco
   m_EditorClassIdentifier: Assembly-CSharp::GameData.Scripts.Items.Spell
   id: fireball
-  displayName: Palla di Fuoco
-  description: "\xC8 una palla di fuoco"
-  icon: {fileID: 21300000, guid: 90ded0611e490aa4ba6961afbfc2280d, type: 3}
+  displayName: Fireball
+  description: 'A fiery orb explodes with immense force, incinerating enemies in
+    its radius
+
+
+    Notably, this spell is dangerous indoors and should be avoided
+    in enclosed spaces!!!'
+  icon: {fileID: 21300000, guid: ec3f45eb46306814ea276e12d55a094d, type: 3}
   prefab: {fileID: 0}

@@ -13,8 +13,17 @@ MonoBehaviour:
   m_Name: Pozione di Eroismo
   m_EditorClassIdentifier: Assembly-CSharp::Potion
   id: heroism_potion
-  displayName: Pozione di Eroismo
-  description: Il liquido blu di questa pozione gorgoglia e fuma come se stesse bollendo
+  displayName: Heroism
+  description: 'The blue liquid of this potion bubbles and steams as if boiling.
+    For one hour, the drinker feels sustained by heroic power, steadier in battle
+    and more resilient to danger
+
+
+    Wyvern Heart
+
+    Owlbear Feather
+
+    Bloodstone'
   icon: {fileID: 21300000, guid: ceb59dd71ef68d94e8f34c8bf5d7ebdd, type: 3}
   prefab: {fileID: 0}
   potionRecipe:

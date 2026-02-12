@@ -18,6 +18,9 @@ public class Dice : MonoBehaviour
     private Potion cachedPotion;
     private bool cachedIsMirable;
 
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip rollSound;
+
     private void Awake()
     {
         // Initial visibility
@@ -89,6 +92,11 @@ public class Dice : MonoBehaviour
         cachedIsMirable = false;
 
         AlchemyEvents.OnAnimationEnded?.Invoke();
+    }
+
+    public void PlayRollSound()
+    {
+        audioSource.PlayOneShot(rollSound);
     }
 
     private void CachePotionResult(Potion potion, bool isMirable)

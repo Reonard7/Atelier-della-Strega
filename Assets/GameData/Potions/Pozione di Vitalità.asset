@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: "Pozione di Vitalit\xE0"
   m_EditorClassIdentifier: Assembly-CSharp::Potion
   id: vitality_potion
-  displayName: "Pozione di Vitalit\xE0"
-  description: Il liquido cremisi della pozione emana una luce fioca che pulsa regolarmente
-    a un ritmo che ricorda il battito di un cuore.
+  displayName: Vitality
+  description: "The crimson liquid emits a faint pulsing glow, beating rhythmically
+    like a living heart. This potion restores the drinker\u2019s vitality\n\n- Revitalizing
+    Algae\n- Wyvern Heart\n- Bloodstone"
   icon: {fileID: 21300000, guid: acab9b275d54c3146b3ed64537b93c44, type: 3}
   prefab: {fileID: 0}
   potionRecipe:

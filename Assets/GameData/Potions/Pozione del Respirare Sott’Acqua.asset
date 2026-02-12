@@ -13,9 +13,17 @@ MonoBehaviour:
   m_Name: "Pozione del Respirare Sott\u2019Acqua"
   m_EditorClassIdentifier: Assembly-CSharp::Potion
   id: waterbreathing_potion
-  displayName: "Pozione del Respirare Sott\u2019Acqua"
-  description: Il suo liquido verde torbido ha un odore salmastro e al suo interno
-    galleggia una bolla a forma di medusa
+  displayName: Water Breathing
+  description: 'Its murky green liquid has a briny smell, and a jellyfish-shaped
+    bubble floats within
+
+
+    - Swamp Water
+
+    - Revitalizing Algae
+
+    - Dried
+    Medusa Powder'
   icon: {fileID: 21300000, guid: 810bc236b2f11454f9d99353ea868b5e, type: 3}
   prefab: {fileID: 0}
   potionRecipe:

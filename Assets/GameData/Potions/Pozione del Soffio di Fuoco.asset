@@ -13,10 +13,17 @@ MonoBehaviour:
   m_Name: Pozione del Soffio di Fuoco
   m_EditorClassIdentifier: Assembly-CSharp::Potion
   id: firebreath_potion
-  displayName: Pozione del Soffio di Fuoco
-  description: "Il liquido arancione di questa pozione lampeggia e la parte superiore
-    della bottiglia \xE8 piena di fumo che si disperde quando la bottiglia viene
-    aperta"
+  displayName: Fire Breath
+  description: 'The orange liquid of this potion flickers, and the upper part of
+    the bottle is filled with smoke that disperses when opened
+
+
+    - Molten Iron
+
+    -
+    Enchanted Charcoal
+
+    - Wyvern Heart'
   icon: {fileID: 21300000, guid: c711983088a05384e829df69481632a6, type: 3}
   prefab: {fileID: 0}
   potionRecipe:

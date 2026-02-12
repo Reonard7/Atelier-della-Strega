@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Carbone Magico
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   id: magic_charcoal
-  displayName: Carbone Magico
-  description: "Sebbene chiamato \"carbone\", \xE8 tecnicamente una carbonella, ottenuta
-    bruciando arbusti senzienti che spesso infestano rovine di villaggi abbandonati."
-  icon: {fileID: 0}
+  displayName: Enchanted Charcoal
+  description: "Although called \u201Ccharcoal,\u201D it is technically a briquette,
+    obtained by burning sentient shrubs that often infest the ruins of abandoned
+    villages"
+  icon: {fileID: 21300000, guid: 7fad9eeeebe344944a4a747846403469, type: 3}
   prefab: {fileID: 0}
   craftablePotions:
   - {fileID: 11400000, guid: f5423c6e7ee877e4c9c9c25cccc3ce0a, type: 2}

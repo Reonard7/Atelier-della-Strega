@@ -7,7 +7,7 @@ using StarterAssets;
 public class GrimoireManager : MonoBehaviour
 {
     [SerializeField] private GameObject grimoireCanvas;
-    private FirstPersonController playerFPS;
+    [SerializeField] private FirstPersonController playerFPS;
     private bool inCrafting;
 
     [Header("All Scriptable Objects")]
@@ -49,7 +49,6 @@ public class GrimoireManager : MonoBehaviour
 
     private void Start()
     {
-        playerFPS = GameObject.FindWithTag("Player").GetComponent<FirstPersonController>();
         grimoireCanvas.SetActive(false);
     }
 
@@ -57,18 +56,23 @@ public class GrimoireManager : MonoBehaviour
     {
         if (!inCrafting && Input.GetKeyDown(KeyCode.Tab))
         {
-            if (!grimoireCanvas.activeSelf)
-            {
-                playerFPS.enabled = false;
-                grimoireCanvas.SetActive(true);
-                Cursor.lockState = CursorLockMode.None;
-            }
-            else
-            {
-                playerFPS.enabled = true;
-                grimoireCanvas.SetActive(false);
-                Cursor.lockState = CursorLockMode.Locked;
-            }
+            TabToggle();
+        }
+    }
+
+    public void TabToggle()
+    {
+        if (!grimoireCanvas.activeSelf)
+        {
+            playerFPS.enabled = false;
+            grimoireCanvas.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            playerFPS.enabled = true;
+            grimoireCanvas.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
@@ -98,6 +102,10 @@ public class GrimoireManager : MonoBehaviour
         var entry = spellEntries.Find(e => e.data == spell);
         if (entry != null)
         {
+            if (entry.data.Id == "swift_retreat")
+            {
+                GrimoireEvents.OnRetreatDiscovered?.Invoke();
+            }
             entry.discovered = true;
             GrimoireEvents.OnEntryDiscovered?.Invoke(entry.data);
         }

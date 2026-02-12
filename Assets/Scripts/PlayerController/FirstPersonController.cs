@@ -151,6 +151,27 @@ namespace StarterAssets
 			}
 		}
 
+		public void ForceLookAt(Vector3 worldPosition)
+{
+    Vector3 dir = worldPosition - CinemachineCameraTarget.transform.position;
+    Quaternion lookRot = Quaternion.LookRotation(dir);
+
+    float pitch = lookRot.eulerAngles.x;
+    if (pitch > 180f) pitch -= 360f;
+
+    _cinemachineTargetPitch = Mathf.Clamp(pitch, BottomClamp, TopClamp);
+
+    CinemachineCameraTarget.transform.localRotation =
+        Quaternion.Euler(_cinemachineTargetPitch, 0f, 0f);
+}
+
+public float CinemachineTargetPitch
+{
+    get => _cinemachineTargetPitch;
+    set => _cinemachineTargetPitch = value;
+}
+
+
 		private void Move()
 		{
 			// set target speed based on move speed, sprint speed and if sprint is pressed

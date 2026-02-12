@@ -12,5 +12,7 @@ namespace Events
         public static Action OnCauldronInteracted;
         public static Action OnCauldronExit;
         public static Action<Spell> OnSpellPickup;
+        public static Action<Ingredient> OnIngredientLocked;
+        public static Action<Ingredient> OnIngredientUnlocked;
     }
 }

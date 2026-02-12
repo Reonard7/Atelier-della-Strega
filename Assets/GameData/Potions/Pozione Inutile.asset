@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Pozione Inutile
   m_EditorClassIdentifier: Assembly-CSharp::GameData.Scripts.Items.Potion
   id: thrash_potion
-  displayName: Pozione Inutile
-  description: "Una pozione senza alcune propriet\xE0 benefica: forse non dovresti
-    berla"
+  displayName: Trash Potion
+  description: "After drinking this potion, nothing happens\u2026 at least, nothing
+    magical\n \nAn unexpected and urgent need for the facilities is noted\n \nI don\u2019t
+    know why \nI\u2019m even noting \nthis\u2026"
   icon: {fileID: 21300000, guid: c723cc42c6406c647a7c53416b7195cd, type: 3}
   prefab: {fileID: 0}
   potionRecipe: []
