@@ -3,48 +3,58 @@ using System.Collections;
 
 public class MageController : MonoBehaviour
 {
+    [Header("Teleport Points")]
     [SerializeField] private Transform downstairsPoint;
 
-     [Header("VFX")]
-    [SerializeField] private GameObject teleportOutVFX;
+    [Header("VFX")]
+    [SerializeField] private GameObject teleportVFX;
 
     [Header("Audio")]
     [SerializeField] private AudioClip teleportSound;
     [SerializeField] private AudioSource audioSource;
 
     [Header("Timing")]
-    [SerializeField] private float teleportDelay = 1f; 
+    [SerializeField] private float teleportDelay = 1f;
 
-    void Update()
-    {
-        
-    }
-
+    // =========================
+    // TELEPORT INIZIALE
+    // =========================
     public void TeleportDownstairs()
     {
-        StartCoroutine(TeleportWithDelay());
+        if (downstairsPoint == null) return;
+        StartCoroutine(TeleportRoutine(downstairsPoint.position));
     }
 
-    private IEnumerator TeleportWithDelay()
+    // =========================
+    // TELEPORT GENERICO
+    // =========================
+    public void TeleportTo(Transform targetPoint)
     {
-        // VFX + Audio di sparizione immediati
-        SpawnVFX(teleportOutVFX, transform.position);
+        if (targetPoint == null) return;
+        StartCoroutine(TeleportRoutine(targetPoint.position));
+    }
+
+    private IEnumerator TeleportRoutine(Vector3 targetPosition)
+    {
+        // Sparizione
+        SpawnVFX(transform.position);
         PlaySound();
 
-        // Aspetta un secondo (o il tempo che vuoi)
         yield return new WaitForSeconds(teleportDelay);
 
-        // Teletrasporto
-        transform.position = downstairsPoint.position;
+        transform.position = targetPosition;
 
-        Debug.Log("Maga teletrasportata al piano di sotto");
+        // Apparizione
+        SpawnVFX(transform.position);
+        PlaySound();
+
+        Debug.Log("Maga teletrasportata");
     }
 
-  private void SpawnVFX(GameObject vfxPrefab, Vector3 position)
+    private void SpawnVFX(Vector3 position)
     {
-        if (vfxPrefab == null) return;
-
-        Instantiate(vfxPrefab, position, Quaternion.identity);
+        if (teleportVFX == null) return;
+        Instantiate(teleportVFX, position, Quaternion.identity);
     }
 
     private void PlaySound()
@@ -52,12 +62,8 @@ public class MageController : MonoBehaviour
         if (teleportSound == null) return;
 
         if (audioSource != null)
-        {
             audioSource.PlayOneShot(teleportSound);
-        }
         else
-        {
             AudioSource.PlayClipAtPoint(teleportSound, transform.position);
-        }
     }
 }
