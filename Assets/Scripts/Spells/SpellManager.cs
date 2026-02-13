@@ -472,6 +472,7 @@ public class SpellManager : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
+        SpellEvents.OnSwiftretreatEnded?.Invoke();
         player.transform.position = new Vector3(8f, 0.2f, 20f);
 
         yield return new WaitForSeconds(2f);
@@ -482,7 +483,6 @@ public class SpellManager : MonoBehaviour
         fps.enabled = true;
 
         _swiftRetreatCoroutine = null;
-        SpellEvents.OnSwiftretreatEnded?.Invoke();
     }
     // JUMPING SPELL
     private void UseJumping()
