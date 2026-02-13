@@ -15,6 +15,7 @@ public class TrialManager : MonoBehaviour
     public static TrialManager Instance;
 
     public List<TrialState> trialStates;
+    public TrialState PreviousState { get; private set; }
     public int CurrentTrialIndex = 0;
 
     private void Awake()
@@ -51,21 +52,23 @@ public class TrialManager : MonoBehaviour
         if (trialStates[index] == TrialState.InProgress) return;
 
         CurrentTrialIndex = index;
-        trialStates[CurrentTrialIndex] = TrialState.InProgress;
-        Debug.Log($"Trial {index + 1} started");
+        PreviousState = trialStates[index];
+        trialStates[index] = TrialState.InProgress;
     }
 
     public void SuspendCurrentTrial()
     {
-        trialStates[CurrentTrialIndex] = TrialState.Idle;
+        if (PreviousState == TrialState.Completed)
+        {
+            trialStates[CurrentTrialIndex] = TrialState.Completed;
+        }
+        else
+        {
+            trialStates[CurrentTrialIndex] = TrialState.Idle;
+        }
     }
     public void CompleteCurrentTrial()
     {
         trialStates[CurrentTrialIndex] = TrialState.Completed;
     }
-
-    /*
-     * Prima prova: frecce e mimic
-     * Oggetti da passare: frecce, mimic, forziere vero
-     */
 }
