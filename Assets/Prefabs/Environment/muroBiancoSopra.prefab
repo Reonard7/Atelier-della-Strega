@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 59759e125f359464fa8ec751a0f76e3f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.9999895
+      value: 11.999979
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 59759e125f359464fa8ec751a0f76e3f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18,23 +18,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 59759e125f359464fa8ec751a0f76e3f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.99999
+      value: 13.000013
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 59759e125f359464fa8ec751a0f76e3f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 59759e125f359464fa8ec751a0f76e3f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 59759e125f359464fa8ec751a0f76e3f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 59759e125f359464fa8ec751a0f76e3f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 59759e125f359464fa8ec751a0f76e3f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 59759e125f359464fa8ec751a0f76e3f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 59759e125f359464fa8ec751a0f76e3f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -51,6 +51,10 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 59759e125f359464fa8ec751a0f76e3f, type: 3}
       propertyPath: m_CastShadows
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 59759e125f359464fa8ec751a0f76e3f, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 59759e125f359464fa8ec751a0f76e3f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

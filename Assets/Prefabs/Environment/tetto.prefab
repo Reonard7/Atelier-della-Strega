@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68e323dbec5c8174484bf7a131ff36d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.02
+      value: 7.99639
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68e323dbec5c8174484bf7a131ff36d9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68e323dbec5c8174484bf7a131ff36d9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.1
+      value: 5.89107
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68e323dbec5c8174484bf7a131ff36d9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -52,9 +52,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 68e323dbec5c8174484bf7a131ff36d9, type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 68e323dbec5c8174484bf7a131ff36d9, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 68e323dbec5c8174484bf7a131ff36d9, type: 3}
       propertyPath: m_Name
       value: tetto
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 68e323dbec5c8174484bf7a131ff36d9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
