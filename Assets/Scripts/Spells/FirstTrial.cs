@@ -14,7 +14,7 @@ public class FirstTrial : MonoBehaviour
         SpellEvents.OnShieldEnded += ProtectionEnded;
         SpellEvents.OnInvulnerabilityUsed += ProtectionStarted;
         SpellEvents.OnInvulnerabilityEnded += ProtectionEnded;
-        SpellEvents.OnSwiftretreatUsed += TeleportAndSuspend;
+        SpellEvents.OnSwiftretreatEnded += Suspend;
         SpellEvents.OnClarovencyUsed += EnableHighlight;
         SpellEvents.OnClarovencyEnded += DisableHighlight;
         SpellEvents.OnArrowCollision += CollisionCheck;
@@ -28,7 +28,7 @@ public class FirstTrial : MonoBehaviour
         SpellEvents.OnShieldEnded -= ProtectionEnded;
         SpellEvents.OnInvulnerabilityUsed -= ProtectionStarted;
         SpellEvents.OnInvulnerabilityEnded -= ProtectionEnded;
-        SpellEvents.OnSwiftretreatUsed -= TeleportAndSuspend;
+        SpellEvents.OnSwiftretreatEnded -= Suspend;
         SpellEvents.OnClarovencyUsed -= EnableHighlight;
         SpellEvents.OnClarovencyEnded -= DisableHighlight;
         SpellEvents.OnArrowCollision -= CollisionCheck;
@@ -46,6 +46,11 @@ public class FirstTrial : MonoBehaviour
         player.transform.position = teleportPos;
         cc.enabled = true;
         fps.enabled = true;
+    }
+
+    private void Suspend()
+    {
+        SpellEvents.OnTrialSuspended?.Invoke();
     }
 
     private void TeleportAndSuspend()

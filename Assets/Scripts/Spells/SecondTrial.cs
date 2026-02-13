@@ -10,14 +10,14 @@ public class SecondTrial : MonoBehaviour
     private void OnEnable()
     {
         SpellEvents.OnTrialStarted += OnTrialStarted;
-        SpellEvents.OnSwiftretreatUsed += TeleportAndSuspend;
+        SpellEvents.OnSwiftretreatEnded += Suspend;
         SpellEvents.OnFirebreathEnded += CheckIfEnded;
         SpellEvents.OnFireballEnded += TeleportAndSuspend;
     }
     private void OnDisable()
     {
         SpellEvents.OnTrialStarted -= OnTrialStarted;
-        SpellEvents.OnSwiftretreatUsed -= TeleportAndSuspend;
+        SpellEvents.OnSwiftretreatEnded -= Suspend;
         SpellEvents.OnFirebreathEnded -= CheckIfEnded;
         SpellEvents.OnFireballEnded -= TeleportAndSuspend;
     }
@@ -31,6 +31,11 @@ public class SecondTrial : MonoBehaviour
         player.transform.position = teleportPos;
         cc.enabled = true;
         fps.enabled = true;
+    }
+
+    private void Suspend()
+    {
+        SpellEvents.OnTrialSuspended?.Invoke();
     }
 
     private void TeleportAndSuspend()

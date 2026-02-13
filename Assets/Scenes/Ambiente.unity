@@ -62997,7 +62997,7 @@ PrefabInstance:
     - target: {fileID: 5484569267772091910, guid: 531dc7066a83f3d42bcf5b2b0e0c472e, type: 3}
       propertyPath: swiftRetreatPrefab
       value: 
-      objectReference: {fileID: 5034656251238326012, guid: 9de2fa19f0390d44491264d9cab8cec5, type: 3}
+      objectReference: {fileID: 2188117795999638060, guid: 33e23d7eaa090d647a83ce8cc752b2d4, type: 3}
     - target: {fileID: 5484569267772091910, guid: 531dc7066a83f3d42bcf5b2b0e0c472e, type: 3}
       propertyPath: invulnerabilityPrefab
       value: 

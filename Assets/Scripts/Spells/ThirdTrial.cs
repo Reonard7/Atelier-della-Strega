@@ -8,13 +8,13 @@ public class ThirdTrial : MonoBehaviour
     private void OnEnable()
     {
         SpellEvents.OnTrialStarted += OnTrialStarted;
-        SpellEvents.OnSwiftretreatUsed += TeleportAndSuspend;
+        SpellEvents.OnSwiftretreatEnded += Suspend;
         SpellEvents.OnPlatformCollision += EndTrial;
     }
     private void OnDisable()
     {
         SpellEvents.OnTrialStarted -= OnTrialStarted;
-        SpellEvents.OnSwiftretreatUsed -= TeleportAndSuspend;
+        SpellEvents.OnSwiftretreatEnded -= Suspend;
         SpellEvents.OnPlatformCollision -= EndTrial;
     }
 
@@ -28,6 +28,11 @@ public class ThirdTrial : MonoBehaviour
         player.transform.position = teleportPos;
         cc.enabled = true;
         fps.enabled = true;
+    }
+
+    private void Suspend()
+    {
+        SpellEvents.OnTrialSuspended?.Invoke();
     }
 
     private void TeleportAndSuspend()
