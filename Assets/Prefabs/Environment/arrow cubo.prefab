@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 65
   m_IsActive: 1
 --- !u!4 &8518700270161829432
 Transform:
@@ -222,8 +222,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.07016731, g: 0.0983879, b: 0.16981131, a: 1}
-      maxColor: {r: 0.4796369, g: 0.5002806, b: 0.509434, a: 1}
+      minColor: {r: 0.381132, g: 0.071192555, b: 0.07559982, a: 1}
+      maxColor: {r: 0.50980395, g: 0.4794789, b: 0.47843137, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4910,7 +4910,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 65
   m_IsActive: 1
 --- !u!4 &5106878204739312958
 Transform:
@@ -5116,8 +5116,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.24668777, g: 0.15676033, b: 0.6754716, a: 1}
-      maxColor: {r: 0.40773934, g: 0.685662, b: 0.7132075, a: 1}
+      minColor: {r: 0.4792453, g: 0.08228551, b: 0.10349775, a: 1}
+      maxColor: {r: 0.7137255, g: 0.40784314, b: 0.45525467, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9752,15 +9752,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5fe754698e02463459b785be0cc77a0e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.700001
+      value: -35.719986
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5fe754698e02463459b785be0cc77a0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.26
+      value: 2.19
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5fe754698e02463459b785be0cc77a0e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.895
+      value: 32.195
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5fe754698e02463459b785be0cc77a0e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9797,6 +9797,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5fe754698e02463459b785be0cc77a0e, type: 3}
       propertyPath: m_Name
       value: arrow cubo
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5fe754698e02463459b785be0cc77a0e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
