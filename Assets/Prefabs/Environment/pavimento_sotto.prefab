@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 69805075b53fa834291b4d7284363bd4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9999995
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69805075b53fa834291b4d7284363bd4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.019296113
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69805075b53fa834291b4d7284363bd4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.9999995
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69805075b53fa834291b4d7284363bd4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 69805075b53fa834291b4d7284363bd4, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 1
+      value: 65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
