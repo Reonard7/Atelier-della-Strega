@@ -52,6 +52,12 @@ public class TutorialManager : MonoBehaviour
     [TextArea(2, 5)]
     [SerializeField] private string[] mageLines;
 
+    [Header("Voice Over")]
+    [SerializeField] private AudioSource voiceAudioSource;
+
+    [SerializeField] private AudioClip[] introVoiceClips;
+    [SerializeField] private AudioClip[] mageVoiceClips;
+
     // =========================
     private int _currentLineIndex;
     private TutorialState _currentState;
@@ -86,13 +92,30 @@ public class TutorialManager : MonoBehaviour
 
         tutorialPanel.SetActive(true);
         tutorialText.text = introLines[_currentLineIndex];
-
+        
         LockPlayer(true);
+        StartCoroutine(PlayFirstIntroVoiceWithDelay(0.5f));
+
     }
+
+    private IEnumerator PlayFirstIntroVoiceWithDelay(float delay)
+{
+    yield return new WaitForSeconds(delay);
+
+    // Sicurezza: controlla che siamo ancora nell'intro
+    if (_currentState == TutorialState.IntroDialogue && _currentLineIndex == 0)
+    {
+        PlayVoiceLine();
+    }
+}
+
 
     private void EndIntro()
     {
         tutorialPanel.SetActive(false);
+
+        if (voiceAudioSource != null && voiceAudioSource.isPlaying)
+        voiceAudioSource.Stop();
 
         if (mage != null)
             mage.TeleportDownstairs();
@@ -114,6 +137,7 @@ public class TutorialManager : MonoBehaviour
                 EndIntro();
             else
                 tutorialText.text = introLines[_currentLineIndex];
+                PlayVoiceLine();
         }
         else if (_currentState == TutorialState.MageDialogue)
         {
@@ -121,6 +145,7 @@ public class TutorialManager : MonoBehaviour
                 EndMageDialogue();
             else
                 tutorialText.text = mageLines[_currentLineIndex];
+                PlayVoiceLine();
         }
     }
 
@@ -142,13 +167,21 @@ public class TutorialManager : MonoBehaviour
 
         tutorialPanel.SetActive(true);
         tutorialText.text = mageLines[_currentLineIndex];
+        PlayVoiceLine();
+        
     }
 
     private void EndMageDialogue()
     {
         tutorialPanel.SetActive(false);
+
+        if (voiceAudioSource != null && voiceAudioSource.isPlaying)
+        voiceAudioSource.Stop();
+
         LockPlayer(false);
         _isLookingAtMage = false;
+
+       
 
         if (mage != null && finalTeleportPoint != null)
             mage.TeleportTo(finalTeleportPoint);
@@ -218,4 +251,30 @@ public class TutorialManager : MonoBehaviour
                 script.enabled = !lockPlayer;
         }
     }
+
+    private void PlayVoiceLine()
+{
+    if (voiceAudioSource == null) return;
+
+    AudioClip clipToPlay = null;
+
+    if (_currentState == TutorialState.IntroDialogue)
+    {
+        if (_currentLineIndex < introVoiceClips.Length)
+            clipToPlay = introVoiceClips[_currentLineIndex];
+    }
+    else if (_currentState == TutorialState.MageDialogue)
+    {
+        if (_currentLineIndex < mageVoiceClips.Length)
+            clipToPlay = mageVoiceClips[_currentLineIndex];
+    }
+
+    if (clipToPlay != null)
+    {
+        voiceAudioSource.Stop();
+        voiceAudioSource.clip = clipToPlay;
+        voiceAudioSource.Play();
+    }
+}
+
 }
