@@ -7,7 +7,9 @@ public enum TutorialState
 {
     IntroDialogue,
     ReachMageDownstairs,
-    MageDialogue
+    MageDialogue,
+    ReachThirdArea,
+    ThirdDialogue
 }
 
 public class TutorialManager : MonoBehaviour
@@ -52,12 +54,16 @@ public class TutorialManager : MonoBehaviour
     [TextArea(2, 5)]
     [SerializeField] private string[] mageLines;
 
+    [Header("Third Dialogue Lines")]
+    [TextArea(2, 5)]
+    [SerializeField] private string[] thirdLines;
+
     [Header("Voice Over")]
     [SerializeField] private AudioSource voiceAudioSource;
 
     [SerializeField] private AudioClip[] introVoiceClips;
     [SerializeField] private AudioClip[] mageVoiceClips;
-
+    [SerializeField] private AudioClip[] thirdVoiceClips;
     // =========================
     private int _currentLineIndex;
     private TutorialState _currentState;
@@ -72,7 +78,7 @@ public class TutorialManager : MonoBehaviour
     private void Update()
     {
         if (_currentState == TutorialState.IntroDialogue ||
-            _currentState == TutorialState.MageDialogue)
+            _currentState == TutorialState.MageDialogue || _currentState == TutorialState.ThirdDialogue)
         {
             if (Input.GetMouseButtonDown(0))
                 NextLine();
@@ -147,7 +153,30 @@ public class TutorialManager : MonoBehaviour
                 tutorialText.text = mageLines[_currentLineIndex];
                 PlayVoiceLine();
         }
+    else if (_currentState == TutorialState.ThirdDialogue)
+{
+    if (_currentLineIndex >= thirdLines.Length)
+        EndThirdDialogue();
+    else
+    {
+        tutorialText.text = thirdLines[_currentLineIndex];
+        PlayVoiceLine();
     }
+}
+    }
+private void EndThirdDialogue()
+{
+    tutorialPanel.SetActive(false);
+
+    if (voiceAudioSource != null && voiceAudioSource.isPlaying)
+        voiceAudioSource.Stop();
+
+    LockPlayer(false);
+    _isLookingAtMage = false;
+
+    _currentState = TutorialState.ReachThirdArea; 
+}
+
 
     // =========================
     // PLAYER RAGGIUNGE LA MAGA
@@ -186,8 +215,27 @@ public class TutorialManager : MonoBehaviour
         if (mage != null && finalTeleportPoint != null)
             mage.TeleportTo(finalTeleportPoint);
 
-        _currentState = TutorialState.ReachMageDownstairs;
+        _currentState = TutorialState.ReachThirdArea;
     }
+
+    //terza area//
+    public void OnPlayerReachedThirdArea()
+{
+    if (_currentState != TutorialState.ReachThirdArea)
+        return;
+
+    LockPlayer(true);
+    _isLookingAtMage = true;
+
+    FaceMageToPlayer();
+
+    _currentState = TutorialState.ThirdDialogue;
+    _currentLineIndex = 0;
+
+    tutorialPanel.SetActive(true);
+    tutorialText.text = thirdLines[_currentLineIndex];
+    PlayVoiceLine();
+}
 
     // =========================
     // ROTAZIONE PLAYER
@@ -267,6 +315,12 @@ public class TutorialManager : MonoBehaviour
     {
         if (_currentLineIndex < mageVoiceClips.Length)
             clipToPlay = mageVoiceClips[_currentLineIndex];
+    }
+
+    else if (_currentState == TutorialState.ThirdDialogue)
+    {
+        if (_currentLineIndex < thirdVoiceClips.Length)
+            clipToPlay = thirdVoiceClips[_currentLineIndex];
     }
 
     if (clipToPlay != null)
