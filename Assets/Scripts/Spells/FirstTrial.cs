@@ -1,9 +1,11 @@
 using StarterAssets;
+using System.Collections;
 using UnityEngine;
 
 public class FirstTrial : MonoBehaviour
 {
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject swiftRetreatVFX;
     [SerializeField] private GameObject mimicGroup;
     public bool invulnerability = false;
 
@@ -96,7 +98,24 @@ public class FirstTrial : MonoBehaviour
 
     private void EndTrial()
     {
+        StartCoroutine(EndRoutine());
+    }
+
+    private IEnumerator EndRoutine()
+    {
+        swiftRetreatVFX.SetActive(true);
+        var ps = swiftRetreatVFX.GetComponent<ParticleSystem>();
+
+        ps.Play();
+
+        yield return new WaitForSeconds(2f);
+
         SpellEvents.OnTrialCompleted?.Invoke();
         Teleport(new Vector3(8f, 0.2f, 20f));
+
+        yield return new WaitForSeconds(2f);
+
+        ps.Stop();
+        swiftRetreatVFX.SetActive(false);
     }
 }
