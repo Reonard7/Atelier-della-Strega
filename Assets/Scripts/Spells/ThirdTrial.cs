@@ -47,7 +47,7 @@ public class ThirdTrial : MonoBehaviour
     {
         if (trialIndex == 2)
         {
-            Teleport(new Vector3(0f, -6f, 36.2f));
+            Teleport(new Vector3(10f, -7.7f, 74.4f));
         }
     }
 

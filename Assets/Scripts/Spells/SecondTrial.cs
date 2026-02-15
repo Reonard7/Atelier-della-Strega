@@ -56,7 +56,7 @@ public class SecondTrial : MonoBehaviour
     {
         if (trialIndex == 1)
         {
-            Teleport(new Vector3(-3.6f, 0.2f, 28.3f));
+            Teleport(new Vector3(0.9f, 0.2f, 55.9f));
         }
     }
 
