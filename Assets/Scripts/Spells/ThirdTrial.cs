@@ -1,20 +1,22 @@
 using UnityEngine;
 using StarterAssets;
+using System.Collections;
 
 public class ThirdTrial : MonoBehaviour
 {
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject swiftRetreatVFX;
 
     private void OnEnable()
     {
         SpellEvents.OnTrialStarted += OnTrialStarted;
-        SpellEvents.OnSwiftretreatUsed += TeleportAndSuspend;
+        SpellEvents.OnSwiftretreatEnded += Suspend;
         SpellEvents.OnPlatformCollision += EndTrial;
     }
     private void OnDisable()
     {
         SpellEvents.OnTrialStarted -= OnTrialStarted;
-        SpellEvents.OnSwiftretreatUsed -= TeleportAndSuspend;
+        SpellEvents.OnSwiftretreatEnded -= Suspend;
         SpellEvents.OnPlatformCollision -= EndTrial;
     }
 
@@ -28,6 +30,11 @@ public class ThirdTrial : MonoBehaviour
         player.transform.position = teleportPos;
         cc.enabled = true;
         fps.enabled = true;
+    }
+
+    private void Suspend()
+    {
+        SpellEvents.OnTrialSuspended?.Invoke();
     }
 
     private void TeleportAndSuspend()
@@ -46,7 +53,24 @@ public class ThirdTrial : MonoBehaviour
 
     private void EndTrial()
     {
+        StartCoroutine(EndRoutine());
+    }
+
+    private IEnumerator EndRoutine()
+    {
+        swiftRetreatVFX.SetActive(true);
+        var ps = swiftRetreatVFX.GetComponent<ParticleSystem>();
+
+        ps.Play();
+
+        yield return new WaitForSeconds(2f);
+
         SpellEvents.OnTrialCompleted?.Invoke();
         Teleport(new Vector3(8f, 0.2f, 20f));
+
+        yield return new WaitForSeconds(2f);
+
+        ps.Stop();
+        swiftRetreatVFX.SetActive(false);
     }
 }

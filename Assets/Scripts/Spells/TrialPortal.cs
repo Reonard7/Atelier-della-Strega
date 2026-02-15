@@ -12,7 +12,6 @@ public class TrialPortal : MonoBehaviour
 
     private void Update()
     {
-        // da spostare in una eventuale interazione, non nell'update
         switch (TrialManager.Instance.GetTrialState(trialIndex))
         {
             case TrialManager.TrialState.Idle:
