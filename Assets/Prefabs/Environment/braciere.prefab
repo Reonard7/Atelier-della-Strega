@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7306cca310f64774883cf46a6593ea49, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.2657652
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7306cca310f64774883cf46a6593ea49, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.0025504741
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7306cca310f64774883cf46a6593ea49, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 31.318035
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7306cca310f64774883cf46a6593ea49, type: 3}
       propertyPath: m_LocalRotation.w
@@ -51,6 +51,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7306cca310f64774883cf46a6593ea49, type: 3}
       propertyPath: m_Name
       value: braciere
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7306cca310f64774883cf46a6593ea49, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
