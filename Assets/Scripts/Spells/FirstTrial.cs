@@ -7,6 +7,8 @@ public class FirstTrial : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject swiftRetreatVFX;
     [SerializeField] private GameObject mimicGroup;
+    [SerializeField] private GameObject objectToRespawn;
+
     public bool invulnerability = false;
 
     private void OnEnable()
@@ -98,6 +100,7 @@ public class FirstTrial : MonoBehaviour
 
     private void EndTrial()
     {
+        objectToRespawn.SetActive(true);
         StartCoroutine(EndRoutine());
     }
 

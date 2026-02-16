@@ -7,6 +7,7 @@ public class SecondTrial : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject swiftRetreatVFX;
     [SerializeField] private GameObject[] braziers;
+    [SerializeField] private GameObject objectToRespawn;
     private bool inArea = false;
 
     private void OnEnable()
@@ -67,6 +68,7 @@ public class SecondTrial : MonoBehaviour
     brazier.GetComponent<BrazerCollider>().ResetBrazier();
 }
 
+        objectToRespawn.SetActive(true);
         StartCoroutine(EndRoutine());
     }
 

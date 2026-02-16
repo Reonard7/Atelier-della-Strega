@@ -6,6 +6,7 @@ public class ThirdTrial : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject swiftRetreatVFX;
+    [SerializeField] private GameObject objectToRespawn;
 
     private void OnEnable()
     {
@@ -53,6 +54,7 @@ public class ThirdTrial : MonoBehaviour
 
     private void EndTrial()
     {
+        objectToRespawn.SetActive(true);
         StartCoroutine(EndRoutine());
     }
 
