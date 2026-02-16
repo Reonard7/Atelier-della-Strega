@@ -53,6 +53,7 @@ public class TutorialManager : MonoBehaviour
     [Header("Mage Dialogue Lines")]
     [TextArea(2, 5)]
     [SerializeField] private string[] mageLines;
+
     [Header("Third Dialogue Lines")]
     [TextArea(2, 5)]
     [SerializeField] private string[] thirdLines;
@@ -63,7 +64,6 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private AudioClip[] introVoiceClips;
     [SerializeField] private AudioClip[] mageVoiceClips;
     [SerializeField] private AudioClip[] thirdVoiceClips;
-
     // =========================
     private int _currentLineIndex;
     private TutorialState _currentState;
@@ -153,7 +153,7 @@ public class TutorialManager : MonoBehaviour
                 tutorialText.text = mageLines[_currentLineIndex];
                 PlayVoiceLine();
         }
-   else if (_currentState == TutorialState.ThirdDialogue)
+    else if (_currentState == TutorialState.ThirdDialogue)
 {
     if (_currentLineIndex >= thirdLines.Length)
         EndThirdDialogue();
@@ -164,6 +164,19 @@ public class TutorialManager : MonoBehaviour
     }
 }
     }
+private void EndThirdDialogue()
+{
+    tutorialPanel.SetActive(false);
+
+    if (voiceAudioSource != null && voiceAudioSource.isPlaying)
+        voiceAudioSource.Stop();
+
+    LockPlayer(false);
+    _isLookingAtMage = false;
+
+    _currentState = TutorialState.ReachThirdArea; 
+}
+
 
     // =========================
     // PLAYER RAGGIUNGE LA MAGA
@@ -204,7 +217,8 @@ public class TutorialManager : MonoBehaviour
 
         _currentState = TutorialState.ReachThirdArea;
     }
-// PLAYER TRAINING AREA //
+
+    //terza area//
     public void OnPlayerReachedThirdArea()
 {
     if (_currentState != TutorialState.ReachThirdArea)
@@ -223,35 +237,21 @@ public class TutorialManager : MonoBehaviour
     PlayVoiceLine();
 }
 
-private void EndThirdDialogue()
-{
-    tutorialPanel.SetActive(false);
-
-    if (voiceAudioSource != null && voiceAudioSource.isPlaying)
-        voiceAudioSource.Stop();
-
-    LockPlayer(false);
-    _isLookingAtMage = false;
-
-    _currentState = TutorialState.ReachThirdArea; // oppure un nuovo stato finale
-}
-
-
     // =========================
     // ROTAZIONE PLAYER
     // =========================
     private void SmoothLookAtMage() { 
         Vector3 targetPos = mage.transform.position + Vector3.up * 1.5f;
      // --- CAPSULE (YAW) --- 
-     Vector3 flatDir = targetPos - fpsController.transform.position;
-      flatDir.y = 0f;
-       if (flatDir.sqrMagnitude > 0.01f) { 
+        Vector3 flatDir = targetPos - fpsController.transform.position;
+        flatDir.y = 0f;
+            if (flatDir.sqrMagnitude > 0.01f) { 
         Quaternion targetRotation = Quaternion.LookRotation(flatDir);
         fpsController.transform.rotation = Quaternion.Slerp(fpsController.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
          } 
          // --- CAMERA (PITCH) ---
-         Vector3 camDir = targetPos - fpsController.CinemachineCameraTarget.transform.position;
-          Quaternion camRotation = Quaternion.LookRotation(camDir); float targetPitch = camRotation.eulerAngles.x;
+        Vector3 camDir = targetPos - fpsController.CinemachineCameraTarget.transform.position;
+        Quaternion camRotation = Quaternion.LookRotation(camDir); float targetPitch = camRotation.eulerAngles.x;
            if (targetPitch > 180f) targetPitch -= 360f;
             fpsController.CinemachineTargetPitch = Mathf.Lerp( fpsController.CinemachineTargetPitch, Mathf.Clamp(targetPitch, fpsController.BottomClamp, fpsController.TopClamp), rotationSpeed * Time.deltaTime );
              fpsController.CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(fpsController.CinemachineTargetPitch, 0f, 0f); 
@@ -318,10 +318,10 @@ private void EndThirdDialogue()
     }
 
     else if (_currentState == TutorialState.ThirdDialogue)
-{
-    if (_currentLineIndex < thirdVoiceClips.Length)
-        clipToPlay = thirdVoiceClips[_currentLineIndex];
-}
+    {
+        if (_currentLineIndex < thirdVoiceClips.Length)
+            clipToPlay = thirdVoiceClips[_currentLineIndex];
+    }
 
     if (clipToPlay != null)
     {

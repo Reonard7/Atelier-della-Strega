@@ -1,23 +1,25 @@
 using StarterAssets;
+using System.Collections;
 using UnityEngine;
 
 public class SecondTrial : MonoBehaviour
 {
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject swiftRetreatVFX;
     [SerializeField] private GameObject[] braziers;
     private bool inArea = false;
 
     private void OnEnable()
     {
         SpellEvents.OnTrialStarted += OnTrialStarted;
-        SpellEvents.OnSwiftretreatUsed += TeleportAndSuspend;
+        SpellEvents.OnSwiftretreatEnded += Suspend;
         SpellEvents.OnFirebreathEnded += CheckIfEnded;
         SpellEvents.OnFireballEnded += TeleportAndSuspend;
     }
     private void OnDisable()
     {
         SpellEvents.OnTrialStarted -= OnTrialStarted;
-        SpellEvents.OnSwiftretreatUsed -= TeleportAndSuspend;
+        SpellEvents.OnSwiftretreatEnded -= Suspend;
         SpellEvents.OnFirebreathEnded -= CheckIfEnded;
         SpellEvents.OnFireballEnded -= TeleportAndSuspend;
     }
@@ -31,6 +33,11 @@ public class SecondTrial : MonoBehaviour
         player.transform.position = teleportPos;
         cc.enabled = true;
         fps.enabled = true;
+    }
+
+    private void Suspend()
+    {
+        SpellEvents.OnTrialSuspended?.Invoke();
     }
 
     private void TeleportAndSuspend()
@@ -49,14 +56,36 @@ public class SecondTrial : MonoBehaviour
     {
         if (trialIndex == 1)
         {
-            Teleport(new Vector3(-3.6f, 0.2f, 28.3f));
+            Teleport(new Vector3(0.9f, 0.2f, 55.9f));
         }
     }
 
     private void EndTrial()
     {
+        foreach (GameObject brazier in braziers)
+{
+    brazier.GetComponent<BrazerCollider>().ResetBrazier();
+}
+
+        StartCoroutine(EndRoutine());
+    }
+
+    private IEnumerator EndRoutine()
+    {
+        swiftRetreatVFX.SetActive(true);
+        var ps = swiftRetreatVFX.GetComponent<ParticleSystem>();
+
+        ps.Play();
+
+        yield return new WaitForSeconds(2f);
+
         SpellEvents.OnTrialCompleted?.Invoke();
         Teleport(new Vector3(8f, 0.2f, 20f));
+
+        yield return new WaitForSeconds(2f);
+
+        ps.Stop();
+        swiftRetreatVFX.SetActive(false);
     }
 
     private void CheckIfEnded()

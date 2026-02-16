@@ -442,7 +442,47 @@ public class SpellManager : MonoBehaviour
     // SWIFT RETREAT SPELL
     private void UseSwiftRetreat()
     {
+        if (_swiftRetreatCoroutine != null)
+            return; // already active, do not restart
+
+        _swiftRetreatCoroutine = StartCoroutine(SwiftRetreatRoutine());
+    }
+    private IEnumerator SwiftRetreatRoutine()
+    {
+        // Instantiate if not existing
+        if (_swiftRetreatInstance == null)
+        {
+            _swiftRetreatInstance = Instantiate(
+                swiftRetreatPrefab,
+                player.transform.position,
+                player.transform.rotation,
+                player.transform //follows player
+            );
+        }
+
+        var ps = _swiftRetreatInstance.GetComponent<ParticleSystem>();
+        var fps = player.GetComponent<FirstPersonController>();
+        var cc = player.GetComponent<CharacterController>();
+
+        cc.enabled = false;
+        fps.enabled = false;
+
+        ps.Play();
         SpellEvents.OnSwiftretreatUsed?.Invoke();
+
+        yield return new WaitForSeconds(2f);
+
+        SpellEvents.OnSwiftretreatEnded?.Invoke();
+        player.transform.position = new Vector3(8f, 0.2f, 20f);
+
+        yield return new WaitForSeconds(2f);
+
+        ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+
+        cc.enabled = true;
+        fps.enabled = true;
+
+        _swiftRetreatCoroutine = null;
     }
     // JUMPING SPELL
     private void UseJumping()
