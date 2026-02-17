@@ -23,7 +23,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        defaultSnapshot.TransitionTo(0f); // parte con musica base
+        defaultSnapshot.TransitionTo(0f);
     }
 
     private void HandleTrialStarted(int trialIndex)

@@ -50717,7 +50717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   defaultSnapshot: {fileID: 2801398965433369291, guid: fb6a0091221240a479cd5cc228bfb770, type: 2}
   trialSnapshot: {fileID: 4767193772341412441, guid: fb6a0091221240a479cd5cc228bfb770, type: 2}
-  transitionTime: 0
+  transitionTime: 1
 --- !u!4 &840289474
 Transform:
   m_ObjectHideFlags: 0
@@ -123202,7 +123202,7 @@ AudioSource:
   m_GameObject: {fileID: 2026190607}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: fb6a0091221240a479cd5cc228bfb770, type: 2}
+  OutputAudioMixerGroup: {fileID: 3358792249253871880, guid: fb6a0091221240a479cd5cc228bfb770, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: e396cf6d0aa96de45b9044f42fe89293, type: 3}
   m_PlayOnAwake: 1
@@ -123314,7 +123314,7 @@ AudioSource:
   m_GameObject: {fileID: 2026190607}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5673792384822654233, guid: fb6a0091221240a479cd5cc228bfb770, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 85f5686293fa478498d68a803c99301d, type: 3}
   m_PlayOnAwake: 1
@@ -130328,7 +130328,7 @@ PrefabInstance:
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: finalTeleportPoint
       value: 
-      objectReference: {fileID: 859087204}
+      objectReference: {fileID: 1910356175}
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: mageLines.Array.size
       value: 4
