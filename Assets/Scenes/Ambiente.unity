@@ -1901,6 +1901,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2775760848442798650, guid: 5fa382b6ddc9b5e439016dc8a26d0678, type: 3}
   m_PrefabInstance: {fileID: 28271716}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &28637801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5844810909800350851, guid: 275f2c58990941f40be8f9eaa739152c, type: 3}
+  m_PrefabInstance: {fileID: 1440217912}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &28637805
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28637801}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8100803849376821182, guid: 45f828aff7fbc084c8009668dc61d771, type: 3}
 --- !u!1 &29738798
 GameObject:
   m_ObjectHideFlags: 0
@@ -76774,6 +76801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1189227228}
   - component: {fileID: 1189227227}
+  - component: {fileID: 1189227229}
   m_Layer: 0
   m_Name: DialogueController
   m_TagString: Untagged
@@ -76800,13 +76828,19 @@ MonoBehaviour:
   - In this trial, you must make your way through a corridor as arrows burst from 
     the walls. At the end of the chamber, there are some treasure chests one holds
     the reward the others are mimics in disguise. Choose wisely.
+  trial1Audio:
+  - {fileID: 8300000, guid: 5cee1cb6ed0a3964ca72c4d398116d0c, type: 3}
   trial2Lines:
-  - 'Their dormant flames seem to await a careful hand. But beware the confined space
-    makes some forms of magic dangerous. Only those who wisely choose how to wield
-    their power will awaken the fire and reveal the hidden treasure. '
-  - 'Their dormant flames seem to await a careful hand. But beware the confined space
-    makes some forms of magic dangerous. Only those who wisely choose how to wield
-    their power will awaken the fire and reveal the hidden treasure. '
+  - 'There are two braziers in the corners, their dormant flames seem to await someone.
+    But beware the confined space makes some forms of magic dangerous. Only those
+    who wisely choose how to wield their power will awaken the fire and reveal the
+    hidden treasure. '
+  - 'There are two braziers in the corners, their dormant flames seem to await someone.
+    But beware the confined space makes some forms of magic dangerous. Only those
+    who wisely choose how to wield their power will awaken the fire and reveal the
+    hidden treasure. '
+  trial2Audio:
+  - {fileID: 8300000, guid: fdb443b9760941d4c9a41d8c364f46df, type: 3}
   trial3Lines:
   - Unstable platforms hover in the void. A cold wind threatens to throw you off
     balance. Only those who master their agility can reach the highest platform,
@@ -76814,10 +76848,17 @@ MonoBehaviour:
   - Unstable platforms hover in the void. A cold wind threatens to throw you off
     balance. Only those who master their agility can reach the highest platform,
     where a treasure awaits.
+  trial3Audio:
+  - {fileID: 8300000, guid: 86f4a3704e7d7744b9bb12e625eb340e, type: 3}
   retreatMessage: You escaped successfully
+  retreatAudio: {fileID: 8300000, guid: 7b4b0d07dc59bf04ea3ec26c4fa14f25, type: 3}
   completeMessage: You completed the trial!
+  completeAudio: {fileID: 8300000, guid: 5daf7bf0e4ad83d4c89d4596c96c6ae4, type: 3}
   fireballMessage: This spell is too strong for enclosed spaces
+  fireballAudio: {fileID: 8300000, guid: 3cce4ee0350b27f4da4f2b36305ecaef, type: 3}
   mimicMessage: 'You fled from the mimic just in time '
+  mimicAudio: {fileID: 8300000, guid: fd033f6e3cd37784584fae5e723ba60f, type: 3}
+  audioSource: {fileID: 1189227229}
 --- !u!4 &1189227228
 Transform:
   m_ObjectHideFlags: 0
@@ -76833,6 +76874,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1189227229
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189227226}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1195033198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -91218,6 +91356,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5844810909800350851, guid: 275f2c58990941f40be8f9eaa739152c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 28637805}
     - targetCorrespondingSourceObject: {fileID: 4208961275711778322, guid: 275f2c58990941f40be8f9eaa739152c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1781785874}
@@ -129817,6 +129958,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
+      propertyPath: thirdVoiceClips.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: scriptsToDisable.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -129852,6 +129997,22 @@ PrefabInstance:
       propertyPath: 'introVoiceClips.Array.data[3]'
       value: 
       objectReference: {fileID: 8300000, guid: 68ce9145f281a5a43b8dafbe0ab42c63, type: 3}
+    - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
+      propertyPath: 'thirdVoiceClips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 479a1eeff163ae448a7235865a6684cf, type: 3}
+    - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
+      propertyPath: 'thirdVoiceClips.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: aae80b6577fa4614e8fa22668151a1f5, type: 3}
+    - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
+      propertyPath: 'thirdVoiceClips.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: eda8ae154c5513f4e82149b80124dfcd, type: 3}
+    - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
+      propertyPath: 'thirdVoiceClips.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: b57e31462d1127e44b8db0cf32b369d9, type: 3}
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: 'scriptsToDisable.Array.data[0]'
       value: 
@@ -133529,6 +133690,7 @@ SceneRoots:
   - {fileID: 58110020}
   - {fileID: 1377518439}
   - {fileID: 1152209237}
+  - {fileID: 5554253}
   - {fileID: 2055337502}
   - {fileID: 604628410}
   - {fileID: 1231685525}
@@ -133537,7 +133699,6 @@ SceneRoots:
   - {fileID: 1957387769}
   - {fileID: 145268486}
   - {fileID: 592963642}
-  - {fileID: 5554253}
   - {fileID: 4261320226516873705}
   - {fileID: 1437407085}
   - {fileID: 1334732725}

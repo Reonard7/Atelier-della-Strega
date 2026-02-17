@@ -1,10 +1,13 @@
 using UnityEngine;
 using TMPro;
-using System.Collections;
+using System;
 
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
+
+    // 👇 Evento per notificare quando il dialogo finisce
+    public static Action OnDialogueEnded;
 
     [Header("UI References")]
     [SerializeField] private GameObject dialoguePanel;
@@ -22,7 +25,6 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        // Avanza al click sinistro del mouse o tocco
         if (isDialogueActive && Input.GetMouseButtonDown(0))
         {
             ShowNextLine();
@@ -61,5 +63,8 @@ public class DialogueManager : MonoBehaviour
         isDialogueActive = false;
         currentLines = null;
         currentLineIndex = 0;
+
+        // 👇 Notifica chi è iscritto (es: TrialDialogueController)
+        OnDialogueEnded?.Invoke();
     }
 }
