@@ -24,6 +24,7 @@ public class FirstTrial : MonoBehaviour
         SpellEvents.OnArrowCollision += CollisionCheck;
         SpellEvents.OnTreasureInteracted += EndTrial;
         SpellEvents.OnMimicInteracted += TeleportAndSuspend;
+         SpellEvents.OnFireballEnded += TeleportAndSuspend;
     }
     private void OnDisable()
     {
@@ -38,6 +39,7 @@ public class FirstTrial : MonoBehaviour
         SpellEvents.OnArrowCollision -= CollisionCheck;
         SpellEvents.OnTreasureInteracted -= EndTrial;
         SpellEvents.OnMimicInteracted -= TeleportAndSuspend;
+         SpellEvents.OnFireballEnded -= TeleportAndSuspend;
     }
 
     private void Teleport(Vector3 teleportPos)

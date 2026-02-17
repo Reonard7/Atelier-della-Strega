@@ -13,12 +13,14 @@ public class ThirdTrial : MonoBehaviour
         SpellEvents.OnTrialStarted += OnTrialStarted;
         SpellEvents.OnSwiftretreatEnded += Suspend;
         SpellEvents.OnPlatformCollision += EndTrial;
+         SpellEvents.OnFireballEnded += TeleportAndSuspend;
     }
     private void OnDisable()
     {
         SpellEvents.OnTrialStarted -= OnTrialStarted;
         SpellEvents.OnSwiftretreatEnded -= Suspend;
         SpellEvents.OnPlatformCollision -= EndTrial;
+         SpellEvents.OnFireballEnded -= TeleportAndSuspend;
     }
 
     private void Teleport(Vector3 teleportPos)
