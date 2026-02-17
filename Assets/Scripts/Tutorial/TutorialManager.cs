@@ -47,7 +47,7 @@ public class TutorialManager : MonoBehaviour
     // DIALOGHI
     // =========================
     [Header("Intro Dialogue Lines")]
-    [TextArea(2, 4)]
+    [TextArea(2, 5)]
     [SerializeField] private string[] introLines;
 
     [Header("Mage Dialogue Lines")]

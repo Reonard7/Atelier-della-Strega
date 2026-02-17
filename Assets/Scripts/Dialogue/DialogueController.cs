@@ -2,36 +2,80 @@ using UnityEngine;
 
 public class TrialDialogueController : MonoBehaviour
 {
-    [Header("Start Messages (Index = Trial Index)")]
-    [TextArea(3,6)]
-    [SerializeField] private string[] startMessages;
+    [Header("Trial 1 Lines")]
+    [TextArea(2, 5)] [SerializeField] private string[] trial1Lines;
+    
+
+    [Header("Trial 2 Lines")]
+    [TextArea(2, 5)] [SerializeField] private string[] trial2Lines;
+   
+
+    [Header("Trial 3 Lines")]
+    [TextArea(2, 5)] [SerializeField] private string[] trial3Lines;
+    
 
     [Header("Retreat Message")]
-    [TextArea(3,6)]
-    [SerializeField] private string retreatMessage;
+    [TextArea(2, 5)] [SerializeField] private string retreatMessage;
 
+    [Header("Completed Lines")]
+    [TextArea(2, 5)] [SerializeField] private string completeMessage;
+
+    [Header("fireball Lines")]
+    [TextArea(2, 5)] [SerializeField] private string fireballMessage;
+
+    [Header("mimic Lines")]
+    [TextArea(2, 5)] [SerializeField] private string mimicMessage;
     private void OnEnable()
     {
         SpellEvents.OnTrialStarted += OnTrialStarted;
-        SpellEvents.OnTrialSuspended += OnTrialSuspended;
+        SpellEvents.OnTrialCompleted += OnTrialCompleted; 
+        SpellEvents.OnSwiftretreatEnded += OnSwiftretreatEnded;
+        SpellEvents.OnFireballEnded += OnFireballEnded;
+        SpellEvents. OnMimicInteracted += OnMimicInteracted;
     }
 
     private void OnDisable()
     {
         SpellEvents.OnTrialStarted -= OnTrialStarted;
-        SpellEvents.OnTrialSuspended -= OnTrialSuspended;
+        SpellEvents.OnTrialCompleted -= OnTrialCompleted;
+        SpellEvents.OnSwiftretreatEnded -= OnSwiftretreatEnded;
+        SpellEvents.OnFireballEnded -= OnFireballEnded;
+        SpellEvents. OnMimicInteracted -=  OnMimicInteracted;
     }
 
     private void OnTrialStarted(int trialIndex)
     {
-        if (trialIndex < startMessages.Length)
+        string[] linesToShow = trialIndex switch
         {
-            DialogueManager.Instance.ShowMessage(startMessages[trialIndex]);
+            0 => trial1Lines,
+            1 => trial2Lines,
+            2 => trial3Lines,
+            _ => null
+        };
+
+        if (linesToShow != null && linesToShow.Length > 0)
+        {
+            DialogueManager.Instance.StartDialogue(linesToShow);
         }
     }
 
-    private void OnTrialSuspended()
+    private void OnSwiftretreatEnded()
     {
-        DialogueManager.Instance.ShowMessage(retreatMessage);
+        DialogueManager.Instance.StartDialogue(new string[] { retreatMessage });
+    }
+
+    private void OnTrialCompleted()
+    {
+       DialogueManager.Instance.StartDialogue(new string[] { completeMessage });
+    }
+
+    private void OnFireballEnded()
+    {
+        DialogueManager.Instance.StartDialogue(new string[] { fireballMessage });
+    }
+
+    private void OnMimicInteracted()
+    {
+        DialogueManager.Instance.StartDialogue(new string[] { mimicMessage });
     }
 }

@@ -10,34 +10,56 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
 
-    [Header("Settings")]
-    [SerializeField] private float messageDuration = 4f;
-
-    private Coroutine currentRoutine;
+    private string[] currentLines;
+    private int currentLineIndex;
+    private bool isDialogueActive = false;
 
     private void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
     }
 
-    public void ShowMessage(string message)
+    private void Update()
     {
-        if (currentRoutine != null)
-            StopCoroutine(currentRoutine);
-
-        currentRoutine = StartCoroutine(ShowRoutine(message));
+        // Avanza al click sinistro del mouse o tocco
+        if (isDialogueActive && Input.GetMouseButtonDown(0))
+        {
+            ShowNextLine();
+        }
     }
 
-    private IEnumerator ShowRoutine(string message)
+    public void StartDialogue(string[] lines)
     {
+        if (lines == null || lines.Length == 0) return;
+
+        currentLines = lines;
+        currentLineIndex = 0;
+        isDialogueActive = true;
+
         dialoguePanel.SetActive(true);
-        dialogueText.text = message;
+        dialogueText.text = currentLines[currentLineIndex];
+    }
 
-        yield return new WaitForSeconds(messageDuration);
+    private void ShowNextLine()
+    {
+        currentLineIndex++;
 
+        if (currentLineIndex >= currentLines.Length)
+        {
+            EndDialogue();
+        }
+        else
+        {
+            dialogueText.text = currentLines[currentLineIndex];
+        }
+    }
+
+    private void EndDialogue()
+    {
         dialoguePanel.SetActive(false);
+        isDialogueActive = false;
+        currentLines = null;
+        currentLineIndex = 0;
     }
 }
