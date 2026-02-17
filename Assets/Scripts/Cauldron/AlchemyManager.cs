@@ -240,6 +240,8 @@ public class AlchemyManager : MonoBehaviour
         }
 
         AlchemyEvents.OnPotionCrafted?.Invoke(craftedPotion, isMirable);
+        AlchemyEvents.OnBrewingEnded?.Invoke();
+        ingredients.Clear();
     }
 
     // EVENTS
