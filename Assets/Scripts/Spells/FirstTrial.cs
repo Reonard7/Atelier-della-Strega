@@ -7,6 +7,8 @@ public class FirstTrial : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject swiftRetreatVFX;
     [SerializeField] private GameObject mimicGroup;
+    [SerializeField] private GameObject objectToRespawn;
+
     public bool invulnerability = false;
 
     private void OnEnable()
@@ -58,7 +60,7 @@ public class FirstTrial : MonoBehaviour
     private void TeleportAndSuspend()
     {
         SpellEvents.OnTrialSuspended?.Invoke();
-        Teleport(new Vector3(8f, 0.2f, 20f));
+        Teleport(new Vector3(10.01f, 0.02f, 23.38f));
     }
 
     private void EnableHighlight()
@@ -98,6 +100,7 @@ public class FirstTrial : MonoBehaviour
 
     private void EndTrial()
     {
+        objectToRespawn.SetActive(true);
         StartCoroutine(EndRoutine());
     }
 
@@ -111,7 +114,7 @@ public class FirstTrial : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         SpellEvents.OnTrialCompleted?.Invoke();
-        Teleport(new Vector3(8f, 0.2f, 20f));
+        Teleport(new Vector3(10.01f, 0.02f, 23.38f));
 
         yield return new WaitForSeconds(2f);
 

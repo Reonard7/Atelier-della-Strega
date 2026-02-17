@@ -6,6 +6,7 @@ public class ThirdTrial : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject swiftRetreatVFX;
+    [SerializeField] private GameObject objectToRespawn;
 
     private void OnEnable()
     {
@@ -40,7 +41,7 @@ public class ThirdTrial : MonoBehaviour
     private void TeleportAndSuspend()
     {
         SpellEvents.OnTrialSuspended?.Invoke();
-        Teleport(new Vector3(8f, 0.2f, 20f));
+        Teleport(new Vector3(10.01f, 0.02f, 23.38f));
     }
 
     private void OnTrialStarted(int trialIndex)
@@ -53,6 +54,7 @@ public class ThirdTrial : MonoBehaviour
 
     private void EndTrial()
     {
+        objectToRespawn.SetActive(true);
         StartCoroutine(EndRoutine());
     }
 
@@ -66,7 +68,7 @@ public class ThirdTrial : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         SpellEvents.OnTrialCompleted?.Invoke();
-        Teleport(new Vector3(8f, 0.2f, 20f));
+        Teleport(new Vector3(10.01f, 0.02f, 23.38f));
 
         yield return new WaitForSeconds(2f);
 

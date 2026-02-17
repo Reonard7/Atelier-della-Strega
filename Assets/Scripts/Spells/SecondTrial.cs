@@ -7,6 +7,7 @@ public class SecondTrial : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject swiftRetreatVFX;
     [SerializeField] private GameObject[] braziers;
+    [SerializeField] private GameObject objectToRespawn;
     private bool inArea = false;
 
     private void OnEnable()
@@ -47,7 +48,7 @@ public class SecondTrial : MonoBehaviour
         if (state == TrialManager.TrialState.InProgress)
         {
             SpellEvents.OnTrialSuspended?.Invoke();
-            Teleport(new Vector3(8f, 0.2f, 20f));
+            Teleport(new Vector3(10.01f, 0.02f, 23.38f));
         }
         
     }
@@ -56,7 +57,7 @@ public class SecondTrial : MonoBehaviour
     {
         if (trialIndex == 1)
         {
-            Teleport(new Vector3(0.9f, 0.2f, 55.9f));
+            Teleport(new Vector3(-12.221f, 0.268f, 55.708f));
         }
     }
 
@@ -67,6 +68,7 @@ public class SecondTrial : MonoBehaviour
     brazier.GetComponent<BrazerCollider>().ResetBrazier();
 }
 
+        objectToRespawn.SetActive(true);
         StartCoroutine(EndRoutine());
     }
 
@@ -80,7 +82,7 @@ public class SecondTrial : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         SpellEvents.OnTrialCompleted?.Invoke();
-        Teleport(new Vector3(8f, 0.2f, 20f));
+        Teleport(new Vector3(10.01f, 0.02f, 23.38f));
 
         yield return new WaitForSeconds(2f);
 
