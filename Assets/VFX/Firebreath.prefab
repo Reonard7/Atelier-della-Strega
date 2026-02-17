@@ -18,15 +18,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8419178667490943989, guid: 842eb98046e1ca348b3c0807fcfe362d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.9092674
+      value: 9.578086
       objectReference: {fileID: 0}
     - target: {fileID: 8419178667490943989, guid: 842eb98046e1ca348b3c0807fcfe362d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0032071813
+      value: -0.0025504401
       objectReference: {fileID: 0}
     - target: {fileID: 8419178667490943989, guid: 842eb98046e1ca348b3c0807fcfe362d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 27.205446
+      value: 28.848452
       objectReference: {fileID: 0}
     - target: {fileID: 8419178667490943989, guid: 842eb98046e1ca348b3c0807fcfe362d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -55,6 +55,10 @@ PrefabInstance:
     - target: {fileID: 8419178667490943989, guid: 842eb98046e1ca348b3c0807fcfe362d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419802679652866803, guid: 842eb98046e1ca348b3c0807fcfe362d, type: 3}
+      propertyPath: lengthInSec
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8419802679652866803, guid: 842eb98046e1ca348b3c0807fcfe362d, type: 3}
       propertyPath: CollisionModule.type

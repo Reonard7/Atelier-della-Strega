@@ -8,6 +8,7 @@ public class SecondTrial : MonoBehaviour
     [SerializeField] private GameObject swiftRetreatVFX;
     [SerializeField] private GameObject[] braziers;
     [SerializeField] private GameObject objectToRespawn;
+    [SerializeField] private GameObject respawDice;
     private bool inArea = false;
 
     private void OnEnable()
@@ -64,16 +65,19 @@ public class SecondTrial : MonoBehaviour
     private void EndTrial()
     {
         foreach (GameObject brazier in braziers)
-{
-    brazier.GetComponent<BrazerCollider>().ResetBrazier();
-}
+        {
+            brazier.GetComponent<BrazerCollider>().ResetBrazier();
+        }
 
+        respawDice.SetActive(true);
         objectToRespawn.SetActive(true);
+
         StartCoroutine(EndRoutine());
     }
 
     private IEnumerator EndRoutine()
     {
+        yield return new WaitForSeconds(3f);
         swiftRetreatVFX.SetActive(true);
         var ps = swiftRetreatVFX.GetComponent<ParticleSystem>();
 
