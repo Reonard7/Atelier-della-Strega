@@ -59,8 +59,8 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             {
                 AlchemyEvents.OnIngredientRemovedFromSlot?.Invoke(ingredient);
                 Debug.Log("OnIngredientRemovedFromSlot invoked");
-                ingredientSlot.Clear();
             }
+            ingredientSlot.Clear();
         }
 
         transform.SetParent(canvas.transform);
@@ -81,6 +81,11 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         {
             transform.SetParent(homeParent);
             transform.localPosition = homeLocalPosition;
+        }
+        var originalSlot = homeParent.GetComponent<IngredientSlot>();
+        if (originalSlot != null)
+        {
+            originalSlot.OnDrop(eventData); 
         }
     }
 

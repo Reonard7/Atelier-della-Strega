@@ -1,3 +1,4 @@
+using System;
 using Events;
 using GameData.Scripts.Items;
 using UnityEngine;
@@ -13,11 +14,22 @@ using UnityEngine.UI;
  */
 public class IngredientSlot : MonoBehaviour, IDropHandler
 {
-    private Ingredient currentIngredient;
+    public RawImage slotImage;             // L'immagine di questo oggetto (lo slot stesso)
+    [Header("Impostazioni Grafiche")]
+    public Texture emptySprite;          // Sprite Rombo con "?"
+    public Texture filledSprite;         // Sprite Rombo pulito
+    
+    private Ingredient _currentIngredient;
+    
+    public void Start()
+    {
+        UpdateSlotVisuals();
+    }
+
     public void OnDrop(PointerEventData eventData)
     {
-        // check necessario per evitare che l'ingrediente venga inserito nella lista provando a metetre un ingrediente sopra l'altro
-        if (currentIngredient != null) return;
+        // check necessario per evitare che l'ingrediente venga inserito nella lista provando a mettere un ingrediente sopra l'altro
+        if (_currentIngredient != null) return;
 
         Draggable draggable = eventData.pointerDrag.GetComponent<Draggable>();
         if (draggable == null) return;
@@ -25,21 +37,33 @@ public class IngredientSlot : MonoBehaviour, IDropHandler
         Ingredient ingredient = draggable.GetIngredient();
         if (ingredient == null) return;
 
-        currentIngredient = ingredient;
+        _currentIngredient = ingredient;
         AlchemyEvents.OnIngredientDropped?.Invoke(ingredient);
 
         if (transform.childCount > 0) return; // slot occupied
         draggable.transform.SetParent(transform);
         draggable.transform.position = transform.position;
+
+        UpdateSlotVisuals();
     }
 
     public Ingredient GetIngredient()
     {
-        return currentIngredient;
+        return _currentIngredient;
     }
 
     public void Clear()
     {
-        currentIngredient = null;
+        _currentIngredient = null;
+        UpdateSlotVisuals();
+    }
+
+    private void UpdateSlotVisuals()
+    {
+        if (!slotImage) return;
+        
+        if (!_currentIngredient) return;
+        
+        slotImage.texture = _currentIngredient ? filledSprite : emptySprite;
     }
 }
