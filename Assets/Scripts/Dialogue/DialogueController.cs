@@ -30,6 +30,10 @@ public class TrialDialogueController : MonoBehaviour
     [TextArea(2, 5)] [SerializeField] private string mimicMessage;
     [SerializeField] private AudioClip mimicAudio;
 
+     [Header("Mimic Lines")]
+    [TextArea(2, 5)] [SerializeField] private string hitMessage;
+    [SerializeField] private AudioClip HitAudio;
+
     [Header("Audio Source")]
     [SerializeField] private AudioSource audioSource;
 
@@ -40,6 +44,8 @@ public class TrialDialogueController : MonoBehaviour
         SpellEvents.OnSwiftretreatEnded += OnSwiftretreatEnded;
         SpellEvents.OnFireballEnded += OnFireballEnded;
         SpellEvents.OnMimicInteracted += OnMimicInteracted;
+        SpellEvents.OnTrialFailedByArrow += OnArrowFailed;
+
 
         DialogueManager.OnDialogueEnded += StopAudio;
     }
@@ -51,6 +57,8 @@ public class TrialDialogueController : MonoBehaviour
         SpellEvents.OnSwiftretreatEnded -= OnSwiftretreatEnded;
         SpellEvents.OnFireballEnded -= OnFireballEnded;
         SpellEvents.OnMimicInteracted -= OnMimicInteracted;
+        SpellEvents.OnTrialFailedByArrow -= OnArrowFailed;
+
 
         DialogueManager.OnDialogueEnded -= StopAudio;
     }
@@ -130,4 +138,14 @@ public class TrialDialogueController : MonoBehaviour
         DialogueManager.Instance.StartDialogue(new string[] { mimicMessage });
         PlayAudio(mimicAudio);
     }
+
+    private void OnArrowFailed()
+{
+    DialogueManager.Instance.StartDialogue(
+        new string[] { hitMessage }
+    );
+
+    PlayAudio(HitAudio);
+}
+
 }

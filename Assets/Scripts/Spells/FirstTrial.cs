@@ -93,12 +93,15 @@ public class FirstTrial : MonoBehaviour
         invulnerability = false;
     }
 
-    private void CollisionCheck()
-    {
-        if (invulnerability) return;
+   private void CollisionCheck()
+{
+    if (invulnerability) 
+        return; 
 
-        TeleportAndSuspend();
-    }
+    SpellEvents.OnTrialFailedByArrow?.Invoke();
+
+    TeleportAndSuspend();
+}
 
     private void EndTrial()
     {

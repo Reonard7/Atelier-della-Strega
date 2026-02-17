@@ -36,4 +36,6 @@ public class SpellEvents : MonoBehaviour
     public static Action OnMimicInteracted;
     public static Action OnTreasureInteracted;
     public static Action OnPlatformCollision;
+    public static Action OnTrialFailedByArrow;
+
 }

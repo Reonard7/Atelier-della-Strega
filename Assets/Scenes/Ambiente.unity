@@ -77095,6 +77095,8 @@ MonoBehaviour:
   fireballAudio: {fileID: 8300000, guid: 3cce4ee0350b27f4da4f2b36305ecaef, type: 3}
   mimicMessage: 'You fled from the mimic just in time! '
   mimicAudio: {fileID: 8300000, guid: fd033f6e3cd37784584fae5e723ba60f, type: 3}
+  hitMessage: You have been hit by an arrow!
+  HitAudio: {fileID: 0}
   audioSource: {fileID: 1189227229}
 --- !u!4 &1189227228
 Transform:
