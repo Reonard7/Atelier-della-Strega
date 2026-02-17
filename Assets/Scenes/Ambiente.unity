@@ -7891,7 +7891,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2357991228346173940, guid: 87d728c47c595004aa84d985a74337df, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7518684430882758512, guid: 87d728c47c595004aa84d985a74337df, type: 3}
       propertyPath: m_RenderMode
@@ -18763,7 +18763,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You need to find the Expedition Retreat scrol before entering this area!
+  m_text: You need to find the Expedition Retreat scroll before entering this area!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73db6715aba55e343bd993d57c7e7c8c, type: 2}
   m_sharedMaterial: {fileID: -2350711671220705056, guid: 73db6715aba55e343bd993d57c7e7c8c, type: 2}
@@ -74158,7 +74158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 1121, y: -232.02818}
+  m_AnchoredPosition: {x: 1123, y: -195}
   m_SizeDelta: {x: 898.52, y: 175.14}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1001 &1159483412
@@ -82726,7 +82726,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 262, y: 177.97177}
+  m_AnchoredPosition: {x: 266, y: 215}
   m_SizeDelta: {x: 278, y: 141}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1313632978
@@ -92127,7 +92127,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -18.999939, y: -3}
+  m_AnchoredPosition: {x: -19, y: -3}
   m_SizeDelta: {x: 1711.373, y: 531.0869}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1463280772
