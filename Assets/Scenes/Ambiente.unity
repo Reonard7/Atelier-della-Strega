@@ -76219,16 +76219,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrialDialogueController
   trial1Lines:
-  - In this trial, you must make your way through a deadly corridor as arrows burst
-    from hidden slits in the walls around you. At the end of the chamber, there are
-    some treasure chests one holds the true reward the others are mimics in disguise.
-    Choose wisely.
-  - In this trial, you must make your way through a deadly corridor as arrows burst
-    from hidden slits in the walls around you. At the end of the chamber, there are
-    some treasure chests one holds the true reward the others are mimics in disguise.
-    Choose wisely.
-  trial1CompletedLines:
-  - finito
+  - In this trial, you must make your way through a corridor as arrows burst from 
+    the walls. At the end of the chamber, there are some treasure chests one holds
+    the reward the others are mimics in disguise. Choose wisely.
+  - In this trial, you must make your way through a corridor as arrows burst from 
+    the walls. At the end of the chamber, there are some treasure chests one holds
+    the reward the others are mimics in disguise. Choose wisely.
   trial2Lines:
   - 'Their dormant flames seem to await a careful hand. But beware the confined space
     makes some forms of magic dangerous. Only those who wisely choose how to wield
@@ -76236,8 +76232,6 @@ MonoBehaviour:
   - 'Their dormant flames seem to await a careful hand. But beware the confined space
     makes some forms of magic dangerous. Only those who wisely choose how to wield
     their power will awaken the fire and reveal the hidden treasure. '
-  trial2CompletedLines:
-  - finito
   trial3Lines:
   - Unstable platforms hover in the void. A cold wind threatens to throw you off
     balance. Only those who master their agility can reach the highest platform,
@@ -76245,11 +76239,10 @@ MonoBehaviour:
   - Unstable platforms hover in the void. A cold wind threatens to throw you off
     balance. Only those who master their agility can reach the highest platform,
     where a treasure awaits.
-  trial3CompletedLines:
-  - 'finito
-
-'
-  retreatMessage: ti sei ritirato
+  retreatMessage: You escaped successfully
+  completeMessage: You completed the trial!
+  fireballMessage: This spell is too strong for enclosed spaces
+  mimicMessage: 'You fled from the mimic just in time '
 --- !u!4 &1189227228
 Transform:
   m_ObjectHideFlags: 0
@@ -91903,7 +91896,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -19, y: -3}
+  m_AnchoredPosition: {x: -18.999939, y: -3}
   m_SizeDelta: {x: 1711.373, y: 531.0869}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1463280772
