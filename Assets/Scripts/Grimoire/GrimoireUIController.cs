@@ -24,7 +24,7 @@ public class GrimoireUIController : MonoBehaviour
     public int currentIndex = 0;
     public int maxIndex;
 
-    private void Awake()
+    private void OnEnable()
     {
         RefreshPages();
     }
