@@ -1,20 +1,20 @@
-﻿using GameData.Scripts.Items;
-using NUnit.Framework;
-using StarterAssets;
+﻿using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
+using Spells;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class SpellManager : MonoBehaviour
 {
     private List<IGrimoireData> abilityList;
     [SerializeField] private GameObject hotbar;
+    [SerializeField] private GameObject background;
     [SerializeField] private Canvas canvas;
     [SerializeField] private TextMeshProUGUI name;
     private SpellSlot[] spellSlots;
+    private BackgroundSpellSlot[] backgroundSlots;
     private int _activeSlotIndex;
     [SerializeField] private List<string> usableIDs;
     private bool _isActive;
@@ -83,11 +83,17 @@ public class SpellManager : MonoBehaviour
         _isActive = false;
         abilityList = new List<IGrimoireData>();
         spellSlots = new SpellSlot[10];
+        backgroundSlots = new BackgroundSpellSlot[10];
 
         for (int i = 0; i < 10; i++)
         {
             spellSlots[i] = hotbar.transform.GetChild(i).GetComponent<SpellSlot>();
             spellSlots[i].index = i;
+        }
+        
+        for (int i = 0; i < 10; i++)
+        {
+            backgroundSlots[i] = background.transform.GetChild(i).GetComponent<BackgroundSpellSlot>();
         }
 
         // Initial update
@@ -214,7 +220,7 @@ public class SpellManager : MonoBehaviour
     private IEnumerator FireBreathRoutine()
     {
         // Instantiate if not existing
-        if (_fireBreathInstance == null)
+        if (!_fireBreathInstance)
         {
             _fireBreathInstance = Instantiate(
                 fireBreathPrefab,
@@ -247,7 +253,7 @@ public class SpellManager : MonoBehaviour
     private IEnumerator ClarovencyRoutine()
     {
         // Instantiate if not existing
-        if (_clarovencyInstance == null)
+        if (!_clarovencyInstance)
         {
             _clarovencyInstance = Instantiate(
                 clarovencyPrefab,
@@ -280,7 +286,7 @@ public class SpellManager : MonoBehaviour
     private IEnumerator InvulnerabilityRoutine()
     {
         // Instantiate if not existing
-        if (_invulnerabilityInstance == null)
+        if (!_invulnerabilityInstance)
         {
             _invulnerabilityInstance = Instantiate(
                 invulnerabilityPrefab,
@@ -313,7 +319,7 @@ public class SpellManager : MonoBehaviour
     private IEnumerator SpeedRoutine()
     {
         // Instantiate if not existing
-        if (_speedInstance == null)
+        if (!_speedInstance)
         {
             _speedInstance = Instantiate(
                 speedPrefab,
@@ -351,7 +357,7 @@ public class SpellManager : MonoBehaviour
     private IEnumerator VitalityRoutine()
     {
         // Instantiate if not existing
-        if (_vitalityInstance == null)
+        if (!_vitalityInstance)
         {
             _vitalityInstance = Instantiate(
                 vitalityPrefab,
@@ -384,7 +390,7 @@ public class SpellManager : MonoBehaviour
     private IEnumerator LightRoutine()
     {
         // Instantiate if not existing
-        if (_lightInstance == null)
+        if (!_lightInstance)
         {
             _lightInstance = Instantiate(
                 lightPrefab,
@@ -417,7 +423,7 @@ public class SpellManager : MonoBehaviour
     private IEnumerator FireballRoutine()
     {
         // Instantiate if not existing
-        if (_fireballInstance == null)
+        if (!_fireballInstance)
         {
             _fireballInstance = Instantiate(
                 fireballPrefab,
@@ -450,7 +456,7 @@ public class SpellManager : MonoBehaviour
     private IEnumerator SwiftRetreatRoutine()
     {
         // Instantiate if not existing
-        if (_swiftRetreatInstance == null)
+        if (!_swiftRetreatInstance)
         {
             _swiftRetreatInstance = Instantiate(
                 swiftRetreatPrefab,
@@ -495,7 +501,7 @@ public class SpellManager : MonoBehaviour
     private IEnumerator JumpingRoutine()
     {
         // Instantiate if not existing
-        if (_jumpingInstance == null)
+        if (!_jumpingInstance)
         {
             _jumpingInstance = Instantiate(
                 jumpingPrefab,
@@ -532,7 +538,7 @@ public class SpellManager : MonoBehaviour
     private IEnumerator ShieldRoutine()
     {
         // Instantiate if not existing
-        if (_shieldInstance == null)
+        if (!_shieldInstance)
         {
             _shieldInstance = Instantiate(
                 shieldPrefab,
@@ -580,17 +586,11 @@ public class SpellManager : MonoBehaviour
         {
             if (i == _activeSlotIndex)
             {
-                // Active slot → red
-                spellSlots[i].GetComponent<Image>().color = Color.red;
+                backgroundSlots[i].ChangeSelectedBackground();
             }
             else
             {
-                // Inactive slot → white (or default alpha)
-                Color c = spellSlots[i].GetComponent<Image>().color;
-                c.r = 1f;
-                c.g = 1f;
-                c.b = 1f;
-                spellSlots[i].GetComponent<Image>().color = c;
+                backgroundSlots[i].ChangeUnselectedBackground();
             }
         }
     }
