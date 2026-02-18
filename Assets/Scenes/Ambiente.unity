@@ -76701,32 +76701,32 @@ MonoBehaviour:
   - Move carefully and stay alert, here nothing is as it seems. Make your way through
     the narrow corridor and find the Dicegem
   trial1Audio:
-  - {fileID: 8300000, guid: 5cee1cb6ed0a3964ca72c4d398116d0c, type: 3}
+  - {fileID: 8300000, guid: ec3a7c472460e084abd522d6bef5b923, type: 3}
   trial2Lines:
   - 'There are two braziers in the corners, their dormant flames seem to await someone.
     Choose wisely how to wield your power '
   - There are two braziers in the corners, their dormant flames seem to await someone.
     Choose wisely how to wield your power
   trial2Audio:
-  - {fileID: 8300000, guid: fdb443b9760941d4c9a41d8c364f46df, type: 3}
+  - {fileID: 8300000, guid: 6c8f5e0136173d5439a591aefc779792, type: 3}
   trial3Lines:
   - Unstable platforms hover in the void. Only those who master their agility can
     reach the highest platform!
   - Unstable platforms hover in the void. Only those who master their agility can
     reach the highest platform!
   trial3Audio:
-  - {fileID: 8300000, guid: 86f4a3704e7d7744b9bb12e625eb340e, type: 3}
+  - {fileID: 8300000, guid: d976af60790fc1b408203479bc3eea7e, type: 3}
   retreatMessage: 'You escaped successfully! '
-  retreatAudio: {fileID: 8300000, guid: 7b4b0d07dc59bf04ea3ec26c4fa14f25, type: 3}
+  retreatAudio: {fileID: 8300000, guid: 88cfaa98f7720314eb2d3d777a618e98, type: 3}
   completeMessage: 'Well done, apprentice! You recovered the Dicegem and completed
     the trial '
-  completeAudio: {fileID: 8300000, guid: 5daf7bf0e4ad83d4c89d4596c96c6ae4, type: 3}
+  completeAudio: {fileID: 8300000, guid: 39a6066a06b2a8b48920b3234dfff3b3, type: 3}
   fireballMessage: Never use Fireball in enclosed spaces!!
-  fireballAudio: {fileID: 8300000, guid: 3cce4ee0350b27f4da4f2b36305ecaef, type: 3}
+  fireballAudio: {fileID: 8300000, guid: 1d2389b567e673946bc93c53c0c35847, type: 3}
   mimicMessage: 'You fled from the mimic just in time! '
-  mimicAudio: {fileID: 8300000, guid: fd033f6e3cd37784584fae5e723ba60f, type: 3}
-  hitMessage: You have been hit by an arrow!
-  HitAudio: {fileID: 0}
+  mimicAudio: {fileID: 8300000, guid: 9646b103c3ac20b4f9b96bee6010efbd, type: 3}
+  hitMessage: An arrow hit you, you should have protected yourself!!
+  HitAudio: {fileID: 8300000, guid: 4c7b70328a774a147949ece7b3fa421f, type: 3}
   audioSource: {fileID: 1189227229}
 --- !u!4 &1189227228
 Transform:
@@ -130152,19 +130152,19 @@ PrefabInstance:
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: 'thirdVoiceClips.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: 479a1eeff163ae448a7235865a6684cf, type: 3}
+      objectReference: {fileID: 8300000, guid: 6deee930fff6f524d806519649d99b6b, type: 3}
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: 'thirdVoiceClips.Array.data[1]'
       value: 
-      objectReference: {fileID: 8300000, guid: aae80b6577fa4614e8fa22668151a1f5, type: 3}
+      objectReference: {fileID: 8300000, guid: 04d489c1956aba44f8785843f1deee5d, type: 3}
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: 'thirdVoiceClips.Array.data[2]'
       value: 
-      objectReference: {fileID: 8300000, guid: eda8ae154c5513f4e82149b80124dfcd, type: 3}
+      objectReference: {fileID: 8300000, guid: ac326bdeba27ceb42acaaa696bb1941a, type: 3}
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: 'thirdVoiceClips.Array.data[3]'
       value: 
-      objectReference: {fileID: 8300000, guid: b57e31462d1127e44b8db0cf32b369d9, type: 3}
+      objectReference: {fileID: 8300000, guid: a6b60f092270b6443b3150e3496478ce, type: 3}
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: 'scriptsToDisable.Array.data[0]'
       value: 
