@@ -18447,6 +18447,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+--- !u!114 &331561465 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5886964765058254175, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+  m_PrefabInstance: {fileID: 1562120551}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331561453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e658d6e4700aa594697851ef9aade796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IngredientSlot
 --- !u!1001 &331919494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35877,6 +35888,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+--- !u!114 &545284826 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4150388032365683280, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+  m_PrefabInstance: {fileID: 1562120551}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545284816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e658d6e4700aa594697851ef9aade796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IngredientSlot
 --- !u!1001 &546741400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84515,6 +84537,22 @@ PrefabInstance:
       propertyPath: _cauldronCanvas
       value: 
       objectReference: {fileID: 1562120552}
+    - target: {fileID: 9013964581922199893, guid: 7b169862bdbf1834292c80c7cf724525, type: 3}
+      propertyPath: ingredientSlots.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9013964581922199893, guid: 7b169862bdbf1834292c80c7cf724525, type: 3}
+      propertyPath: 'ingredientSlots.Array.data[0]'
+      value: 
+      objectReference: {fileID: 331561465}
+    - target: {fileID: 9013964581922199893, guid: 7b169862bdbf1834292c80c7cf724525, type: 3}
+      propertyPath: 'ingredientSlots.Array.data[1]'
+      value: 
+      objectReference: {fileID: 545284826}
+    - target: {fileID: 9013964581922199893, guid: 7b169862bdbf1834292c80c7cf724525, type: 3}
+      propertyPath: 'ingredientSlots.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1739697811}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -108517,6 +108555,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+--- !u!114 &1739697811 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7570041211131905362, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+  m_PrefabInstance: {fileID: 1562120551}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739697801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e658d6e4700aa594697851ef9aade796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IngredientSlot
 --- !u!1001 &1744488289
 PrefabInstance:
   m_ObjectHideFlags: 0

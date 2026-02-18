@@ -23,6 +23,7 @@ public class AlchemyManager : MonoBehaviour
     [Header("Craftable")]
     [SerializeField] private List<Potion> craftablePotions;
     [SerializeField] private List<Ingredient> ingredients;
+    [SerializeField] private List<IngredientSlot> ingredientSlots;
     private Potion currentResult;
     private int diceResult;
     private bool _isBrewing = false;
@@ -241,6 +242,9 @@ public class AlchemyManager : MonoBehaviour
 
         AlchemyEvents.OnPotionCrafted?.Invoke(craftedPotion, isMirable);
         AlchemyEvents.OnBrewingEnded?.Invoke();
+
+        foreach (IngredientSlot slot in ingredientSlots) slot.Clear();
+
         ingredients.Clear();
     }
 
