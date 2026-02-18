@@ -81450,7 +81450,7 @@ PrefabInstance:
     - target: {fileID: 5484569267772091910, guid: 531dc7066a83f3d42bcf5b2b0e0c472e, type: 3}
       propertyPath: invulnerabilityPrefab
       value: 
-      objectReference: {fileID: 5819147329508461796, guid: 2af542671c4a9b644830ba160bc2ce25, type: 3}
+      objectReference: {fileID: 6774809062547825202, guid: 7d9d25b81797ef942837814220611f0f, type: 3}
     - target: {fileID: 5597064277109850707, guid: 531dc7066a83f3d42bcf5b2b0e0c472e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.1677
@@ -92913,6 +92913,14 @@ PrefabInstance:
     - target: {fileID: 29942906131187832, guid: d8cc2c097c2163f4ab0e1235b0718c96, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 118869613844312300, guid: d8cc2c097c2163f4ab0e1235b0718c96, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 118869613844312300, guid: d8cc2c097c2163f4ab0e1235b0718c96, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 180383287755659743, guid: d8cc2c097c2163f4ab0e1235b0718c96, type: 3}
       propertyPath: m_Sprite

@@ -118,14 +118,14 @@ public class SpellManager : MonoBehaviour
         {
             _isHolding = true;
             _holdTimer = 0f;
-            chargeBar.localScale = new Vector3(0f,2f,2f);
+            chargeBar.localScale = new Vector3(0f,0f,0f);
             chargeBar.gameObject.SetActive(true);
         }
 
         if (Input.GetMouseButton(1) && _isHolding)
         {
             _holdTimer += Time.deltaTime;
-            chargeBar.localScale = new Vector3(Mathf.Clamp01(_holdTimer / holdTimeToCast), 2f, 2f);
+            chargeBar.localScale = new Vector3(Mathf.Clamp01(_holdTimer / holdTimeToCast), Mathf.Clamp01(_holdTimer / holdTimeToCast), Mathf.Clamp01(_holdTimer / holdTimeToCast));
 
             if (_holdTimer >= holdTimeToCast)
             {
