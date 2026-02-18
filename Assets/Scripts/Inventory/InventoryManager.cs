@@ -11,12 +11,14 @@ namespace Inventory
     public class InventoryManager : MonoBehaviour
     {
         [FormerlySerializedAs("_hotbar")] [SerializeField] private GameObject hotbar;
+        [FormerlySerializedAs("_background")] [SerializeField] private GameObject background;
         [SerializeField] private AudioSource audioSource;
         [SerializeField] private AudioClip pickupClip;
         [SerializeField] private Canvas canvas;
-        [SerializeField] private TextMeshProUGUI name;
+        [SerializeField] private new TextMeshProUGUI name;
         private List<Ingredient> _inventory;
         private HotbarSlot[] _hotbarSlots;
+        private InventorySlot[] _inventorySlots;
         private HashSet<Ingredient> _lockedIngredients = new();
         private int _activeSlotIndex;
         private bool _inCrafting;
@@ -52,11 +54,17 @@ namespace Inventory
             // initialize the inventory list and hotbar slots array
             _inventory = new List<Ingredient>();
             _hotbarSlots = new HotbarSlot[3];
+            _inventorySlots = new InventorySlot[3];
 
             for (int i = 0; i < 3; i++)
             {
                 _hotbarSlots[i] = hotbar.transform.GetChild(i).GetComponent<HotbarSlot>();
                 _hotbarSlots[i].index = i;
+            }
+            
+            for (int i = 0; i < 3; i++)
+            {
+                _inventorySlots[i] = background.transform.GetChild(i).GetComponent<InventorySlot>();
             }
 
             // Initial update
@@ -176,17 +184,11 @@ namespace Inventory
             {
                 if (i == _activeSlotIndex)
                 {
-                    // Active slot → red
-                    _hotbarSlots[i].GetComponent<Image>().color = Color.red;
+                    _inventorySlots[i].ChangeSelectedBackground();
                 }
                 else
                 {
-                    // Inactive slot → white (or default alpha)
-                    Color c = _hotbarSlots[i].GetComponent<Image>().color;
-                    c.r = 1f;
-                    c.g = 1f;
-                    c.b = 1f;
-                    _hotbarSlots[i].GetComponent<Image>().color = c;
+                    _inventorySlots[i].ChangeUnselectedBackground();
                 }
             }
         }
