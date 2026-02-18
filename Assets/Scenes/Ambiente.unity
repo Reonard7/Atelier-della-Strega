@@ -47630,6 +47630,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7198971506138548238, guid: 4a8f01f2378e33c4e8409306585a8fa2, type: 3}
   m_PrefabInstance: {fileID: 781544445}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &781635988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 781635990}
+  - component: {fileID: 781635989}
+  m_Layer: 0
+  m_Name: Fine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &781635989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781635988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 854190100a754b441b4873f895fa30eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Fine
+  tutorialManager: {fileID: 1714629462}
+--- !u!4 &781635990
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781635988}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.98564, y: 5.40902, z: 11.95304}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &781936766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131580,6 +131625,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
+      propertyPath: finalLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: introLines.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -131608,6 +131657,11 @@ PrefabInstance:
       propertyPath: 'mageLines.Array.data[3]'
       value: "When you're ready, train with potions and spells in the training area.
         I\u2019ve prepared some trials for you. Good luck!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
+      propertyPath: 'finalLines.Array.data[0]'
+      value: You have retrieved all the treasures congratulations! Now you are a
+        level one mage. Keep studying to reach level 2!
       objectReference: {fileID: 0}
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: 'introLines.Array.data[0]'
@@ -131658,6 +131712,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
+      propertyPath: finalVoiceClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: introVoiceClips.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -131685,6 +131743,10 @@ PrefabInstance:
       propertyPath: 'mageVoiceClips.Array.data[3]'
       value: 
       objectReference: {fileID: 8300000, guid: 543743599eb90e24f900dfa696a9722a, type: 3}
+    - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
+      propertyPath: 'finalVoiceClips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: a0b737e508ac2c44294096040e2a1fc5, type: 3}
     - target: {fileID: 1403216877693906484, guid: 04d1af40dc4471d4585b211039442679, type: 3}
       propertyPath: 'introVoiceClips.Array.data[0]'
       value: 
@@ -135539,6 +135601,7 @@ SceneRoots:
   - {fileID: 928444761}
   - {fileID: 1465437680}
   - {fileID: 1282948087}
+  - {fileID: 781635990}
   - {fileID: 1079011094}
   - {fileID: 2026190609}
   - {fileID: 588758131164806315}

@@ -9,21 +9,17 @@ public enum TutorialState
     ReachMageDownstairs,
     MageDialogue,
     ReachThirdArea,
-    ThirdDialogue
+    ThirdDialogue,
+    FinalDialogue
 }
 
 public class TutorialManager : MonoBehaviour
 {
-    // =========================
-    // UI
-    // =========================
+    
     [Header("UI Tutorial")]
     [SerializeField] private GameObject tutorialPanel;
     [SerializeField] private TextMeshProUGUI tutorialText;
 
-    // =========================
-    // PLAYER
-    // =========================
     [Header("Player")]
     [SerializeField] private MonoBehaviour[] scriptsToDisable;
     [SerializeField] private FirstPersonController fpsController;
@@ -32,9 +28,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField, Range(1f, 10f)]
     private float rotationSpeed = 5f;
 
-    // =========================
-    // MAGE
-    // =========================
+
     [Header("Mage")]
     [SerializeField] private MageController mage;
     [SerializeField] private float rotationSpeedMage = 120f;
@@ -43,9 +37,7 @@ public class TutorialManager : MonoBehaviour
     [Header("Final Teleport")]
     [SerializeField] private Transform finalTeleportPoint;
 
-    // =========================
-    // DIALOGHI
-    // =========================
+
     [Header("Intro Dialogue Lines")]
     [TextArea(2, 5)]
     [SerializeField] private string[] introLines;
@@ -58,12 +50,18 @@ public class TutorialManager : MonoBehaviour
     [TextArea(2, 5)]
     [SerializeField] private string[] thirdLines;
 
+    [Header("Final Dialogue Lines")]
+    [TextArea(2, 5)]
+    [SerializeField] private string[] finalLines;
+
     [Header("Voice Over")]
     [SerializeField] private AudioSource voiceAudioSource;
 
     [SerializeField] private AudioClip[] introVoiceClips;
     [SerializeField] private AudioClip[] mageVoiceClips;
     [SerializeField] private AudioClip[] thirdVoiceClips;
+    [SerializeField] private AudioClip[] finalVoiceClips;
+
     // =========================
     private int _currentLineIndex;
     private TutorialState _currentState;
@@ -78,7 +76,7 @@ public class TutorialManager : MonoBehaviour
     private void Update()
     {
         if (_currentState == TutorialState.IntroDialogue ||
-            _currentState == TutorialState.MageDialogue || _currentState == TutorialState.ThirdDialogue)
+            _currentState == TutorialState.MageDialogue || _currentState == TutorialState.ThirdDialogue || _currentState == TutorialState.FinalDialogue)
         {
             if (Input.GetMouseButtonDown(0))
                 NextLine();
@@ -88,9 +86,8 @@ public class TutorialManager : MonoBehaviour
             SmoothLookAtMage();
     }
 
-    // =========================
+    
     // INTRO
-    // =========================
     private void StartIntro()
     {
         _currentState = TutorialState.IntroDialogue;
@@ -105,15 +102,14 @@ public class TutorialManager : MonoBehaviour
     }
 
     private IEnumerator PlayFirstIntroVoiceWithDelay(float delay)
-{
-    yield return new WaitForSeconds(delay);
-
-    // Sicurezza: controlla che siamo ancora nell'intro
-    if (_currentState == TutorialState.IntroDialogue && _currentLineIndex == 0)
     {
-        PlayVoiceLine();
+        yield return new WaitForSeconds(delay);
+
+        if (_currentState == TutorialState.IntroDialogue && _currentLineIndex == 0)
+        {
+            PlayVoiceLine();
+        }
     }
-}
 
 
     private void EndIntro()
@@ -130,9 +126,7 @@ public class TutorialManager : MonoBehaviour
         _currentState = TutorialState.ReachMageDownstairs;
     }
 
-    // =========================
     // DIALOGHI
-    // =========================
     private void NextLine()
     {
         _currentLineIndex++;
@@ -153,34 +147,45 @@ public class TutorialManager : MonoBehaviour
                 tutorialText.text = mageLines[_currentLineIndex];
                 PlayVoiceLine();
         }
-    else if (_currentState == TutorialState.ThirdDialogue)
-{
-    if (_currentLineIndex >= thirdLines.Length)
-        EndThirdDialogue();
-    else
+        else if (_currentState == TutorialState.ThirdDialogue)
+        {
+            if (_currentLineIndex >= thirdLines.Length)
+                EndThirdDialogue();
+            else
+            {
+                tutorialText.text = thirdLines[_currentLineIndex];
+                PlayVoiceLine();
+            }
+        }
+        else if (_currentState == TutorialState.FinalDialogue)
+        {
+            if (_currentLineIndex >= finalLines.Length)
+                EndFinalDialogue();
+            else
+            {
+                tutorialText.text = finalLines[_currentLineIndex];
+                PlayVoiceLine();
+            }
+        }
+
+    }
+
+    private void EndThirdDialogue()
     {
-        tutorialText.text = thirdLines[_currentLineIndex];
-        PlayVoiceLine();
+        tutorialPanel.SetActive(false);
+
+        if (voiceAudioSource != null && voiceAudioSource.isPlaying)
+            voiceAudioSource.Stop();
+
+        LockPlayer(false);
+        _isLookingAtMage = false;
+
+        _currentState = TutorialState.ReachThirdArea; 
     }
-}
-    }
-private void EndThirdDialogue()
-{
-    tutorialPanel.SetActive(false);
-
-    if (voiceAudioSource != null && voiceAudioSource.isPlaying)
-        voiceAudioSource.Stop();
-
-    LockPlayer(false);
-    _isLookingAtMage = false;
-
-    _currentState = TutorialState.ReachThirdArea; 
-}
 
 
-    // =========================
+    
     // PLAYER RAGGIUNGE LA MAGA
-    // =========================
     public void OnPlayerReachedMage()
     {
         if (_currentState != TutorialState.ReachMageDownstairs)
@@ -218,7 +223,7 @@ private void EndThirdDialogue()
         _currentState = TutorialState.ReachThirdArea;
     }
 
-    //terza area//
+    //terza area
     public void OnPlayerReachedThirdArea()
 {
     if (_currentState != TutorialState.ReachThirdArea)
@@ -237,29 +242,53 @@ private void EndThirdDialogue()
     PlayVoiceLine();
 }
 
-    // =========================
+    //FINE
+    public void StartFinalDialogue()
+{
+    LockPlayer(true);
+    _isLookingAtMage = true;
+
+    FaceMageToPlayer();
+
+    _currentState = TutorialState.FinalDialogue;
+    _currentLineIndex = 0;
+
+    tutorialPanel.SetActive(true);
+    tutorialText.text = finalLines[_currentLineIndex];
+    PlayVoiceLine();
+}
+
+private void EndFinalDialogue()
+{
+    tutorialPanel.SetActive(false);
+
+    if (voiceAudioSource != null && voiceAudioSource.isPlaying)
+        voiceAudioSource.Stop();
+
+    LockPlayer(false);
+    _isLookingAtMage = false;
+
+    Debug.Log("Dialogo finale completato!");
+}
+
+
     // ROTAZIONE PLAYER
-    // =========================
     private void SmoothLookAtMage() { 
         Vector3 targetPos = mage.transform.position + Vector3.up * 1.5f;
-     // --- CAPSULE (YAW) --- 
         Vector3 flatDir = targetPos - fpsController.transform.position;
         flatDir.y = 0f;
             if (flatDir.sqrMagnitude > 0.01f) { 
-        Quaternion targetRotation = Quaternion.LookRotation(flatDir);
-        fpsController.transform.rotation = Quaternion.Slerp(fpsController.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-         } 
-         // --- CAMERA (PITCH) ---
+                Quaternion targetRotation = Quaternion.LookRotation(flatDir);
+                fpsController.transform.rotation = Quaternion.Slerp(fpsController.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            } 
         Vector3 camDir = targetPos - fpsController.CinemachineCameraTarget.transform.position;
         Quaternion camRotation = Quaternion.LookRotation(camDir); float targetPitch = camRotation.eulerAngles.x;
            if (targetPitch > 180f) targetPitch -= 360f;
-            fpsController.CinemachineTargetPitch = Mathf.Lerp( fpsController.CinemachineTargetPitch, Mathf.Clamp(targetPitch, fpsController.BottomClamp, fpsController.TopClamp), rotationSpeed * Time.deltaTime );
-             fpsController.CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(fpsController.CinemachineTargetPitch, 0f, 0f); 
+                fpsController.CinemachineTargetPitch = Mathf.Lerp( fpsController.CinemachineTargetPitch, Mathf.Clamp(targetPitch, fpsController.BottomClamp, fpsController.TopClamp), rotationSpeed * Time.deltaTime );
+                fpsController.CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(fpsController.CinemachineTargetPitch, 0f, 0f); 
             }
 
-    // =========================
     // ROTAZIONE MAGA
-    // =========================
     private void FaceMageToPlayer()
     {
         if (rotateCoroutine != null)
@@ -322,6 +351,13 @@ private void EndThirdDialogue()
         if (_currentLineIndex < thirdVoiceClips.Length)
             clipToPlay = thirdVoiceClips[_currentLineIndex];
     }
+
+    else if (_currentState == TutorialState.FinalDialogue)
+    {
+        if (_currentLineIndex < finalVoiceClips.Length)
+            clipToPlay = finalVoiceClips[_currentLineIndex];
+    }
+
 
     if (clipToPlay != null)
     {
