@@ -1,5 +1,6 @@
 using Events;
 using GameData.Scripts.Items;
+using Inventory;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -49,7 +50,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public void OnBeginDrag(PointerEventData eventData)
     {
         // questa parte serve a gestire la rimozione dell'ingrediente dalla lista interna a AlchemyManager
-        // Se IngredientSlot è presente, vuol dire che l'ingrediente si trova attualmente in uno slot di crafting
+        // Se IngredientSlot ï¿½ presente, vuol dire che l'ingrediente si trova attualmente in uno slot di crafting
         IngredientSlot ingredientSlot = GetComponentInParent<IngredientSlot>();
 
         if (ingredientSlot != null)

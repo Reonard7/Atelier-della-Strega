@@ -7,35 +7,38 @@ using UnityEngine.UI;
  * Expected behaviour:
  * - Settare correttamente lo sprite corrispondente trovato dentro lo SO Ingredient
  */
-public class HotbarSlot : MonoBehaviour
+namespace Inventory
 {
-    public int index;               // slot index
-    public Ingredient ingredient;   // ingredient in this slot
-    public Image icon;
-
-    private void Awake()
+    public class HotbarSlot : MonoBehaviour
     {
-        icon = GetComponent<Image>();
-    }
+        public int index;               // slot index
+        public Ingredient ingredient;   // ingredient in this slot
+        public Image icon;
 
-    public void SetIngredient(Ingredient newIngredient)
-    {
-        ingredient = newIngredient;
-
-        if (ingredient != null)
+        private void Awake()
         {
-            icon.sprite = ingredient.icon;
-            icon.enabled = true;
+            icon = GetComponent<Image>();
         }
-        else
-        {
-            icon.sprite = null;
-            icon.enabled = false;
-        }
-    }
 
-    public void Clear()
-    {
-        SetIngredient(null);
+        public void SetIngredient(Ingredient newIngredient)
+        {
+            ingredient = newIngredient;
+
+            if (ingredient)
+            {
+                icon.sprite = ingredient.icon;
+                icon.enabled = true;
+            }
+            else
+            {
+                icon.sprite = null;
+                icon.enabled = false;
+            }
+        }
+
+        public void Clear()
+        {
+            SetIngredient(null);
+        }
     }
 }
