@@ -152,9 +152,6 @@ Transform:
   - {fileID: 420635707}
   - {fileID: 1020798772}
   - {fileID: 1598149410}
-  - {fileID: 8316557}
-  - {fileID: 1977260319}
-  - {fileID: 1276509696}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4167353
@@ -508,7 +505,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 785768}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!215 &8316558
 ReflectionProbe:
@@ -11586,11 +11583,11 @@ Transform:
   m_GameObject: {fileID: 205357210}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.05, y: 3.3, z: 8.4}
+  m_LocalPosition: {x: 9.7699995, y: 7.1499996, z: 26.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 876995347}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!215 &205357212
 ReflectionProbe:
@@ -52365,7 +52362,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 205357211}
   - {fileID: 161394372}
   - {fileID: 1841882061}
   - {fileID: 1427340713}
@@ -58191,11 +58187,11 @@ Transform:
   m_GameObject: {fileID: 937313829}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.03428, y: 2.4105897, z: 3.76}
+  m_LocalPosition: {x: 0, y: 6.141, z: 2.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 2062211853}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &938363994
 PrefabInstance:
@@ -80457,7 +80453,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 785768}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!215 &1276509697
 ReflectionProbe:
@@ -120806,7 +120802,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 785768}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!215 &1977260320
 ReflectionProbe:
@@ -125108,7 +125104,6 @@ Transform:
   - {fileID: 1603239246}
   - {fileID: 1733451871}
   - {fileID: 65470519}
-  - {fileID: 937313831}
   - {fileID: 879673236}
   - {fileID: 776143365}
   - {fileID: 1364950640}
@@ -134109,6 +134104,11 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1862163970}
+  - {fileID: 205357211}
+  - {fileID: 8316557}
+  - {fileID: 1977260319}
+  - {fileID: 1276509696}
+  - {fileID: 937313831}
   - {fileID: 2065464495}
   - {fileID: 1794485391}
   - {fileID: 2107412535}
