@@ -62,8 +62,6 @@ public class IngredientSlot : MonoBehaviour, IDropHandler
     {
         if (!slotImage) return;
         
-        if (!_currentIngredient) return;
-        
         slotImage.texture = _currentIngredient ? filledSprite : emptySprite;
     }
 }
