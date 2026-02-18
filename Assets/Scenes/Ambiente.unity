@@ -30934,65 +30934,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 45
       objectReference: {fileID: 0}
-    - target: {fileID: 931274940374719124, guid: 79f3f59e3161e984e97498a75d5666eb, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 81
-      objectReference: {fileID: 0}
     - target: {fileID: 959350003853436982, guid: 79f3f59e3161e984e97498a75d5666eb, type: 3}
       propertyPath: m_Name
       value: arrow cubo (14)
       objectReference: {fileID: 0}
-    - target: {fileID: 959350003853436982, guid: 79f3f59e3161e984e97498a75d5666eb, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 81
-      objectReference: {fileID: 0}
-    - target: {fileID: 1591985420132083558, guid: 79f3f59e3161e984e97498a75d5666eb, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1591985420132083558, guid: 79f3f59e3161e984e97498a75d5666eb, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1591985420132083558, guid: 79f3f59e3161e984e97498a75d5666eb, type: 3}
-      propertyPath: InitialModule.startSpeed.minScalar
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 1591985420132083558, guid: 79f3f59e3161e984e97498a75d5666eb, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.16540514
-      objectReference: {fileID: 0}
-    - target: {fileID: 1591985420132083558, guid: 79f3f59e3161e984e97498a75d5666eb, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.05208248
-      objectReference: {fileID: 0}
-    - target: {fileID: 1591985420132083558, guid: 79f3f59e3161e984e97498a75d5666eb, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.78867924
-      objectReference: {fileID: 0}
-    - target: {fileID: 1591985420132083558, guid: 79f3f59e3161e984e97498a75d5666eb, type: 3}
-      propertyPath: InitialModule.startSpeed.minMaxState
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724302729257601761, guid: 79f3f59e3161e984e97498a75d5666eb, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.1465645
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724302729257601761, guid: 79f3f59e3161e984e97498a75d5666eb, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.1465645
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724302729257601761, guid: 79f3f59e3161e984e97498a75d5666eb, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.6754716
-      objectReference: {fileID: 0}
-    - target: {fileID: 8242579334312482524, guid: 79f3f59e3161e984e97498a75d5666eb, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 65
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 8242579334312482524, guid: 79f3f59e3161e984e97498a75d5666eb, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79f3f59e3161e984e97498a75d5666eb, type: 3}
@@ -106460,7 +106407,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 177638, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_Name
-      value: '[Graphy]'
+      value: fps counter
+      objectReference: {fileID: 0}
+    - target: {fileID: 177638, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22451668, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_Pivot.x
