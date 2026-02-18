@@ -90,11 +90,25 @@ public class GrimoireManager : MonoBehaviour
         return result;
     }
 
+    private void ReorderEntries<T>(List<GrimoireEntry<T>> list) where T : IGrimoireData
+    {
+        list.Sort((a, b) =>
+        {
+            // discovered first
+            if (a.discovered && !b.discovered) return -1;
+            if (!a.discovered && b.discovered) return 1;
+            return 0; // keep relative order otherwise
+        });
+    }
+
     private void OnIngredientPickup(Ingredient ingredient)
     {
         var entry = ingredientEntries.Find(e => e.data == ingredient);
         if (entry != null)
+        {
             entry.discovered = true;
+            ReorderEntries(ingredientEntries);
+        }
     }
 
     private void OnSpellPickup(Spell spell)
@@ -106,7 +120,9 @@ public class GrimoireManager : MonoBehaviour
             {
                 GrimoireEvents.OnRetreatDiscovered?.Invoke();
             }
+
             entry.discovered = true;
+            ReorderEntries(spellEntries);
             GrimoireEvents.OnEntryDiscovered?.Invoke(entry.data);
         }
     }
@@ -117,6 +133,7 @@ public class GrimoireManager : MonoBehaviour
         if (entry != null)
         {
             entry.discovered = true;
+            ReorderEntries(potionEntries);
             GrimoireEvents.OnEntryDiscovered?.Invoke(entry.data);
         }
     }
