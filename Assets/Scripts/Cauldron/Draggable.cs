@@ -36,6 +36,16 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         homeLocalPosition = transform.localPosition;
     }
 
+    private void OnEnable()
+    {
+        AlchemyEvents.OnBrewingEnded += OnBrewingEnded;
+    }
+
+    private void OnDisable()
+    {
+        AlchemyEvents.OnBrewingEnded -= OnBrewingEnded;
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         // questa parte serve a gestire la rimozione dell'ingrediente dalla lista interna a AlchemyManager
@@ -49,8 +59,8 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             {
                 AlchemyEvents.OnIngredientRemovedFromSlot?.Invoke(ingredient);
                 Debug.Log("OnIngredientRemovedFromSlot invoked");
-                ingredientSlot.Clear();
             }
+            ingredientSlot.Clear();
         }
 
         transform.SetParent(canvas.transform);
@@ -72,6 +82,17 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             transform.SetParent(homeParent);
             transform.localPosition = homeLocalPosition;
         }
+        var originalSlot = homeParent.GetComponent<IngredientSlot>();
+        if (originalSlot != null)
+        {
+            originalSlot.OnDrop(eventData); 
+        }
+    }
+
+    private void OnBrewingEnded()
+    {
+        transform.SetParent(homeParent);
+        transform.localPosition = homeLocalPosition;
     }
 
     public Ingredient GetIngredient()

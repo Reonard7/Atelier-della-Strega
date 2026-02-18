@@ -18308,6 +18308,17 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
+--- !u!114 &331561463 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5789365528238963433, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+  m_PrefabInstance: {fileID: 1562120551}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331561453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
 --- !u!1001 &331919494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35724,6 +35735,17 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
+--- !u!114 &545284824 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5739733208603132788, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+  m_PrefabInstance: {fileID: 1562120551}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545284816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
 --- !u!1001 &550193506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92574,6 +92596,76 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5848628880451625868, guid: e226c80c9c5c65e4f9b40251ce8a57c0, type: 3}
   m_PrefabInstance: {fileID: 7418125780712889089}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1463280771}
+  - component: {fileID: 1463280773}
+  - component: {fileID: 1463280772}
+  m_Layer: 5
+  m_Name: dialoguePanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1463280771
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463280770}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6715361, y: 0.64345, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 867225651}
+  m_Father: {fileID: 5546053}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -18.999756, y: -3}
+  m_SizeDelta: {x: 1711.373, y: 531.0869}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1463280772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463280770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4f98210062b74164e9fe5a801d0d71f7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1463280773
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463280770}
+  m_CullTransparentMesh: 1
 --- !u!1 &1465437678
 GameObject:
   m_ObjectHideFlags: 0
@@ -98957,6 +99049,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -6
       objectReference: {fileID: 0}
+    - target: {fileID: 4150388032365683280, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+      propertyPath: slotImage
+      value: 
+      objectReference: {fileID: 545284824}
+    - target: {fileID: 4150388032365683280, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+      propertyPath: emptySprite
+      value: 
+      objectReference: {fileID: 2800000, guid: 9e398048f5c3d3346a8810ca7c52db1b, type: 3}
+    - target: {fileID: 4150388032365683280, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+      propertyPath: filledSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: 5590f2be74c550c429c2548b368e7212, type: 3}
+    - target: {fileID: 4150388032365683280, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+      propertyPath: slotGameObject
+      value: 
+      objectReference: {fileID: 545284816}
     - target: {fileID: 4361521497302558028, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
       propertyPath: m_SizeDelta.x
       value: 5.999973
@@ -99125,6 +99233,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.9849968
       objectReference: {fileID: 0}
+    - target: {fileID: 5886964765058254175, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+      propertyPath: slotImage
+      value: 
+      objectReference: {fileID: 331561463}
+    - target: {fileID: 5886964765058254175, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+      propertyPath: emptySprite
+      value: 
+      objectReference: {fileID: 2800000, guid: 9e398048f5c3d3346a8810ca7c52db1b, type: 3}
+    - target: {fileID: 5886964765058254175, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+      propertyPath: filledSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: 5590f2be74c550c429c2548b368e7212, type: 3}
+    - target: {fileID: 5886964765058254175, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+      propertyPath: slotGameObject
+      value: 
+      objectReference: {fileID: 331561453}
     - target: {fileID: 6609525817725645940, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
       propertyPath: m_SizeDelta.x
       value: 100
@@ -99149,6 +99273,22 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 554634598}
+    - target: {fileID: 7570041211131905362, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+      propertyPath: slotImage
+      value: 
+      objectReference: {fileID: 1739697809}
+    - target: {fileID: 7570041211131905362, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+      propertyPath: emptySprite
+      value: 
+      objectReference: {fileID: 2800000, guid: 9e398048f5c3d3346a8810ca7c52db1b, type: 3}
+    - target: {fileID: 7570041211131905362, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+      propertyPath: filledSprite
+      value: 
+      objectReference: {fileID: 2800000, guid: 5590f2be74c550c429c2548b368e7212, type: 3}
+    - target: {fileID: 7570041211131905362, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+      propertyPath: slotGameObject
+      value: 
+      objectReference: {fileID: 1739697801}
     - target: {fileID: 7682634798025110334, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
       propertyPath: m_text
       value: Brew Potion
@@ -107741,6 +107881,17 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
+--- !u!114 &1739697809 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8061327917195477593, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+  m_PrefabInstance: {fileID: 1562120551}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739697801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
 --- !u!1001 &1744488289
 PrefabInstance:
   m_ObjectHideFlags: 0
