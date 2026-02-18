@@ -61,7 +61,6 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             if (ingredient != null)
             {
                 AlchemyEvents.OnIngredientRemovedFromSlot?.Invoke(ingredient);
-                Debug.Log("OnIngredientRemovedFromSlot invoked");
             }
             ingredientSlot.Clear();
         }

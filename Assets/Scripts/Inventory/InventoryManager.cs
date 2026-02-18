@@ -117,8 +117,6 @@ namespace Inventory
 
         private void OnIngredientDiscard()
         {
-            Debug.Log($"Contenuto HashSet: {string.Join(", ", _lockedIngredients)}");
-
             if (_inventory.Count <= 0 || _activeSlotIndex >= _inventory.Count) return;
 
             var ingredient = _inventory[_activeSlotIndex];
