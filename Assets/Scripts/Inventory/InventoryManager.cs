@@ -32,6 +32,7 @@ namespace Inventory
             InteractionEvents.OnIngredientDiscard += OnIngredientDiscard;
             InteractionEvents.OnIngredientLocked += OnIngredientLocked;
             InteractionEvents.OnIngredientUnlocked += OnIngredientUnlocked;
+            AlchemyEvents.OnBrewingEnded += OnBrewingEnded;
             SpellEvents.OnSpellZoneTrigger += OnSpellZoneTrigger;
         }
 
@@ -43,6 +44,7 @@ namespace Inventory
             InteractionEvents.OnIngredientDiscard -= OnIngredientDiscard;
             InteractionEvents.OnIngredientLocked -= OnIngredientLocked;
             InteractionEvents.OnIngredientUnlocked -= OnIngredientUnlocked;
+            AlchemyEvents.OnBrewingEnded -= OnBrewingEnded;
             SpellEvents.OnSpellZoneTrigger -= OnSpellZoneTrigger;
         }
 
@@ -115,6 +117,8 @@ namespace Inventory
 
         private void OnIngredientDiscard()
         {
+            Debug.Log($"Contenuto HashSet: {string.Join(", ", _lockedIngredients)}");
+
             if (_inventory.Count <= 0 || _activeSlotIndex >= _inventory.Count) return;
 
             var ingredient = _inventory[_activeSlotIndex];
@@ -158,6 +162,11 @@ namespace Inventory
         private void OnIngredientUnlocked(Ingredient ingredient)
         {
             _lockedIngredients.Remove(ingredient);
+        }
+
+        private void OnBrewingEnded()
+        {
+            _lockedIngredients.Clear();
         }
 
         private void UpdateHotbar()

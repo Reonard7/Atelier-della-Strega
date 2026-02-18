@@ -19,7 +19,7 @@ public class IngredientSlot : MonoBehaviour, IDropHandler
     public Texture emptySprite;          // Sprite Rombo con "?"
     public Texture filledSprite;         // Sprite Rombo pulito
     
-    private Ingredient _currentIngredient;
+    public Ingredient _currentIngredient;
     
     public void Start()
     {

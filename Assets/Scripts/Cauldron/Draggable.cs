@@ -30,7 +30,9 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     private void Awake()
     {
         canvas = GetComponentInParent<Canvas>();
-        canvasGroup = gameObject.AddComponent<CanvasGroup>();
+        canvasGroup = GetComponent<CanvasGroup>();
+        if (canvasGroup == null)
+            canvasGroup = gameObject.AddComponent<CanvasGroup>();
         hotbarSlot = GetComponentInParent<HotbarSlot>();
 
         homeParent = transform.parent;
@@ -94,6 +96,8 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     {
         transform.SetParent(homeParent);
         transform.localPosition = homeLocalPosition;
+        canvas = GetComponentInParent<Canvas>();
+        canvasGroup.blocksRaycasts = true;
     }
 
     public Ingredient GetIngredient()
