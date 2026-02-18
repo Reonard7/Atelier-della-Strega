@@ -20,36 +20,43 @@ public class MageController : MonoBehaviour
     // TELEPORT INIZIALE
     // =========================
     public void TeleportDownstairs()
-    {
-        if (downstairsPoint == null) return;
-        StartCoroutine(TeleportRoutine(downstairsPoint.position));
-    }
+{
+    if (downstairsPoint == null) return;
+    StartCoroutine(TeleportRoutine(downstairsPoint));
+}
+
 
     // =========================
     // TELEPORT GENERICO
     // =========================
-    public void TeleportTo(Transform targetPoint)
-    {
-        if (targetPoint == null) return;
-        StartCoroutine(TeleportRoutine(targetPoint.position));
-    }
+   public void TeleportTo(Transform targetPoint)
+{
+    if (targetPoint == null) return;
+    StartCoroutine(TeleportRoutine(targetPoint));
+}
 
-    private IEnumerator TeleportRoutine(Vector3 targetPosition)
-    {
-        // Sparizione
-        SpawnVFX(transform.position);
-        PlaySound();
 
-        yield return new WaitForSeconds(teleportDelay);
+   private IEnumerator TeleportRoutine(Transform targetPoint)
+{
+    // Sparizione
+    SpawnVFX(transform.position);
+    PlaySound();
 
-        transform.position = targetPosition;
+    yield return new WaitForSeconds(teleportDelay);
 
-        // Apparizione
-        SpawnVFX(transform.position);
-        PlaySound();
+    // 🔹 Solo rotazione Y del target
+    float targetY = targetPoint.rotation.eulerAngles.y;
+    Quaternion yOnlyRotation = Quaternion.Euler(0f, targetY, 0f);
 
-        Debug.Log("Maga teletrasportata");
-    }
+    transform.SetPositionAndRotation(targetPoint.position, yOnlyRotation);
+
+    // Apparizione
+    SpawnVFX(transform.position);
+    PlaySound();
+
+    Debug.Log("Maga teletrasportata con Y rotation del target");
+}
+
 
     private void SpawnVFX(Vector3 position)
     {
