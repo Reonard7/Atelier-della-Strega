@@ -99980,6 +99980,10 @@ PrefabInstance:
       value: 0.227451
       objectReference: {fileID: 0}
     - target: {fileID: 5078979147708225669, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
+      propertyPath: m_lineSpacing
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078979147708225669, guid: 61aee609cc25ba845990e2f6399bb6ab, type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -2350711671220705056, guid: 73db6715aba55e343bd993d57c7e7c8c, type: 2}

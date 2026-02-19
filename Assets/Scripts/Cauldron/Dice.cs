@@ -81,7 +81,7 @@ public class Dice : MonoBehaviour
         // Show potion
         potionImage.sprite = cachedPotion.icon;
         potionName.text = cachedIsMirable
-            ? $"{cachedPotion.displayName} (Meravigliosa)"
+            ? $"{cachedPotion.displayName}\n(Mirable)"
             : cachedPotion.displayName;
 
         potionImage.enabled = true;
